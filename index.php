@@ -29,13 +29,13 @@
     <div class = "ism-slider" data-play_type="loop" data-interval="8000">
       <ol>
           <li>
-            <img src="img/Banner/banner1.jpg">
+            <img src="img/banner/banner1.jpg">
           </li>
           <li>
-            <img src="img/Banner/banner2.jpg">
+            <img src="img/banner/banner2.jpg">
           </li>
           <li>
-            <img src="img/Banner/banner1.jpg">
+            <img src="img/banner/banner1.jpg">
           </li>
       </ol>
     </div>
@@ -49,7 +49,7 @@
             </div>
 
             <div class="photoPrincipalTroupe">
-                <img src="img/Accueil/bureau.jpg"/>
+                <img src="img/accueil/bureau.jpg"/>
             </div>
     </div>
 </div>
