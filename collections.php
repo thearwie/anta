@@ -79,10 +79,7 @@
               <a href="#">
                   <img class="img-responsive" src="img/bague/BA-0001-1.jpg" alt="BA-0001-1">
               </a>
-              <div class="infos-produit-group">
-                <h3 class="prix">15,00 CAD$</h3>
-                <h3 class="materiau">Argent 950</h3>
-              </div>
+              <h3 class="prix">15,00 CAD$</h3>
               <button type="button" class="btn btn-primary bouton-detail">Détails</button>
           </div>
           <div class="col-md-4 portfolio-item produit">
