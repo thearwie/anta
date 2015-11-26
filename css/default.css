@@ -316,8 +316,9 @@ h1
 .produit
 {
   border-style: solid;
-  border-width: 2px;
+  border-width: 1px;
   border-color: #696969;
+  border-collapse: collapse;
   padding-bottom: 20px;
 }
 
