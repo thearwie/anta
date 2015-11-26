@@ -45,7 +45,7 @@
         <div class="col-xs-4">
         </div>
         <div class="col-xs-4 combobox-group">
-            <label class="control-label">Classement</label>
+            <label class="control-label h3">Classement</label>
             <div class="combobox">
                 <select class="form-control" name="classement" onchange="this.form.submit()">
                     <option value="">Choisir un classement</option>
@@ -57,7 +57,7 @@
           </div>
       
         <div class="col-xs-4 combobox-group">
-            <label id="label-categorie" class="control-label">Catégorie</label>
+            <label id="label-categorie" class="control-label h3">Catégorie</label>
             <div class="combobox">
                 <select class="form-control" name="categorie" onchange="this.form.submit()">
                     <option value="tout">Tous les produits</option>
@@ -73,25 +73,25 @@
       <!-- Projects Row -->
       <div class="row">
           <div class="col-md-4 portfolio-item produit">
-              <h3>
-                  <a class="h3" href="#">Bague BA-0001</a>
-              </h3>
+              <h2>
+                  <a class="h2" href="#">Bague BA-0001</a>
+              </h2>
               <a href="#">
                   <img class="img-responsive" src="img/bague/BA-0001-1.jpg" alt="BA-0001-1">
               </a>
           </div>
           <div class="col-md-4 portfolio-item produit">
-              <h3>
-                  <a class="h3" href="#">Boucle d'oreille BO-0002</a>
-              </h3>
+              <h2>
+                  <a class="h2" href="#">Boucle d'oreille BO-0002</a>
+              </h2>
               <a href="#">
                   <img class="img-responsive" src="img/boucleOreille/BO-0002-1.jpg" alt="BO-0002-1">
               </a>
           </div>
           <div class="col-md-4 portfolio-item produit">
-              <h3>
-                  <a class="h3" href="#">Boucle d'oreille BO-0003</a>
-              </h3>
+              <h2>
+                  <a class="h2" href="#">Boucle d'oreille BO-0003</a>
+              </h2>
               <a href="#">
                   <img class="img-responsive" src="img/boucleOreille/BO-0003-1.jpg" alt="BO-0003-1">
               </a>
@@ -102,25 +102,25 @@
       <!-- Projects Row -->
       <div class="row">
           <div class="col-md-4 portfolio-item produit">
-              <h3>
-                  <a class="h3" href="#">Bracelet BR-0007</a>
-              </h3>
+              <h2>
+                  <a class="h2" href="#">Bracelet BR-0007</a>
+              </h2>
               <a href="#">
                   <img class="img-responsive" src="img/bracelet/BR-0007-1.jpg" alt="BR-0007-1">
               </a>
           </div>
           <div class="col-md-4 portfolio-item produit">
-              <h3>
-                  <a class="h3" href="#">Bracelet BR-0003</a>
-              </h3>
+              <h2>
+                  <a class="h2" href="#">Bracelet BR-0003</a>
+              </h2>
               <a href="#">
                   <img class="img-responsive" src="img/bracelet/BR-0003-1.jpg" alt="BR-0003-1">
               </a>
           </div>
           <div class="col-md-4 portfolio-item produit">
-              <h3>
-                  <a class="h3" href="#">Collier CO-0001</a>
-              </h3>
+              <h2>
+                  <a class="h2" href="#">Collier CO-0001</a>
+              </h2>
               <a href="#">
                   <img class="img-responsive" src="img/collier/CO-0001-1.jpg" alt="CO-0001-1">
               </a>
@@ -130,25 +130,25 @@
       <!-- Projects Row -->
       <div class="row">
           <div class="col-md-4 portfolio-item produit">
-              <h3>
-                  <a class="h3" href="#">Bracelet BR-0001</a>
-              </h3>
+              <h2>
+                  <a class="h2" href="#">Bracelet BR-0001</a>
+              </h2>
               <a href="#">
                   <img class="img-responsive" src="img/bracelet/BR-0001-1.jpg" alt="BR-0001-1">
               </a>
           </div>
           <div class="col-md-4 portfolio-item produit">
-              <h3>
-                  <a class="h3" href="#">Bracelet BR-007</a>
-              </h3>
+              <h2>
+                  <a class="h2" href="#">Bracelet BR-007</a>
+              </h2>
               <a href="#">
                   <img class="img-responsive" src="img/bracelet/BR-0007-1.jpg" alt="BR-0007-1">
               </a>
           </div>
           <div class="col-md-4 portfolio-item produit">
-              <h3>
-                  <a class="h3" href="#">Bracelet BR-0003</a>
-              </h3>
+              <h2>
+                  <a class="h2" href="#">Bracelet BR-0003</a>
+              </h2>
               <a href="#">
                   <img class="img-responsive" src="img/bracelet/BR-0003-1.jpg" alt="BR-0003">
               </a>
