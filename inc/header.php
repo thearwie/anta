@@ -24,14 +24,14 @@
     
      <!-- <div> -->
         <a href='/' class='logo'></a>
-    <?php /*  </div>
+   <!-- </div>
       <div id="utilisateur">
         <ul>
           <li><a href='/anta/inscription.php'>S'inscrire</a></li>
           <li><a href='/anta/'>Se connecter</a></li>
         </ul>
       </div>
-      <div>*/ ?>
+      <div> -->
         <nav>
           <?php include('menu.php'); ?>
         </nav>
