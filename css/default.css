@@ -313,8 +313,21 @@ h1
   margin-top: 100px;
 }
 
+<<<<<<< HEAD
 /* Formulaires Nous Joindre et Services*/
 .formulaireNousJoindre, .formulaireServices
+=======
+.produit
+{
+  border-style: solid;
+  border-width: 2px;
+  border-color: #696969;
+}
+
+
+/* Page Nous Joindre*/
+.formulaireNousJoindre
+>>>>>>> origin/master
 {
   width:100%;
   text-align: left;
