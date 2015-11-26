@@ -335,17 +335,13 @@ h3, .h3
   margin-left: 2%;
   padding-left: 20px;
   padding-right: 20px;
-  border-style: solid !important;
-  border-width: 1px !important;
-  border-color: black !important;
-  border-collapse: collapse !important;
 }
 
-.img-produit, .prix, .bouton-detail
+.collection, .img-produit, .prix, .bouton-detail
 {
   border-style: solid !important;
   border-width: 1px !important;
-  border-color: #696969 !important;
+  border-color: black !important;
   border-collapse: collapse !important;
 }
 
