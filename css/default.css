@@ -219,7 +219,7 @@ h3
 {
    font-size: 2.5em;
    text-align: center;
-   font-color: #4B0082;
+   color: #4B0082;
 }
 
 .button 
@@ -320,9 +320,6 @@ h3
   margin-top: 100px;
 }
 
-<<<<<<< HEAD
-
-=======
 .produit
 {
   border-style: solid;
@@ -335,7 +332,6 @@ h3
 
 /* Formulaires Nous Joindre et Services*/
 .formulaireNousJoindre, .formulaireServices
->>>>>>> origin/master
 {
   width:100%;
   text-align: left;
