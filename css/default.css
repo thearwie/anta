@@ -336,7 +336,7 @@ h3, .h3
 
 .combobox-categorie
 {
-  width: 200px;
+  width: 300px !important;
 }
 
 .produit
