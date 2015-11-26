@@ -333,6 +333,11 @@ h3, .h3
   padding-right: 20px;
 }
 
+.control-label
+{
+  text-align: left;
+}
+
 .combobox
 {
   width: 98% !important;
