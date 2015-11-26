@@ -45,7 +45,7 @@
       <div class="row">
           <div class="col-md-4 portfolio-item">
               <a href="#">
-                  <img class="img-responsive" src="http://placehold.it/700x400" alt="">
+                  <img class="img-responsive" src="img/anneaux/BA-0001.jpg" alt="">
               </a>
               <h3>
                   <a href="#">Project Name</a>
@@ -53,7 +53,7 @@
           </div>
           <div class="col-md-4 portfolio-item">
               <a href="#">
-                  <img class="img-responsive" src="http://placehold.it/700x400" alt="">
+                  <img class="img-responsive" src="img/boucles d'oreilles/BO-0002.jpg" alt="">
               </a>
               <h3>
                   <a href="#">Project Name</a>
@@ -61,7 +61,7 @@
           </div>
           <div class="col-md-4 portfolio-item">
               <a href="#">
-                  <img class="img-responsive" src="http://placehold.it/700x400" alt="">
+                  <img class="img-responsive" src="img/boucles d'oreilles/BO-0003.jpg" alt="">
               </a>
               <h3>
                   <a href="#">Project Name</a>
