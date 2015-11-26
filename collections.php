@@ -42,15 +42,17 @@
 	
 	<div class="collection">
       <div class="row">
-          <label class="col-xs-3 control-label" onchange="this.form.submit()">Catégorie</label>
-          <div class="col-xs-5 combobox-categorie">
-              <select class="form-control" name="categorie">
-                  <option value="tout">Tous les produits</option>
-                  <option value="ba">Bague (BA)</option>
-                  <option value="bo">Boucle d'oreille (BO)</option>
-                  <option value="br">Bracelet(BR)</option>
-                  <option value="co">Collier (CO)</option>
-              </select>
+        <div class="combobox-categorie-group">
+            <label class="col-xs-3 control-label" onchange="this.form.submit()">Catégorie</label>
+            <div class="col-xs-5 combobox-categorie">
+                <select class="form-control" name="categorie">
+                    <option value="tout">Tous les produits</option>
+                    <option value="ba">Bague (BA)</option>
+                    <option value="bo">Boucle d'oreille (BO)</option>
+                    <option value="br">Bracelet(BR)</option>
+                    <option value="co">Collier (CO)</option>
+                </select>
+              </div>
           </div>
       </div>
   

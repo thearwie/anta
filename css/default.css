@@ -335,7 +335,7 @@ h3, .h3
 
 .combobox-categorie-group
 {
-  right: 20px;
+  float: right;
 }
 
 .combobox-categorie
