@@ -367,7 +367,7 @@ h3, .h3
 
 .btn-detail
 {
-  float: left;
+  float: left !important;
 }
 
 .prix
