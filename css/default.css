@@ -320,14 +320,14 @@ h3, .h3
   width: 96%;
   margin-top: 100px;
   margin-left: 2%;
-}
-
-.produit
-{
   border-style: solid;
   border-width: 1px;
   border-color: #696969;
   border-collapse: collapse;
+}
+
+.produit
+{
   padding-bottom: 20px;
 }
 

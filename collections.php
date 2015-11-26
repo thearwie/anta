@@ -40,6 +40,15 @@
       </ol>
     </div>
 	
+  <form>
+     <select class="combobox-categorie">
+      <option value="bague">Bague</option>
+      <option value="boucleOreille">Boucle d'oreille</option>
+      <option value="bracelet">Bracelet</option>
+      <option value="collier">Collier</option>
+    </select> 
+  </form>
+  
 	<div class="collection">
       <!-- Projects Row -->
       <div class="row">
