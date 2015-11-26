@@ -400,6 +400,11 @@ h3, .h3
   background-color: rgb(75, 0, 130) !important;
 }
 
+.page-active
+{
+  background-color: rgb(75, 0, 130) !important;
+}
+
 
 /* Formulaires Nous Joindre et Services*/
 .formulaireNousJoindre, .formulaireServices
