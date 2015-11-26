@@ -20,10 +20,19 @@
     
   </head>
   <body>
-  <header>
-    <a href='/' class='logo'></a>
-    <nav>
-      <?php include('menu.php'); ?>
-    </nav>
-    
-  </header>
+    <header>
+      <div>
+        <a href='/' class='logo'></a>
+      </div>
+      <div>
+        <ul>
+          <li><a href='/anta/' <?php if($page == 'index') echo 'class="selected"'?>>Accueil</a></li>
+          <li><a href='/anta/creations.php' <?php if($page == 'creations') echo 'class="selected"'?>>Créations</a></li>
+        </ul>
+      </div>
+      <div>
+        <nav>
+          <?php include('menu.php'); ?>
+        </nav>
+      </div>
+    </header>

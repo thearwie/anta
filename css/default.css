@@ -133,6 +133,7 @@ header img
 
 nav .selected {
   color: #666666;
+  text-decoration: underline;
 }
 
 nav
