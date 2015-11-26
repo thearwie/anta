@@ -44,28 +44,28 @@
       <!-- Projects Row -->
       <div class="row">
           <div class="col-md-4 portfolio-item">
-              <a href="#">
-                  <img class="img-responsive" src="img/anneaux/BA-0001.jpg" alt="">
-              </a>
               <h3>
-                  <a href="#">Project Name</a>
+                  <a href="#">Bague BA-0001</a>
               </h3>
+              <a href="#">
+                  <img class="img-responsive" src="img/bague/BA-0001.jpg" alt="BA-0001">
+              </a>
           </div>
           <div class="col-md-4 portfolio-item">
-              <a href="#">
-                  <img class="img-responsive" src="img/boucles d'oreilles/BO-0002.jpg" alt="">
-              </a>
               <h3>
-                  <a href="#">Project Name</a>
+                  <a href="#">Boucle d'oreille BO-0002</a>
               </h3>
+              <a href="#">
+                  <img class="img-responsive" src="img/boucleOreille/BO-0002.jpg" alt="BO-0002">
+              </a>
           </div>
           <div class="col-md-4 portfolio-item">
-              <a href="#">
-                  <img class="img-responsive" src="img/boucles d'oreilles/BO-0003.jpg" alt="">
-              </a>
               <h3>
-                  <a href="#">Project Name</a>
+                  <a href="#">Boucle d'oreille BO-0003</a>
               </h3>
+              <a href="#">
+                  <img class="img-responsive" src="img/boucleOreille/BO-0003.jpg" alt="BO-0003">
+              </a>
           </div>
       </div>
       <!-- /.row -->
@@ -73,56 +73,56 @@
       <!-- Projects Row -->
       <div class="row">
           <div class="col-md-4 portfolio-item">
-              <a href="#">
-                  <img class="img-responsive" src="http://placehold.it/700x400" alt="">
-              </a>
               <h3>
-                  <a href="#">Project Name</a>
+                  <a href="#">Collier CO-0002</a>
               </h3>
+              <a href="#">
+                  <img class="img-responsive" src="img/collier/CO-0002" alt="CO-0002">
+              </a>
           </div>
           <div class="col-md-4 portfolio-item">
-              <a href="#">
-                  <img class="img-responsive" src="http://placehold.it/700x400" alt="">
-              </a>
               <h3>
-                  <a href="#">Project Name</a>
+                  <a href="#">Bracelet BR-0003</a>
               </h3>
+              <a href="#">
+                  <img class="img-responsive" src="img/bracelet/BR-0003" alt="BR-0003">
+              </a>
           </div>
           <div class="col-md-4 portfolio-item">
-              <a href="#">
-                  <img class="img-responsive" src="http://placehold.it/700x400" alt="">
-              </a>
               <h3>
-                  <a href="#">Project Name</a>
+                  <a href="#">Collier CO-0001</a>
               </h3>
+              <a href="#">
+                  <img class="img-responsive" src="img/collier/CO-0001" alt="CO-0001">
+              </a>
           </div>
       </div>
 
       <!-- Projects Row -->
       <div class="row">
           <div class="col-md-4 portfolio-item">
-              <a href="#">
-                  <img class="img-responsive" src="http://placehold.it/700x400" alt="">
-              </a>
               <h3>
-                  <a href="#">Project Name</a>
+                  <a href="#">Bracelet BR-0001</a>
               </h3>
+              <a href="#">
+                  <img class="img-responsive" src="img/bracelet/BR-0001" alt="BR-0001">
+              </a>
           </div>
           <div class="col-md-4 portfolio-item">
-              <a href="#">
-                  <img class="img-responsive" src="http://placehold.it/700x400" alt="">
-              </a>
               <h3>
-                  <a href="#">Project Name</a>
+                  <a href="#">Bracelet BR-007</a>
               </h3>
+              <a href="#">
+                  <img class="img-responsive" src="img/bracelet/BR-0007" alt="BR-0007">
+              </a>
           </div>
           <div class="col-md-4 portfolio-item">
-              <a href="#">
-                  <img class="img-responsive" src="http://placehold.it/700x400" alt="">
-              </a>
               <h3>
-                  <a href="#">Project Name</a>
+                  <a href="#">Bracelet BR-0003</a>
               </h3>
+              <a href="#">
+                  <img class="img-responsive" src="img/bracelet/BR-0003" alt="BR-0003">
+              </a>
           </div>
       </div>
       <!-- /.row -->
