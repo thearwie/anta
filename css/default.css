@@ -372,7 +372,12 @@ h3, .h3
 
 .prix
 {
-  text-align: center !important;
+  float: left;
+}
+
+.materiau
+{
+  float: right;
 }
 
 .produit
