@@ -371,6 +371,12 @@ h3, .h3
   margin: 0;
 }
 
+.infos-produit-group h3
+{
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
 .prix
 {
   float: left;
