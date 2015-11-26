@@ -345,6 +345,11 @@ h3, .h3
   border-collapse: collapse !important;
 }
 
+.img-produit
+{
+  border-style-bottom: none;
+}
+
 .combobox-group
 {
   padding: 20px;
