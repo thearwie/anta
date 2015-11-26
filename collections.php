@@ -41,7 +41,6 @@
     </div>
 	
 	<div class="collection">
-    <form>
       <div class="form-group">
           <label class="col-xs-3 control-label" onchange="this.form.submit()">Catégorie</label>
           <div class="col-xs-5 combobox-categorie">
@@ -54,7 +53,6 @@
               </select>
           </div>
       </div>
-    </form>
   
       <!-- Projects Row -->
       <div class="row">
