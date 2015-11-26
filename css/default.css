@@ -365,9 +365,9 @@ h3, .h3
   margin-left: 2% !important;
 }
 
-.bouton-detail
+.infos-produit-group
 {
-  width: 100%;
+  padding: 0;
 }
 
 .prix
@@ -378,6 +378,11 @@ h3, .h3
 .materiau
 {
   float: right;
+}
+
+.bouton-detail
+{
+  width: 100%;
 }
 
 .produit
