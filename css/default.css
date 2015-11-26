@@ -368,6 +368,7 @@ h3, .h3
 .infos-produit-group, .infos-produit-group h3
 {
   padding: 0;
+  margin: 0;
 }
 
 .prix
