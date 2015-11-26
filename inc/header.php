@@ -26,8 +26,8 @@
       </div>
       <div>
         <ul>
-          <li><a href='/anta/' <?php if($page == 'index') echo 'class="selected"'?>>Accueil</a></li>
-          <li><a href='/anta/creations.php' <?php if($page == 'creations') echo 'class="selected"'?>>Créations</a></li>
+          <li><a href='/anta/inscription.php'>S'inscrire</a></li>
+          <li><a href='/anta/creations.php'>Se connecter</a></li>
         </ul>
       </div>
       <div>
