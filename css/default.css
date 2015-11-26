@@ -339,10 +339,10 @@ h3, .h3
 
 .collection, .prix, .bouton-detail
 {
-  border-style: solid;
-  border-width: 1px;
-  border-color: #696969;
-  border-collapse: collapse;
+  border-style: solid !important;
+  border-width: 1px !important;
+  border-color: #696969 !important;
+  border-collapse: collapse !important;
 }
 
 .combobox-group
