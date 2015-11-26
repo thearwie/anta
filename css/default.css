@@ -313,9 +313,8 @@ h1
   margin-top: 100px;
 }
 
-
-/* Page Nous Joindre*/
-.formulaireNousJoindre
+/* Formulaires Nous Joindre et Services*/
+.formulaireNousJoindre, .formulaireServices
 {
   width:100%;
   text-align: left;
@@ -323,19 +322,20 @@ h1
   color: #732876;
 }
 
+
 .titreFormulaire
 {
   font-size: 1.7em;
   margin-top: 20px;
 }
 
-.labelFormulaireNousJoindre
+.labelFormulaireNousJoindre, .labelFormulaireServices
 {
   font-size: 1.2em;
   margin-top: 16px; 
 }
 
-.spanNousJoindre,.infoDetail
+.spanNousJoindre,.infoDetail, .spanServices
 {
   color: #732876;
 }
