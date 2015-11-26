@@ -347,7 +347,7 @@ h3, .h3
 
 .img-produit
 {
-  border-bottom: none;
+  border-bottom: none !important;
 }
 
 .combobox-group
