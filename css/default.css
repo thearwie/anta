@@ -346,6 +346,11 @@ h3, .h3
   margin-right: 250px;
 }
 
+#label-categorie
+{
+  margin-right: 5px;
+}
+
 .combobox
 {
   width: 98% !important;
