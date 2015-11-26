@@ -42,12 +42,12 @@
 	
 	<div class="collection">
       <div class="row">
-        <div class="col-xs-3">
+        <div class="col-xs-4">
         </div>
-        <div class="col-xs-3 combobox-group">
+        <div class="col-xs-4 combobox-group">
             <label class="control-label">Classement</label>
             <div class="combobox">
-                <select class="combobox" name="classement" onchange="this.form.submit()">
+                <select class="form-control" name="classement" onchange="this.form.submit()">
                     <option value="">Choisir un classement</option>
                     <option value="pop">Popularité</option>
                     <option value="crois">Prix - moins élevé au plus élevé</option>
@@ -55,8 +55,8 @@
                 </select>
               </div>
           </div>
-      </div>
-        <div class="col-xs-3 combobox-group">
+      
+        <div class="col-xs-4 combobox-group">
             <label class="control-label">Catégorie</label>
             <div class="combobox">
                 <select class="form-control" name="categorie" onchange="this.form.submit()">

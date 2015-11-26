@@ -338,6 +338,11 @@ h3, .h3
   text-align: center !important;
 }
 
+.control-label
+{
+  float: left;
+}
+
 .combobox
 {
   width: 98% !important;
