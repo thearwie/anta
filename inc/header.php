@@ -21,10 +21,10 @@
   </head>
   <body>
     <header>
-    <?php /*
-      <div>
+    
+     <!-- <div> -->
         <a href='/' class='logo'></a>
-      </div>
+    <?php /*  </div>
       <div id="utilisateur">
         <ul>
           <li><a href='/anta/inscription.php'>S'inscrire</a></li>
