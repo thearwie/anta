@@ -320,10 +320,9 @@ h3
   margin-top: 100px;
 }
 
-<<<<<<< HEAD
+
 /* Formulaires Nous Joindre et Services*/
 .formulaireNousJoindre, .formulaireServices
-=======
 .produit
 {
   border-style: solid;
@@ -336,7 +335,6 @@ h3
 
 /* Page Nous Joindre*/
 .formulaireNousJoindre
->>>>>>> origin/master
 {
   width:100%;
   text-align: left;
