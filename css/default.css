@@ -365,7 +365,7 @@ h3, .h3
   margin-left: 2% !important;
 }
 
-.infos-produit-group
+.infos-produit-group, .infos-produit-group h3
 {
   padding: 0;
 }
