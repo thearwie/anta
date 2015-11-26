@@ -40,16 +40,20 @@
       </ol>
     </div>
 	
-  <form>
-     <select class="combobox-categorie">
-      <option value="bague">Bague</option>
-      <option value="boucleOreille">Boucle d'oreille</option>
-      <option value="bracelet">Bracelet</option>
-      <option value="collier">Collier</option>
-    </select> 
-  </form>
-  
 	<div class="collection">
+    <div class="form-group">
+        <label class="col-xs-3 control-label" onchange="this.form.submit()">Catégorie</label>
+        <div class="col-xs-5 combobox-categorie">
+            <select class="form-control" name="categorie">
+                <option value="tout">Tous les produits</option>
+                <option value="ba">Bague (BA)</option>
+                <option value="bo">Boucle d'oreille (BO)</option>
+                <option value="br">Bracelet(BR)</option>
+                <option value="co">Collier (CO)</option>
+            </select>
+        </div>
+    </div>
+  
       <!-- Projects Row -->
       <div class="row">
           <div class="col-md-4 portfolio-item produit">
