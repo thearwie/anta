@@ -329,6 +329,11 @@ h3, .h3
   padding-right: 20px;
 }
 
+.combobox-categorie
+{
+  text-align: right;
+}
+
 .produit
 {
   padding-bottom: 20px;
