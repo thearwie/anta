@@ -333,14 +333,15 @@ h3, .h3
   padding-right: 20px;
 }
 
-.combobox-categorie-group
+.combobox-group
 {
-  float: right;
+  text-align: center !important;
 }
 
-.combobox-categorie
+.combobox
 {
-  width: 300px !important;
+  width: 98% !important;
+  margin-left: 2% !important;
 }
 
 .produit
