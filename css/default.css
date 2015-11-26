@@ -366,7 +366,7 @@ h3, .h3
   margin-top: 16px; 
 }
 
-.spanNousJoindre,.infoDetail, .spanServices, .selectService
+.spanNousJoindre,.infoDetail, .spanServices, .selectService, .optionSelectService
 {
   color: #732876;
 }
