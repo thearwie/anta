@@ -367,12 +367,12 @@ h3, .h3
 
 .bouton-detail
 {
-  float: left !important;
+  width: 100%;
 }
 
 .prix
 {
-  float: right;
+  text-align: center !important;
 }
 
 .produit
