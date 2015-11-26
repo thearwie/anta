@@ -215,6 +215,13 @@ h1
    width: 100%;
 }
 
+h3
+{
+   font-size: 2.5em;
+   text-align: center;
+   font-color: #4B0082;
+}
+
 .button 
 {
   transition-duration: 0.4s;
@@ -320,8 +327,10 @@ h1
 .produit
 {
   border-style: solid;
-  border-width: 2px;
+  border-width: 1px;
   border-color: #696969;
+  border-collapse: collapse;
+  padding-bottom: 20px;
 }
 
 
