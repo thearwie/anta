@@ -179,6 +179,7 @@ footer ul li
 .partage
 {
   margin-top: 25px;
+  margin-left: 30px;
 }
 
 .copyright
@@ -204,7 +205,6 @@ footer ul li
  
   width: calc(100% - 20px);
 }
-
 
 h1
 {

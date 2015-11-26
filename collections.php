@@ -1,12 +1,12 @@
-<!DOCTYPE html>
+ï»¿<!DOCTYPE html>
 <!--
 /*******************************************************************************************************/
 /*                                                                                                     */
 /*  Fichier....................:  collections.php                                                      */
 /*  Type.......................:  Document PHP                                                         */
 /*  Titre......................:  Bijouterie Anta950                                                   */
-/*  Auteurs....................:  ©Michaël Bilodeau, 2015                                			         */
-/*  Date de création...........:  2015-11-19                                                           */
+/*  Auteurs....................:  Â©MichaÃ«l Bilodeau, 2015                                			         */
+/*  Date de crÃ©ation...........:  2015-11-19                                                           */
 /*  Date de mise en production.:                                                                       */
 /*                                                                                                     */
 /*******************************************************************************************************/
@@ -39,7 +39,8 @@
           </li>
       </ol>
     </div>
-
+	
+	<div class="collection">
       <!-- Projects Row -->
       <div class="row">
           <div class="col-md-4 portfolio-item">
@@ -157,5 +158,6 @@
           </div>
       </div>
       <!-- /.row -->
+    </div>
 </div>
 <?php include('/inc/footer.php')?>
