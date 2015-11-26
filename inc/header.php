@@ -24,7 +24,7 @@
       <div>
         <a href='/' class='logo'></a>
       </div>
-      <div>
+      <div id="utilisateur">
         <ul>
           <li><a href='/anta/inscription.php'>S'inscrire</a></li>
           <li><a href='/anta/creations.php'>Se connecter</a></li>
