@@ -74,19 +74,19 @@
       <div class="row">
           <div class="col-md-4 portfolio-item produit">
               <h2>Bague BA-0001</h2>
-              <img class="img-responsive" src="img/bague/BA-0001-1.jpg" alt="BA-0001-1">
+              <img class="img-responsive img-produit" src="img/bague/BA-0001-1.jpg" alt="BA-0001-1">
               <h3 class="prix">15,00 CAD$</h3>
               <button type="button" class="btn btn-primary bouton-detail" href="#">Détails</button>
           </div>
           <div class="col-md-4 portfolio-item produit">
               <h2>Boucle d'oreille BO-0002</h2>
-              <img class="img-responsive" src="img/boucleOreille/BO-0002-1.jpg" alt="BO-0002-1">
+              <img class="img-responsive img-produit" src="img/boucleOreille/BO-0002-1.jpg" alt="BO-0002-1">
               <h3 class="prix">15,00 CAD$</h3>
               <button type="button" class="btn btn-primary bouton-detail" href="#">Détails</button>
           </div>
           <div class="col-md-4 portfolio-item produit">
               <h2>Boucle d'oreille BO-0003</h2>
-              <img class="img-responsive" src="img/boucleOreille/BO-0003-1.jpg" alt="BO-0003-1">
+              <img class="img-responsive img-produit" src="img/boucleOreille/BO-0003-1.jpg" alt="BO-0003-1">
               <h3 class="prix">15,00 CAD$</h3>
               <button type="button" class="btn btn-primary bouton-detail" href="#">Détails</button>
           </div>
@@ -97,19 +97,19 @@
       <div class="row">
           <div class="col-md-4 portfolio-item produit">
               <h2>Bracelet BR-0007</h2>
-              <img class="img-responsive" src="img/bracelet/BR-0007-1.jpg" alt="BR-0007-1">
+              <img class="img-responsive img-produit" src="img/bracelet/BR-0007-1.jpg" alt="BR-0007-1">
               <h3 class="prix">15,00 CAD$</h3>
               <button type="button" class="btn btn-primary bouton-detail" href="#">Détails</button>
           </div>
           <div class="col-md-4 portfolio-item produit">
               <h2>Bracelet BR-0003</h2>
-              <img class="img-responsive" src="img/bracelet/BR-0003-1.jpg" alt="BR-0003-1">
+              <img class="img-responsive img-produit" src="img/bracelet/BR-0003-1.jpg" alt="BR-0003-1">
               <h3 class="prix">15,00 CAD$</h3>
               <button type="button" class="btn btn-primary bouton-detail" href="#">Détails</button>
           </div>
           <div class="col-md-4 portfolio-item produit">
               <h2>Collier CO-0001</h2>
-              <img class="img-responsive" src="img/collier/CO-0001-1.jpg" alt="CO-0001-1">
+              <img class="img-responsive img-produit" src="img/collier/CO-0001-1.jpg" alt="CO-0001-1">
               <h3 class="prix">15,00 CAD$</h3>
               <button type="button" class="btn btn-primary bouton-detail" href="#">Détails</button>
           </div>
@@ -119,19 +119,19 @@
       <div class="row">
           <div class="col-md-4 portfolio-item produit">
               <h2>Bracelet BR-0001</h2>
-              <img class="img-responsive" src="img/bracelet/BR-0001-1.jpg" alt="BR-0001-1">
+              <img class="img-responsive img-produit" src="img/bracelet/BR-0001-1.jpg" alt="BR-0001-1">
               <h3 class="prix">15,00 CAD$</h3>
               <button type="button" class="btn btn-primary bouton-detail" href="#">Détails</button>
           </div>
           <div class="col-md-4 portfolio-item produit">
               <h2>Bracelet BR-007</h2>
-              <img class="img-responsive" src="img/bracelet/BR-0007-1.jpg" alt="BR-0007-1">
+              <img class="img-responsive img-produit" src="img/bracelet/BR-0007-1.jpg" alt="BR-0007-1">
               <h3 class="prix">15,00 CAD$</h3>
               <button type="button" class="btn btn-primary bouton-detail" href="#">Détails</button>
           </div>
           <div class="col-md-4 portfolio-item produit">
               <h2>Bracelet BR-0003</h2>
-              <img class="img-responsive" src="img/bracelet/BR-0003-1.jpg" alt="BR-0003">
+              <img class="img-responsive img-produit" src="img/bracelet/BR-0003-1.jpg" alt="BR-0003">
               <h3 class="prix">15,00 CAD$</h3>
               <button type="button" class="btn btn-primary bouton-detail" href="#">Détails</button>
           </div>
