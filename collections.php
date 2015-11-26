@@ -79,6 +79,10 @@
               <a href="#">
                   <img class="img-responsive" src="img/bague/BA-0001-1.jpg" alt="BA-0001-1">
               </a>
+              <div>
+                <button type="button" class="btn btn-primary">Détails</button>
+                <h3 class="prix">15,00 $</h3>
+              </div>
           </div>
           <div class="col-md-4 portfolio-item produit">
               <h2>

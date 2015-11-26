@@ -365,6 +365,16 @@ h3, .h3
   margin-left: 2% !important;
 }
 
+.btn-detail
+{
+  float: left;
+}
+
+.prix
+{
+  float: right;
+}
+
 .produit
 {
   padding-bottom: 20px;
