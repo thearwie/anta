@@ -321,8 +321,7 @@ h3
 }
 
 <<<<<<< HEAD
-/* Formulaires Nous Joindre et Services*/
-.formulaireNousJoindre, .formulaireServices
+
 =======
 .produit
 {
@@ -334,8 +333,8 @@ h3
 }
 
 
-/* Page Nous Joindre*/
-.formulaireNousJoindre
+/* Formulaires Nous Joindre et Services*/
+.formulaireNousJoindre, .formulaireServices
 >>>>>>> origin/master
 {
   width:100%;
