@@ -23,7 +23,7 @@
 
 <!-- VIEW -->
 
-<?php include('/inc/header.php');?>
+<?php include('inc/header.php');?>
 <div class='page'>
 
     <div class = "ism-slider" data-play_type="loop" data-interval="8000">
@@ -44,7 +44,6 @@
             <div class="descriptionTroupe">
                 <span class="infoLabel">Anta</span>
                 <span class="infoData">
-                    Après 
                 </span>
             </div>
 
@@ -53,4 +52,4 @@
             </div>
     </div>
 </div>
-<?php include('/inc/footer.php')?>
+<?php include('inc/footer.php')?>
