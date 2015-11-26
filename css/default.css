@@ -90,8 +90,9 @@ header > a {
   transform: translateY(-50%);
 }
 
-.utilisateur {
+#utilisateur {
   float: right;
+  display: inline-block;
 }
 
 body footer, body header {
