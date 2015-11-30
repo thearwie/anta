@@ -1,6 +1,11 @@
 ﻿<html>
   <head>
     <title>Bijouterie Anta950</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Site de vente de la bijouterie avec exposition des créations">
+    <meta name="keywords" content="Bijou, bague, collier, boucle d'oreille, bracelet">
+    <meta name="author" content="Michaël Bilodeau, Paola Carranza, Maxime Viau">
+    
     <link rel="stylesheet" type="text/css"  href="css/banner.css" />
     <link rel="stylesheet" type="text/css"  href="css/default.css" />
     <link rel="stylesheet" type="text/css"  href="css/bootstrap.min.css" />
