@@ -1,4 +1,5 @@
-﻿<html>
+﻿<!DOCTYPE html>
+<html>
   <head>
     <title>Bijouterie Anta950</title>
     <meta charset="UTF-8">
@@ -32,8 +33,8 @@
       </div>
       <div id="utilisateur">
         <ul>
-          <li><a href='/anta/inscription.php'>S'inscrire</a></li>
-          <li><a href='/anta/'>Se connecter</a></li>
+          <li><a href='/inscription.php'>S'inscrire</a></li>
+          <li><a href='/'>Se connecter</a></li>
         </ul>
       </div>
       <div>
