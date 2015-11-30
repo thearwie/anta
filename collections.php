@@ -147,7 +147,7 @@
                   <li>
                       <a href="#">&laquo;</a>
                   </li>
-                  <li class="active">
+                  <li class="active page-active">
                       <a href="#">1</a>
                   </li>
                   <li>

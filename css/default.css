@@ -10,7 +10,7 @@ fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed, 
 figure, figcaption, footer, header,
-menu, nav, output, ruby, section, summary,
+menu, nav, output, ruby, section, summFary,
 time, mark, audio, video {
 	margin: 0;
 	padding: 0;
@@ -68,9 +68,12 @@ body
   background-image: url('../img/logo.png');
   background-repeat: no-repeat; 
   width: 320px;
-  height: 324px;
+  height: 344px;
   float: left;
   margin-left: 40px;
+  margin-top: 30px;
+  padding-top:20px;
+  text-align:center;
 }
 
 header
@@ -90,11 +93,6 @@ header > a {
   transform: translateY(-50%);
 }
 
-#utilisateur {
-  float: right;
-  display: inline-block;
-}
-
 body footer, body header {
   background-color: #FFFFFF;
   border-radius: 5px;
@@ -111,7 +109,7 @@ header ul a {
   text-decoration: none;
   color: #742775;
   display: block;
-  padding-top: 120px;
+  padding-top: 60px;
   padding-bottom: 5px;
   width: 100%;
   font-size: 25px;
@@ -125,7 +123,7 @@ header ul li
 {
   float: left;
   list-style: outside none none;
-  margin: 30px;
+  margin: 60px;
   margin-left: 35px;
   margin-right: 35px;
   text-align: center;
@@ -149,7 +147,7 @@ nav
 nav > a {
   display: block;
   float: left;
-  margin-top: 32px;
+  margin-top: 28px;
 }
 /* footer */
 footer 
@@ -183,6 +181,53 @@ footer ul li
   float: left;
 }
 
+/* MENU */
+.menuLogo
+{
+  float:left;
+}
+
+.menuLinks
+{
+  float:right;
+  height:100%;
+}
+
+
+.menuUtilisateur
+{
+  display: inline-block;
+  float:right;
+  height:30%;
+}
+
+.linkMenuUtilisateur
+{
+  font-size: 0.9em;
+  padding:0;
+}
+
+.optionMenuUtilisateur 
+{
+  margin-left: 5px;
+  margin-right: 5px;
+  border-right: 1px solid #9B9A9A;
+  padding-right:10px;
+  
+}
+
+.optionMenuUtilisateur:last-child 
+{
+  border-right:none;
+}
+
+.menuUtilisateur>ul
+{
+  margin-right: 16px;
+}
+
+
+/* */
 .partage
 {
   margin-top: 25px;
@@ -407,9 +452,9 @@ h3, .h3
 
 
 /* Formulaires Nous Joindre et Services*/
-.formulaireNousJoindre, .formulaireServices
+.formulaireNousJoindre, .formulaireServices, .formulaireInscription
 {
-  width:100%;
+  width:415px;
   text-align: left;
   margin-left:60px; 
   color: #732876;
@@ -421,25 +466,82 @@ h3, .h3
   margin-top: 20px;
 }
 
-.labelFormulaireNousJoindre, .labelFormulaireServices
+.labelFormulaireNousJoindre, .labelFormulaireServices, .labelFormulaireInscription
 {
   font-size: 1.2em;
   margin-top: 16px; 
 }
 
-.spanNousJoindre,.infoDetail, .spanServices, .selectService, .optionSelectService
+.spanNousJoindre,.infoDetail, .spanServices, .selectService, .optionSelectService, .spanInscription
 {
   color: #732876;
 }
 
-.message
-{
-  margin-bottom: 20px;
-}
-
 .buttonEnvoyer
 {
-  padding-left: 380px;
+  text-align:right;
+  margin-top: 30px;
+  -webkit-margin-start: 380px; 
+   
+}
+
+.spanServicesInformation
+ {
+   text-align:justify;
+   color: #732876;
+
+ }        
+ 
+.informationFormulaire
+{
+  padding-bottom: 30px;
+}
+
+/* Formulaire inscription  */
+
+.adresse2, 
+{
+  width: 100%;
+}
+
+.adresse3, .adresse4
+{
+  width: 100%;
+  float:left;
+}
+
+.codePostale
+{
+ width: 39%; 
+ float:left;
+}
+
+.ville
+{
+  width:61%;
+  float:right;
+  
+}
+
+.selectProvince, .selectPays
+{
+  width: 276px;
+  font-size: 1.2em;
+  color: #732876;
+}
+
+.selectVille
+{
+  font-size: 1.2em;
+  color: #732876;
+}
+
+.buttonEnvoyerInscription
+{
+   width: 100%;
+   float: right;
+   margin-top: 40px;
+   margin-bottom: 60px;
 }
 
 

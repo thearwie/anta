@@ -1,12 +1,6 @@
-﻿<!DOCTYPE html>
-<html>
+﻿<html>
   <head>
     <title>Bijouterie Anta950</title>
-    <meta charset="UTF-8">
-    <meta name="description" content="Site de vente de la bijouterie avec exposition des créations">
-    <meta name="keywords" content="Bijou, bague, collier, boucle d'oreille, bracelet">
-    <meta name="author" content="Michaël Bilodeau, Paola Carranza, Maxime Viau">
-    
     <link rel="stylesheet" type="text/css"  href="css/banner.css" />
     <link rel="stylesheet" type="text/css"  href="css/default.css" />
     <link rel="stylesheet" type="text/css"  href="css/bootstrap.min.css" />
@@ -28,18 +22,20 @@
   <body>
     <header>
     
-      <div>
-        <a href='/' class='logo'></a>
+      <div class = "menuLogo">
+        <a href='index.php' class='logo'></a>
       </div>
-      <div id="utilisateur">
-        <ul>
-          <li><a href='/inscription.php'>S'inscrire</a></li>
-          <li><a href='/'>Se connecter</a></li>
-        </ul>
-      </div>
-      <div>
-        <nav>
-          <?php include('menu.php'); ?>
-        </nav>
+      <div class = "menuLinks">
+          <div class = "menuUtilisateur">
+            <ul>
+              <li class = "optionMenuUtilisateur"><a  class = "linkMenuUtilisateur" href='formulaireInscription.php'>S'inscrire</a></li>
+              <li class = "optionMenuUtilisateur"><a  class = "linkMenuUtilisateur" href='/anta/'>Se connecter</a></li>
+            </ul>
+          </div>
+          <div class = "menuPrincipal">
+            <nav>
+              <?php include('menu.php'); ?>
+            </nav>
+          </div>
       </div>
     </header>
