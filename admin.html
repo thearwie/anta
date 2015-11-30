@@ -16,8 +16,13 @@
   /*                                                                                                     */
   /*******************************************************************************************************/
   -->
-
   <head>
+    <title>connexion</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Site de vente de la bijouterie avec exposition des créations">
+    <meta name="keywords" content="Bijou, bague, collier, boucle d'oreille, bracelet">
+    <meta name="author" content="Michaël Bilodeau, Paola Carranza, Maxime Viau">
+   
   </head>
   <body>
 
@@ -26,73 +31,21 @@
     <!-- VIEW -->
 
     <div class='page'>
-    <h1>Gestion des produits</h1>
+    <h1>Connexion</h1>
 
     <form action="">
 
-    <label>Action</label>
+    <label>Utilisateur</label>
     <br/>
-    <select>
-      <option value="ajouter" selected>Ajouter</option>
-      <option value="modifier/supprimer">Modifier/Supprimer</option>
-    </select>
+    <input type="text" name="username">
+    <br/><br/>
+
+    <label>Mot de passe</label>
     <br/>
-    <br/>
-    <ul style="display:flex; list-style:none;">
-      <li><input type="radio" name="produit" value="bague">Bague</li><br/>
-      <li><input type="radio" name="produit" value="collier">Collier</li><br/>
-      <li><input type="radio" name="produit" value="boucleOreille">Boucle d'oreille</li><br/>
-      <li><input type="radio" name="produit" value="bracelet">Bracelet</li><br/>
-    </ul>
-    <br/>
+    <input type="password" name="password">
+    <br/><br/>
     
-    <label>Code</label>
-    <br/>
-    <input type="text" name="code">
-    <br/><br/>
-
-    <label>Image</label>
-    <br/>
-
-    <label>Matériel principal</label>
-    <br/>
-    <select>
-      <option value="Argent 950" selected>Argent 950</option>
-      <option value="Argent 925">Argent 925</option>
-      <option value="or 14k">Or 14k</option>
-    </select>
-    <br/><br/>
-
-    <label>Autres matériaux</label>
-    <br/>
-    <select size="3" multiple>
-      <option value="diamand">Diamand</option>
-      <option value="rubis">Rubis</option>
-      <option value="zircon">zircon</option>
-    </select>
-    <br/><br/>
-
-    <div style="padding: 10px; padding-left: 0px;">
-      <div style="float:left;">
-        <label>Prix ($)</label>
-        <br/>
-        <input type="text" name="prix">
-        <br/>
-        <br/>
-      </div>
-      <div>
-        <label>Produit en vente?</label>
-        <br/>
-        <input type="radio" name="enVente" value="oui">Oui
-        <input type="radio" name="enVente" value="non">Non<br>
-      </div>
-    </div>
-    <br/>
-
-    <label>Quantité</label>
-    <br/>
-    <input type="number" name="quantite" value="0">
-
+    <input type="button" value="connecter">
     </form>
 
     </div>
