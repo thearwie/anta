@@ -25,21 +25,14 @@
 
 <?php include('/inc/header.php')?>
 
-<?php
-  $connexionDB = mysql_connect("127.0.0.1", "viauma", "rurove") or die ("Couldn't connect to server");
-  
-  mysql_select_db("viauma",  $connexionDB) or die ("Couldn't select database");
-  
-  //$query = "INSERT INTO utilisateur ()"
-  
-  
-?> 
-
-
 
 <div class='page'>
 
+
   <div class= "formulaireInscription">
+  
+  <form name="formulaireInscription" action = "model/enregistrerFormulaire.php" method="post">
+  
      <div class = "titreFormulaire">
        <span class="spanInscription">Créer un profil</span>	
      </div>
@@ -51,7 +44,7 @@
           <span class="spanInscription">Prénom</span>
         </div>	
         <div class = "input">
-          <input type="text" id="txtPrenom" size="40" />
+          <input type="text" id="txtPrenom" name = "txtPrenom" size="40" />
         </div>
       </div>
       <div class="nom">
@@ -59,7 +52,7 @@
           <span class="spanInscription">Nom</span>
         </div>	
         <div class = "input">
-          <input type="text" id="txtNom" size="40" />
+          <input type="text" id="txtNom"  name = "txtNom" size="40" />
         </div>
       </div>
       <div class="courriel">
@@ -67,7 +60,7 @@
           <span class="spanInscription">Courriel</span>
           </div>	
         <div class = "input">
-        <input type="text" id="txtCourriel" size="40" />
+        <input type="text" id="txtCourriel" name = "txtCourriel" size="40" />
         </div>
       </div>
       <div class="motPasse">
@@ -75,7 +68,7 @@
           <span class="spanInscription">Mot de passe</span>
           </div>	
         <div class = "input">
-        <input type="password" id="txtPassword" size="40" />
+        <input type="password" id="txtPassword" name = "txtPassword" size="40" />
         </div>
       </div>
       <div class="confirmationMotPasse">
@@ -91,7 +84,7 @@
           <span class="spanInscription">Adresse</span>
         </div>	
         <div class = "input">
-          <input type="text" id="txtAdresse" size="40" />
+          <input type="text" id="txtAdresse" name = "txtAdresse" size="40" />
         </div>
       </div>
       <div class="adresse2">
@@ -100,7 +93,7 @@
             <span class="spanInscription">Code Postale</span>
           </div>	
           <div class = "input">
-            <input type="text" id="txtCodePostale" size="12" />
+            <input type="text" id="txtCodePostale" name = "txtCodePostale" size="12" />
           </div>
         </div>
         <div class="ville">
@@ -108,7 +101,7 @@
             <span class="spanServices">Ville</span>
           </div>	
           <div>
-            <select class = "selectVille" name="select">
+            <select class = "selectVille" name="selectVille">
               <option class="optionSelectInscription" value="value1" selected>Sherbrooke</option> 
               <option class="optionSelectInscription" value="value2">Granby</option>
             </select>
@@ -138,6 +131,12 @@
       <div class = "buttonEnvoyerInscription">
         <a class="button">Envoyer</a>
       </div>
+      
+    </form>
+      
     </div>
   </div>
 <?php include('/inc/footer.php')?>
+
+
+
