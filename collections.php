@@ -40,98 +40,10 @@
       </ol>
     </div>
     
-    <?php
- $domainName = "webc.cegepsherbrooke.qc.ca";
- $userName = "viauma";
- $password = "rurove";
- $dbName = "viauma";
-
- $test = 0;
- $link = mysqli_connect($domainName, $userName, $password, $dbName);
-
- /* Vérification de la connexion */
- if (mysqli_connect_errno())
- {
-   printf("Échec de la connexion : %s\n", mysqli_connect_error());
-   exit();
- }
-
- if($resultat = mysqli_query($link, "select * from produit"))
- { 
-   include('/classe/produit.php');
-   $nbLigne = mysqli_num_rows($resultat);
-   $mesProduits[$nbLigne] = new Produit();
-   $iterateur = 0;
-   while ($row = mysqli_fetch_array($resultat, MYSQLI_BOTH))
-   { 
-      $mesProduits[$iterateur] = new Produit();
-      $idTypeProduit = $row[7];
-      if($resultat2 = mysqli_query($link, "select * from type_produit where id = " . $idTypeProduit))
-      {
-        $row2 = mysqli_fetch_array($resultat2, MYSQLI_BOTH);
-      }
-      $mesProduits[$iterateur]->init($row[0], $row[1], $row[2], $row[3], $row[4], $row[5], $row[6], $row2[0], $row2[1]);
-      $iterateur ++;
-   } 
-   
-   echo "<div class='collection'>";
-
-   echo "<div class='row'>"
-   echo   "<div class='col-xs-4'>"
-   echo   "</div>"
-   echo   "<div class='col-xs-4 combobox-group'>"
-   echo     "<label class='control-label h3'>Classement</label>"
-   echo     "<div class='combobox'>"
-   echo       "<select class='form-control' name='classement' onchange='this.form.submit()'>"
-   echo         "<option value=''>Choisir un classement</option>"
-   echo         "<option value='pop'>Popularité</option>"
-   echo         "<option value='crois'>Prix - moins élevé au plus élevé</option>"
-   echo         "<option value='dec'>Prix - plus élevé au moins élevé</option>"
-   echo       "</select>"
-   echo     "</div>"
-   echo "</div>"
-      
-   echo "<div class='col-xs-4 combobox-group'>"
-   echo   "<label class='control-label h3'>Catégorie</label>"
-   echo   "<div class='combobox'>"
-   echo     "<select class='form-control' name='categorie' onchange='this.form.submit()'>"
-   echo       "<option value='tout'>Tous les produits</option>"
-   echo       "<option value='ba'>Bague (BA)</option>"
-   echo       "<option value='bo'>Boucle d\'oreille (BO)</option>"
-   echo       "<option value='br'>Bracelet (BR)</option>"
-   echo       "<option value='co'>Collier (CO)</option>"
-   echo     "</select>"
-   echo   "</div>"
-   echo "</div>"
-   echo "</div>"
-   
-   $nbLigneParPage = 3;
-   $nbProduitParLigne = 3;
-   for($i=0; $i<$nbLigneParPage; $i++) 
-   {
-      echo "<div class='row'>"
-      for($y=0; $y<$nbProduitParLigne; $y++)
-      {
-        $iterateur = 3 * $i + $y;
-        echo "<div class='col-md-4'>"
-        echo "<h2>" . $mesProduits[$iterateur]->getNom() . "</h2>"
-        echo "<img class='img-responsive img-produit' src='img/' . strtolower($mesProduits[$iterateur]->getTypeProduit()->getNom()) . '/' . $mesProduits[$iterateur]->getId() . '.jpg' alt='BA-0001-1'>"
-        echo "<h3 class='prix'>15,00 CAD$</h3>"
-        echo "<button type='button' class='btn btn-primary bouton-detail' href='#'>Détails</button>"
-        echo "</div>"
-      }
-      echo "</div>"
-   }
-    echo "</div>";
-    mysqli_free_result($result);
-  }
-  
-   mysqli_close($link);
-   
- ?>
+    <?php include('/inc/genererCollection.php');?>
 
       <!-- Projects Row -->
-      <div class="row">
+      <!-- <div class="row">
           <div class="col-md-4">
               <h2>Bague BA-0001</h2>
               <img class="img-responsive img-produit" src="img/bague/BA-0001-1.jpg" alt="BA-0001-1">
@@ -150,11 +62,11 @@
               <h3 class="prix">15,00 CAD$</h3>
               <button type="button" class="btn btn-primary bouton-detail" href="#">Détails</button>
           </div>
-      </div>
+      </div> -->
       <!-- /.row -->
 
       <!-- Projects Row -->
-      <div class="row">
+      <!-- <div class="row">
           <div class="col-md-4">
               <h2>Bracelet BR-0007</h2>
               <img class="img-responsive img-produit" src="img/bracelet/BR-0007-1.jpg" alt="BR-0007-1">
@@ -173,10 +85,10 @@
               <h3 class="prix">15,00 CAD$</h3>
               <button type="button" class="btn btn-primary bouton-detail" href="#">Détails</button>
           </div>
-      </div>
+      </div> -->
 
       <!-- Projects Row -->
-      <div class="row">
+      <!-- <div class="row">
           <div class="col-md-4">
               <h2>Bracelet BR-0001</h2>
               <img class="img-responsive img-produit" src="img/bracelet/BR-0001-1.jpg" alt="BR-0001-1">
@@ -195,7 +107,7 @@
               <h3 class="prix">15,00 CAD$</h3>
               <button type="button" class="btn btn-primary bouton-detail" href="#">Détails</button>
           </div>
-      </div>
+      </div> -->
       <!-- /.row -->
 
       <hr/>
