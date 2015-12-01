@@ -17,14 +17,26 @@
 -->
 
 <!-- CONTROLLER -->
-<?php
-  
+<?php 
   //$page = 'formulaire';
 ?>
 
 <!-- VIEW -->
 
 <?php include('/inc/header.php')?>
+
+<?php
+  $connexionDB = mysql_connect("127.0.0.1", "viauma", "rurove") or die ("Couldn't connect to server");
+  
+  mysql_select_db("viauma",  $connexionDB) or die ("Couldn't select database");
+  
+  //$query = "INSERT INTO utilisateur ()"
+  
+  
+?> 
+
+
+
 <div class='page'>
 
   <div class= "formulaireInscription">
