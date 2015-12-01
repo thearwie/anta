@@ -1,6 +1,6 @@
 ﻿<?php
   echo "Hola0";
-  if(isset($_POST['txtPrenom']) && !empty($_POST['txtPrenom']) && isset($_POST['txtNom']) && !empty($_POST['txtNom']))
+ /* if(isset($_POST['txtPrenom']) && !empty($_POST['txtPrenom']) && isset($_POST['txtNom']) && !empty($_POST['txtNom']))
   {
     echo "Hola1";
     $connexionDB = mysql_connect("webc.cegepsherbrooke.qc.ca", "viauma", "rurove") or die ("Couldn't connect to server");
@@ -21,5 +21,5 @@
     
     mysql_close($connexionDB);
   
-  }
-?> 
+  }*/
+?>
