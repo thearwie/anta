@@ -6,7 +6,7 @@
 
     function __construct()
     {
-      $this->setId("");
+      $this->setId(0);
       $this->setNom("");
     }
 

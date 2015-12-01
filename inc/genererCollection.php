@@ -20,28 +20,36 @@ function connectionBD()
 function getAllProduit($idTypeProduit = 0)
 {
   if($idTypeProduit == 0)
+  {
     $sql = "select * from produit";
+  }
   else
+  {
     $sql = "select * from produit where id_type_produit = " . $idTypeProduit;
+  }
   
  if($resultat = mysqli_query($link, $sql))
  { 
    include('/classe/produit.php');
    include('/classe/type_produit.php');
    $nbLigne = mysqli_num_rows($resultat);
-   $mesProduits[$nbLigne] = new Produit();
-   $iterateur = 0;
+   $mesProduits = array();
    while ($row = mysqli_fetch_array($resultat, MYSQLI_BOTH))
    { 
-      $mesProduits[$iterateur] = new Produit();
+      $produit = new Produit();
       $idTypeProduit = $row[7];
       if($resultat2 = mysqli_query($link, "select * from type_produit where id = " . $idTypeProduit))
       {
         $row2 = mysqli_fetch_array($resultat2, MYSQLI_BOTH);
       }
-      $mesProduits[$iterateur]->init($row[0], $row[1], $row[2], $row[3], $row[4], $row[5], $row[6], $row2[0], $row2[1]);
-      $iterateur ++;
+      $produit->init($row[0], $row[1], $row[2], $row[3], $row[4], $row[5], $row[6], $row2[0], $row2[1]);
+      array_push($mesProduits, $produit);
    }
+   mysqli_free_result($resultat);
+   mysqli_free_result($resultat2);
+   
+   mysqli_close($link);
+   
    return $mesProduits;
  }
 }
@@ -92,16 +100,12 @@ function getAllProduit($idTypeProduit = 0)
         echo "<div class='col-md-4'>";
         echo    "<h2>" . $mesProduits[$iterateur]->getNom() . "</h2>";
         echo    "<img class='img-responsive img-produit' src='img/" . strtolower($mesProduits[$iterateur]->getTypeProduit()->getNom()) . "/" . $mesProduits[$iterateur]->getId() . ".jpg' alt='" . $mesProduits[$iterateur]->getId() . "'>";
-        echo    "<h3 class='prix'>" . $mesProduits[$iterateur]->getPrix() . " CAD$ </h3>";
+        echo    "<h3 class='prix'>" . $mesProduits[$iterateur]->getPrix() . " CAD$</h3>";
         echo    "<button type='button' class='btn btn-primary bouton-detail' href='#'>Détails</button>";
         echo "</div>";
       }
       echo "</div>";
    }
     echo "</div>";
-    
-   mysqli_free_result($result);
-  
-   mysqli_close($link);
 }
  ?>

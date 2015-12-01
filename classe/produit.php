@@ -71,7 +71,7 @@
     
     function setTypeProduit($idTypeProduit, $nomTypeProduit)
     {
-      $this->itypeProduit->init($idTypeProduit, $nomTypeProduit);
+      $this->typeProduit->init($idTypeProduit, $nomTypeProduit);
     }
     
     function getId()
