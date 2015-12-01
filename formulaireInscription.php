@@ -37,7 +37,7 @@
        <span class="spanInscription">Créer un profil</span>	
      </div>
      <div class = "label">
-       <span class="infoDetail">* Tous les champs sont obligatoires</span>
+       <span class="infoDetail">** Tous les champs sont obligatoires</span>
       </div>
       <div class="prenom">
         <div class = "labelFormulaireInscription">
