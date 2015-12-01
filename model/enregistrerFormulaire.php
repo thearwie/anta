@@ -1,4 +1,4 @@
-<?php
+﻿<?php
   
   if(isset($_POST['txtPrenom']) && !empty($_POST['txtPrenom']) && isset($_POST['txtNom']) && !empty($_POST['txtNom']))
   {
