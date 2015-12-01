@@ -1,4 +1,3 @@
-
 <?php
   
   if(isset($_POST['txtPrenom']) && !empty($_POST['txtPrenom']) && isset($_POST['txtNom']) && !empty($_POST['txtNom']))
@@ -8,8 +7,8 @@
     
     mysql_select_db("viauma",  $connexionDB) or die ("Couldn't select database");
     
-    $query = "INSERT INTO utilisateur (id, nom, prenom, courriel, motPasse, adresse, codePostal, infolet{}tre, idVille ) 
-              VALUES ('10001', '$_POST['txtPrenom']', '$_POST['txtNom']')";
+    $query = "INSERT INTO utilisateur (id, nom, prenom, courriel, motPasse, adresse, codePostal, infolettre, idVille ) 
+              VALUES ('10001', '$_POST['txtPrenom']', '$_POST['txtNom']', '', '', '', '', 0, 1)";
     
     if(!mysql_query($query, $connexionDB))
     {
