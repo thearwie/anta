@@ -9,7 +9,7 @@
   $infolettre = '0';
   $ville = '10000'; 
  
-   if( ($prenom != '') && ($nom != '') && ($courriel != '') && ($password != '') && ($adresse != '') && ($codePostal != ''))
+   if( empty($prenom) || empty($nom) || empty($courriel) || empty($password) || empty($adresse) || empty($codePostal))
    {
     $connexionDB = mysql_connect("webc.cegepsherbrooke.qc.ca", "viauma", "rurove") or die ("Couldn't connect to server");
     
