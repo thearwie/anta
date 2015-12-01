@@ -57,7 +57,7 @@
           </div>
       
         <div class="col-xs-4 combobox-group">
-            <label id="label-categorie" class="control-label h3">Catégorie</label>
+            <label class="control-label h3">Catégorie</label>
             <div class="combobox">
                 <select class="form-control" name="categorie" onchange="this.form.submit()">
                     <option value="tout">Tous les produits</option>
