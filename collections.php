@@ -39,6 +39,50 @@
           </li>
       </ol>
     </div>
+    
+<?php
+ $domainName = "webc.cegepsherbrooke.qc.ca";
+ $userName = "viauma";
+ $password = "rurove";
+ $dbName = "viauma";
+
+ $test = 0;
+ $link = mysqli_connect($domainName, $userName, $password, $dbName);
+
+ /* Vérification de la connexion */
+ if (mysqli_connect_errno())
+ {
+   printf("Échec de la connexion : %s\n", mysqli_connect_error());
+   exit();
+ }
+
+ if ($resultat = mysqli_query($link, "select * from produit"))
+ { 
+   include("classe/produit.php");
+   $nbLigne = mysqli_num_rows($resultat);
+   $mesProduits[nbLigne] = new Produit();
+   $iterateur = 0;
+   while ($row = mysqli_fetch_array($resultat, MYSQLI_BOTH))
+   { 
+      $mesProduits[$iterateur] = new Produit();
+      $mesProduits[$iterateur]->init($row[0], $row[1], $row[2], $row[3], $row[4], $row[5]);
+      $iterateur ++;
+   } 
+   
+   echo "<form id='form_affiches' action='production_detaillee.php' method='post'>";
+
+   for($i=$nbLigne-1; $i>=0; $i--) 
+   { 
+      $value = $mesProductions[$i]->getId();
+      echo "<input class='img_affiche' type='image' name='id' src='img/" . $mesProductions[$i]->getSrcImage() . "' alt='Affiche de production' onclick='submit' value='$value'/>";
+   }
+    echo "</form>";
+    mysqli_free_result($result);
+  }
+  
+   mysqli_close($link);
+   
+ ?>
 	
 	<div class="collection">
       <div class="row">
@@ -63,7 +107,7 @@
                     <option value="tout">Tous les produits</option>
                     <option value="ba">Bague (BA)</option>
                     <option value="bo">Boucle d'oreille (BO)</option>
-                    <option value="br">Bracelet(BR)</option>
+                    <option value="br">Bracelet (BR)</option>
                     <option value="co">Collier (CO)</option>
                 </select>
               </div>
