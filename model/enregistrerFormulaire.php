@@ -7,7 +7,7 @@
   $adresse = $_POST['txtAdresse']; 
   $codePostal = $_POST['txtCodePostale']; 
   $infolettre = '0';
-  $ville = '1'; 
+  $ville = '10000'; 
  
  
     $connexionDB = mysql_connect("webc.cegepsherbrooke.qc.ca", "viauma", "rurove") or die ("Couldn't connect to server");
