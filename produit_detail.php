@@ -1,0 +1,88 @@
+ï»¿<!DOCTYPE html>
+<!--
+/*******************************************************************************************************/
+/*                                                                                                     */
+/*  Fichier....................:  produit_detail.php                                                   */
+/*  Type.......................:  Document PHP                                                         */
+/*  Titre......................:  Bijouterie Anta950                                                   */
+/*  Auteurs....................:  ©Michaël Bilodeau, 2015                                			         */
+/*  Date de création...........:  2015-12-01                                                           */
+/*  Date de mise en production.:                                                                       */
+/*                                                                                                     */
+/*******************************************************************************************************/
+/*                                                                                                     */
+/*  - Page principale du site                                                                          */
+/*                                                                                                     */
+/*******************************************************************************************************/
+-->
+<!-- CONTROLLER -->
+<?php
+
+  $page = 'produit';
+?>
+
+<!-- VIEW -->
+
+<?php include('/inc/header.php');?>
+<div class='page'>
+    
+    <div class="detail-produit">
+    
+      <div class="row">
+        <div class="col-md-4">
+          <h1 class="titre-produit">Bracelet BR-0003</h1>
+          <img class="img-responsive img-produit" src="img/bracelet/BR-0003-1.jpg" alt="BR-0003-1">
+        </div>
+        <div class="col-md-8">
+          <div class="row">
+            <div class="col-sm-4">
+              <label></label>
+            </div>
+            <div class="col-sm-8">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-4">
+              <input class="quantite" type="number" name="quantity" value="0" min="0" max="5" />
+            </div>
+            <div class="col-sm-8">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-4">
+              <div class='col-xs-4 combobox-group'>
+                <label class='control-label h3'>Taille</label>
+                <div class='combobox'>
+                <select class='form-control' name='taille' onchange='this.form.submit()'>
+                  <option value=''>Choisir un la taille</option>
+                  <option value='52'>52</option>
+                  <option value='54'>54</option>
+                  <option value='56'>56</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-sm-8">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-4">
+            </div>
+            <div class="col-sm-8">
+            </div>
+          </div>
+          <div class="row">
+          
+          </div>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-md-4">
+        </div>
+        <div class="col-md-8">
+        </div>
+      </div>
+    </div>
+    
+</div>
+<?php include('/inc/footer.php')?>

@@ -19,6 +19,8 @@ function connectionBD()
 
 function getAllProduit($idTypeProduit = 0)
 {
+  $link = connectionBD();
+  
   if($idTypeProduit == 0)
   {
     $sql = "select * from produit";
@@ -34,7 +36,7 @@ function getAllProduit($idTypeProduit = 0)
    include('/classe/type_produit.php');
    $nbLigne = mysqli_num_rows($resultat);
    $mesProduits = array();
-   while ($row = mysqli_fetch_array($resultat, MYSQLI_BOTH))
+   while($row = mysqli_fetch_array($resultat, MYSQLI_BOTH))
    { 
       $produit = new Produit();
       $idTypeProduit = $row[7];
@@ -57,37 +59,6 @@ function getAllProduit($idTypeProduit = 0)
  function afficherCollection($idTypeProduit)
  {
    $mesProduits = getAllProduit($idTypeProduit);
-  
-   echo "<div class='collection'>";
-
-   echo   "<div class='row'>";
-   echo     "<div class='col-xs-4'>";
-   echo     "</div>";
-   echo     "<div class='col-xs-4 combobox-group'>";
-   echo      "<label class='control-label h3'>Classement</label>";
-   echo      "<div class='combobox'>";
-   echo         "<select class='form-control' name='classement' onchange='this.form.submit()'>";
-   echo           "<option value=''>Choisir un classement</option>";
-   echo           "<option value='pop'>Popularité</option>";
-   echo           "<option value='crois'>Prix - moins élevé au plus élevé</option>";
-   echo           "<option value='dec'>Prix - plus élevé au moins élevé</option>";
-   echo         "</select>";
-   echo      "</div>";
-   echo   "</div>";
-      
-   echo   "<div class='col-xs-4 combobox-group'>";
-   echo     "<label class='control-label h3'>Catégorie</label>";
-   echo     "<div class='combobox'>";
-   echo       "<select class='form-control' name='categorie' onchange='this.form.submit()'>";
-   echo         "<option value='tout'>Tous les produits</option>";
-   echo         "<option value='ba'>Bague (BA)</option>";
-   echo         "<option value='bo'>Boucle d\'oreille (BO)</option>";
-   echo         "<option value='br'>Bracelet (BR)</option>";
-   echo         "<option value='co'>Collier (CO)</option>";
-   echo       "</select>";
-   echo     "</div>";
-   echo   "</div>";
-   echo   "</div>";
    
    $nbLigneParPage = 3;
    $nbProduitParLigne = 3;
@@ -98,14 +69,13 @@ function getAllProduit($idTypeProduit = 0)
       {
         $iterateur = 3 * $i + $y;
         echo "<div class='col-md-4'>";
-        echo    "<h2>" . $mesProduits[$iterateur]->getNom() . "</h2>";
-        echo    "<img class='img-responsive img-produit' src='img/" . strtolower($mesProduits[$iterateur]->getTypeProduit()->getNom()) . "/" . $mesProduits[$iterateur]->getId() . ".jpg' alt='" . $mesProduits[$iterateur]->getId() . "'>";
-        echo    "<h3 class='prix'>" . $mesProduits[$iterateur]->getPrix() . " CAD$</h3>";
-        echo    "<button type='button' class='btn btn-primary bouton-detail' href='#'>Détails</button>";
+        echo "<h2>" . $mesProduits[$iterateur]->getNom() . "</h2>";
+        echo "<img class='img-responsive img-produit' src='img/" . strtolower($mesProduits[$iterateur]->getTypeProduit()->getNom()) . "/" . $mesProduits[$iterateur]->getId() . ".jpg' alt='" . $mesProduits[$iterateur]->getId() . "'>";
+        echo "<h3 class='prix'>" . $mesProduits[$iterateur]->getPrix() . " CAD$</h3>";
+        echo "<button type='button' class='btn btn-primary bouton-detail' href='#'>Détails</button>";
         echo "</div>";
       }
       echo "</div>";
    }
-    echo "</div>";
 }
  ?>

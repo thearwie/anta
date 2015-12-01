@@ -40,6 +40,36 @@
       </ol>
     </div>
     
+  <div class='collection'>"
+
+   <div class='row'>
+      <div class='col-xs-4'>
+      </div>
+      <div class='col-xs-4 combobox-group'>
+        <label class='control-label h3'>Classement</label>
+        <div class='combobox'>
+        <select class='form-control' name='classement' onchange='this.form.submit()'>
+          <option value=''>Choisir un classement</option>
+          <option value='pop'>Popularité</option>
+          <option value='crois'>Prix - moins élevé au plus élevé</option>
+          <option value='dec'>Prix - plus élevé au moins élevé</option>
+        </select>
+      </div>
+     </div>
+        
+     <div class='col-xs-4 combobox-group'>
+      <label class='control-label h3'>Catégorie</label>
+      <div class='combobox'>
+      <select class='form-control' name='categorie' onchange='this.form.submit()'>
+        <option value='tout'>Tous les produits</option>
+        <option value='ba'>Bague (BA)</option>
+        <option value='bo'>Boucle d'oreille (BO)</option>
+        <option value='br'>Bracelet (BR)</option>
+        <option value='co'>Collier (CO)</option>
+      </select>
+     </div>
+  </div>
+    
     <?php include('/inc/genererCollection.php');?>
     <?php afficherCollection(0);?>
 

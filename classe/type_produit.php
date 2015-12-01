@@ -31,9 +31,9 @@
       return $this->id;
     }
     
-    function getId()
+    function getNom()
     {
-      return $this->id;
+      return $this->nom;
     }
     
     function printProduction()
