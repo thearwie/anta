@@ -1,5 +1,5 @@
 <?php
-function connectionBD() 
+function connectionBD()
 {
   $domainName = "webc.cegepsherbrooke.qc.ca";
   $userName = "viauma";
@@ -17,16 +17,12 @@ function connectionBD()
   return $link;
 }
 
-function getAllProduit($idTypeProduit)
+function getAllProduit($idTypeProduit = 0)
 {
-  if($typeProduit == 0)
-  {
+  if($idTypeProduit == 0)
     $sql = "select * from produit";
-  }
   else
-  {
     $sql = "select * from produit where id_type_produit = " . $idTypeProduit;
-  }
   
  if($resultat = mysqli_query($link, $sql))
  { 
@@ -48,6 +44,7 @@ function getAllProduit($idTypeProduit)
    }
    return $mesProduits;
  }
+}
    
  function afficherCollection($idTypeProduit)
  {

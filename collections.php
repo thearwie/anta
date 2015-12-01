@@ -41,6 +41,7 @@
     </div>
     
     <?php include('/inc/genererCollection.php');?>
+    <?php afficherCollection(0);?>
 
       <!-- Projects Row -->
       <!-- <div class="row">
