@@ -9,7 +9,7 @@
   $infolettre = '0';
   $ville = '10000'; 
  
-   if( $prenom != null and $nom != null and $courriel !=null and $password != null and $adresse != null and $codePostal !=null)
+   if( ($prenom != '') && ($nom != '') && ($courriel != '') && ($password != '') && ($adresse != '') && ($codePostal != ''))
    {
     $connexionDB = mysql_connect("webc.cegepsherbrooke.qc.ca", "viauma", "rurove") or die ("Couldn't connect to server");
     
@@ -26,7 +26,7 @@
    
        echo "Merci pour s'inscrire<br/>
              Bijouterie Anta950!<br/><br/>
-             <a href="http://webc.cegepsherbrooke.qc.ca/~viauma/">Retour à la page d\'accueil</a>";  
+             <a href="'http://webc.cegepsherbrooke.qc.ca/~viauma/'">Retour à la page d\'accueil</a>";  
       
     
     mysql_close($connexionDB);
