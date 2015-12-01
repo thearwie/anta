@@ -31,7 +31,7 @@
 
   <div class= "formulaireInscription">
   
-  <form id = "formulaireInscription" name="formulaireInscription" action = "model/enregistrerFormulaire.php" method="post">
+  <form id = "formulaireInscription" name="formulaireInscription" action = "/model/enregistrerFormulaire.php" method="post">
   
      <div class = "titreFormulaire">
        <span class="spanInscription">Créer un profil</span>	
