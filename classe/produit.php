@@ -8,7 +8,7 @@
     var $commentaire;
     var $enVente;
     var $nouveaute;
-    var $idTypeProduit;
+    var $typeProduit;
 
     function __construct()
     {
@@ -19,10 +19,10 @@
       $this->setCommentaire("");
       $this->setEnVente(0);
       $this->setNouveaute(0);
-      $this->setIdTypeProduit(0);
+      $this->$typeProduit = new TypeProduit();
     }
 
-    function init($nvId, $nvNom, $nvQuantite, $nvPrix, $nvCommentaire, $nvEnVente, $nvNouveaute, $nvIdTypeProduit)
+    function init($nvId, $nvNom, $nvQuantite, $nvPrix, $nvCommentaire, $nvEnVente, $nvNouveaute, $idTypeProduit, $nomTypeProduit)
     {
       $this->setId($nvId);
       $this->setNom($nvNom);
@@ -31,7 +31,7 @@
       $this->setCommentaire($nvCommentaire);
       $this->setEnVente($nvEnVente);
       $this->setNouveaute($nvNouveaute);
-      $this->setIdTypeProduit($nvIdTypeProduit);
+      $this->setTypeProduit($idTypeProduit, $nomTypeProduit);
     }
     
     function setId($nvId)
@@ -69,9 +69,9 @@
       $this->nouveaute = $nvNouveaute;
     }
     
-    function setIdTypeProduit($nvIdTypeProduit)
+    function setTypeProduit($idTypeProduit, $nomTypeProduit)
     {
-      $this->idTypeProduit = $nvIdTypeProduit;
+      $this->itypeProduit->init($idTypeProduit, $nomTypeProduit);
     }
     
     function getId()
@@ -114,22 +114,13 @@
       return $this->nouveaute;
     }
     
-    function getIdTypeProduit()
+    function getTypeProduit()
     {
-      return $this->idTypeProduit;
+      return $this->typeProduit;
     }
     
     function printProduction()
     {
-      $this->setId("");
-      $this->setNom("");
-      $this->setQuantite(0);
-      $this->setPrix(0);
-      $this->setCommentaire("");
-      $this->setEnVente(0);
-      $this->setNouveaute(0);
-      $this->setIdTypeProduit(0);
-      
       echo"Id: <br/>" . $this->getId() . "<br/>";
       echo"Nom: <br/>" . $this->getNom() . "<br/>";
       echo"Quantité: <br/>" . $this->getQuantite() . "<br/>";
@@ -137,7 +128,7 @@
       echo"Commentaire: <br/>" . $this->getCommentaire() . "<br/>";
       echo"Si en vente: <br/>" . $this->getEnVente() . "<br/>";
       echo"Si nouveauté: <br/>" . $this->getNouveaute() . "<br/>";
-      echo"Id du type de produit: <br/>" . $this->setIdTypeProduit() . "<br/><br/>";
+      echo"Id du type de produit: <br/>" . $this->getTypeProduit()->getId() . "<br/><br/>";
     }
   }
 ?>

@@ -1,0 +1,45 @@
+<?php
+  class TypeProduit
+  {
+    var $id;
+    var $nom;
+
+    function __construct()
+    {
+      $this->setId("");
+      $this->setNom("");
+    }
+
+    function init($nvId, $nvNom)
+    {
+      $this->setId($nvId);
+      $this->setNom($nvNom);
+    }
+    
+    function setId($nvId)
+    {
+      $this->id = $nvId;
+    }
+    
+    function setNom($nvNom)
+    {
+      $this->nom = $nvNom;
+    }
+    
+    function getId()
+    {
+      return $this->id;
+    }
+    
+    function getId()
+    {
+      return $this->id;
+    }
+    
+    function printProduction()
+    {
+      echo"Id: <br/>" . $this->getId() . "<br/>";
+      echo"Nom: <br/>" . $this->getNom() . "<br/><br/>";
+    }
+  }
+?>
