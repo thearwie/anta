@@ -31,7 +31,7 @@
 
   <div class= "formulaireInscription">
   
-  <form name="formulaireInscription" action = "model/enregistrerFormulaire.php" method="post">
+  <form id = "formulaireInscription" name="formulaireInscription" action = "model/enregistrerFormulaire.php" method="post">
   
      <div class = "titreFormulaire">
        <span class="spanInscription">Créer un profil</span>	
@@ -129,7 +129,7 @@
       </div> 
      
       <div class = "buttonEnvoyerInscription">
-        <a class="button">Envoyer</a>
+        <a class="button"  href="javascript:{}" onclick="document.getElementById('formulaireInscription').submit();">Envoyer</a>
       </div>
       
     </form>
