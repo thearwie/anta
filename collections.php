@@ -24,23 +24,24 @@
 <!-- VIEW -->
 
 <?php include('/inc/header.php');?>
+
 <div class='page'>
 
     <div class = "ism-slider" data-play_type="loop" data-interval="8000">
       <ol>
           <li>
-            <img src="img/banner/banner1.jpg">
+            <img src="img/banner/banner1.jpg" alt="banner1.jpg"/>
           </li>
           <li>
-            <img src="img/banner/banner2.jpg">
+            <img src="img/banner/banner2.jpg" alt="banner2.jpg"/>
           </li>
           <li>
-            <img src="img/banner/banner1.jpg">
+            <img src="img/banner/banner3.jpg" alt="banner3.jpg"/>
           </li>
       </ol>
     </div>
     
-  <div class='collection'>"
+  <div class='collection'>
 
    <div class='row'>
       <div class='col-xs-4'>
@@ -70,8 +71,13 @@
      </div>
   </div>
     
-    <?php include('/inc/genererCollection.php');?>
-    <?php afficherCollection(0);?>
+    <?php 
+	  //echo "<br/> début des test";
+	  include('/inc/genererCollection.php');
+	  
+	  //afficherCollection(0);
+	  //echo "<br/> fin des test";
+	?>
 
       <!-- Projects Row -->
       <!-- <div class="row">
@@ -173,5 +179,5 @@
       </div>
       <!-- /.row -->
     </div>
-</div>
+</div></div>
 <?php include('/inc/footer.php')?>
