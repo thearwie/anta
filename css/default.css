@@ -533,10 +533,11 @@ h3, .h3
 
 .infolettre
 {
-  width:830px;
+  width:600px;
   text-align:justify;
   font-size: 0.8em;
   float: left;
+  color: #732876;
   margin-top: 20px;
   margin-bottom: 20px;
 }
