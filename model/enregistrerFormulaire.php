@@ -42,7 +42,7 @@
       {
          echo "Merci pour s'inscrire";
          <script language="javascript"> 
-            window.location="http://webc.cegepsherbrooke.qc.ca/~viauma/index.php"; 
+            window.location="webc.cegepsherbrooke.qc.ca/~viauma/index.php"; 
           </script>
       }
         
