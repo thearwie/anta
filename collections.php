@@ -70,114 +70,12 @@
       </select>
      </div>
   </div>
-    
+   
+  <div class="collection-produit">
     <?php 
-	  //echo "<br/> début des test";
 	  include("genererCollection.php");
-	  
 	  afficherCollection(0);
-	  //echo "<br/> fin des test";
-	?>
-
-      <!-- Projects Row -->
-      <!-- <div class="row">
-          <div class="col-md-4">
-              <h2>Bague BA-0001</h2>
-              <img class="img-responsive img-produit" src="img/bague/BA-0001-1.jpg" alt="BA-0001-1">
-              <h3 class="prix">15,00 CAD$</h3>
-              <button type="button" class="btn btn-primary bouton-detail" href="#">Détails</button>
-          </div>
-          <div class="col-md-4">
-              <h2>Boucle d'oreille BO-0002</h2>
-              <img class="img-responsive img-produit" src="img/boucleOreille/BO-0002-1.jpg" alt="BO-0002-1">
-              <h3 class="prix">15,00 CAD$</h3>
-              <button type="button" class="btn btn-primary bouton-detail" href="#">Détails</button>
-          </div>
-          <div class="col-md-4">
-              <h2>Boucle d'oreille BO-0003</h2>
-              <img class="img-responsive img-produit" src="img/boucleOreille/BO-0003-1.jpg" alt="BO-0003-1">
-              <h3 class="prix">15,00 CAD$</h3>
-              <button type="button" class="btn btn-primary bouton-detail" href="#">Détails</button>
-          </div>
-      </div> -->
-      <!-- /.row -->
-
-      <!-- Projects Row -->
-      <!-- <div class="row">
-          <div class="col-md-4">
-              <h2>Bracelet BR-0007</h2>
-              <img class="img-responsive img-produit" src="img/bracelet/BR-0007-1.jpg" alt="BR-0007-1">
-              <h3 class="prix">15,00 CAD$</h3>
-              <button type="button" class="btn btn-primary bouton-detail" href="#">Détails</button>
-          </div>
-          <div class="col-md-4">
-              <h2>Bracelet BR-0003</h2>
-              <img class="img-responsive img-produit" src="img/bracelet/BR-0003-1.jpg" alt="BR-0003-1">
-              <h3 class="prix">15,00 CAD$</h3>
-              <button type="button" class="btn btn-primary bouton-detail" href="#">Détails</button>
-          </div>
-          <div class="col-md-4">
-              <h2>Collier CO-0001</h2>
-              <img class="img-responsive img-produit" src="img/collier/CO-0001-1.jpg" alt="CO-0001-1">
-              <h3 class="prix">15,00 CAD$</h3>
-              <button type="button" class="btn btn-primary bouton-detail" href="#">Détails</button>
-          </div>
-      </div> -->
-
-      <!-- Projects Row -->
-      <!-- <div class="row">
-          <div class="col-md-4">
-              <h2>Bracelet BR-0001</h2>
-              <img class="img-responsive img-produit" src="img/bracelet/BR-0001-1.jpg" alt="BR-0001-1">
-              <h3 class="prix">15,00 CAD$</h3>
-              <button type="button" class="btn btn-primary bouton-detail" href="#">Détails</button>
-          </div>
-          <div class="col-md-4">
-              <h2>Bracelet BR-007</h2>
-              <img class="img-responsive img-produit" src="img/bracelet/BR-0007-1.jpg" alt="BR-0007-1">
-              <h3 class="prix">15,00 CAD$</h3>
-              <button type="button" class="btn btn-primary bouton-detail" href="#">Détails</button>
-          </div>
-          <div class="col-md-4">
-              <h2>Bracelet BR-0003</h2>
-              <img class="img-responsive img-produit" src="img/bracelet/BR-0003-1.jpg" alt="BR-0003">
-              <h3 class="prix">15,00 CAD$</h3>
-              <button type="button" class="btn btn-primary bouton-detail" href="#">Détails</button>
-          </div>
-      </div> -->
-      <!-- /.row -->
-
-      <!-- <hr/> -->
-
-      <!-- Pagination -->
-      <!-- <div class="row text-center">
-          <div class="col-lg-12">
-              <ul class="pagination">
-                  <li>
-                      <a href="#">&laquo;</a>
-                  </li>
-                  <li class="active page-active">
-                      <a href="#">1</a>
-                  </li>
-                  <li>
-                      <a href="#">2</a>
-                  </li>
-                  <li>
-                      <a href="#">3</a>
-                  </li>
-                  <li>
-                      <a href="#">4</a>
-                  </li>
-                  <li>
-                      <a href="#">5</a>
-                  </li>
-                  <li>
-                      <a href="#">&raquo;</a>
-                  </li>
-              </ul>
-          </div>
-      </div> -->
-      <!-- /.row -->
-    </div>
+    ?>
+  </div>
 </div></div>
 <?php include('/inc/footer.php')?>
