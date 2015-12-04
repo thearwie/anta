@@ -19,7 +19,7 @@ $texte = formaterTexte("Boucle d'oreille");
   $i = 0;
   while($i<strlen($texte))
   {
-    if($texte[$i] == "\'")
+    if($texte[$i] == "'")
     {
       $indexApostrophe = $i;
       for($y=$i; $y>0; $y--)
@@ -28,14 +28,13 @@ $texte = formaterTexte("Boucle d'oreille");
         {
           $indexEspace = $y;
           $y = 0;
-          $i = -1;
+          $i = 0;
         }
       }
       //trancher ce qu'il y a entre l'apostrophe et l'espace
-      $texteSansApo = substr($texte, 0, $indexEspace) + substr($texte, $indexApostrophe+1, ($indexApostrophe+2) - strlen($texte));
+      $texteSansApo = substr($texte, 0, $indexEspace) + substr($texte, $indexApostrophe+1);
     }
     $i++;
   }
-echo "<br/>";
-$texteSansApo = formaterTexte($substr($texte, 0, $indexEspace));
+echo $texteSansApo . "<br/>";
 ?>
