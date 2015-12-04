@@ -61,7 +61,7 @@
        <div class='col-xs-4 combobox-group'>
         <label class='control-label h3'>Catégorie</label>
         <div class='combobox'>
-        <select class='form-control' name='categorie' onchange='this.form.submit()'>
+        <select class='form-control' name='categorie' onchange='reloadCollection()'>
           <option value='tout'>Tous les produits</option>
           <option value='ba'>Bague (BA)</option>
           <option value='bo'>Boucle d'oreille (BO)</option>
