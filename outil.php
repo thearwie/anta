@@ -11,30 +11,36 @@ function formaterTexte($texte = "")
   // echo substr($texte, 0, strlen($texte)) . "<br/>";
   return $texte;
 }
-$texte = formaterTexte("Boucle d'oreille");
+$texte = "Boucle d'oreille";
+// $texteSansApo = substr($texte, 0, 6) . substr($texte, 9);
+// echo $texteSansApo;
+echo $texte;
 
   $indexApostrophe = 0;
   $indexEspace = 0;
   
-  $i = 0;
-  while($i<strlen($texte))
+  for($i = 0; $i < strlen($texte); $i++)
   {
     if($texte[$i] == "'")
     {
       $indexApostrophe = $i;
-      for($y=$i; $y>0; $y--)
+      echo $indexApostrophe;
+      for($y = $indexApostrophe; $y >= 1; $y--)
       {
         if($texte[$y] == " ")
         {
           $indexEspace = $y;
+          echo $indexEspace;
+          
+          //trancher ce qu'il y a entre l'apostrophe (inclusivement) et l'espace (exclusivement)
+          $texteSansApo = substr($texte, 0, $indexEspace) . substr($texte, $indexApostrophe+1);
+          
           $y = 0;
-          $i = 0;
+          $i = $indexEspace;
+          break;
         }
       }
-      //trancher ce qu'il y a entre l'apostrophe et l'espace
-      $texteSansApo = substr($texte, 0, $indexEspace) + substr($texte, $indexApostrophe+1);
     }
-    $i++;
   }
-echo $texteSansApo . "<br/>";
+echo $texteSansApo . "<br/>"; 
 ?>

@@ -74,7 +74,7 @@ function getAllProduit($idTypeProduit = 0)
         $iterateur = 3 * $i + $y;
         echo "<div class='col-md-4'>";
         echo "<h2>" . $mesProduits[$iterateur]->getNom() . "</h2>";
-        echo "<img class='img-responsive img-produit' src='img/" . strtolower($mesProduits[$iterateur]->getTypeProduit()->getNom()) . "/" . $mesProduits[$iterateur]->getId() . ".jpg' alt='" . $mesProduits[$iterateur]->getId() . "'>";
+        echo "<img class='img-responsive img-produit' src='img/" . $mesProduits[$iterateur]->getTypeProduit()->getNom() . "/" . $mesProduits[$iterateur]->getId() . ".jpg' alt='" . $mesProduits[$iterateur]->getId() . "'>";
         echo "<h3 class='prix'>" . $mesProduits[$iterateur]->getPrix() . " CAD$</h3>";
         echo "<button type='button' class='btn btn-primary bouton-detail' href='#'>Détails</button>";
         echo "</div>";
