@@ -30,13 +30,13 @@
     <div class = "ism-slider" data-play_type="loop" data-interval="8000">
       <ol>
           <li>
-            <img src="img/banner/banner1.jpg">
+            <img src="img/banner/banner1.jpg" alt="banner1.jpg"/>
           </li>
           <li>
-            <img src="img/banner/banner2.jpg">
+            <img src="img/banner/banner2.jpg" alt="banner2.jpg"/>
           </li>
           <li>
-            <img src="img/banner/banner1.jpg">
+            <img src="img/banner/banner3.jpg" alt="banner3.jpg"/>
           </li>
       </ol>
     </div>
@@ -73,7 +73,7 @@
     
     <?php 
 	  //echo "<br/> début des test";
-	  include("genererCollection2.php");
+	  include("genererCollection.php");
 	  
 	  afficherCollection(0);
 	  //echo "<br/> fin des test";
