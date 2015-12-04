@@ -46,7 +46,7 @@
           </script>*/
          /*  echo "<script>alert('Merci pour s'inscrire'); location.href='index.php'</script>";*/
          
-          Header("Location: ../index.php");
+          Header("Location: webc.cegepsherbrooke.qc.ca/~viauma/index.php");
       }
         
     }
