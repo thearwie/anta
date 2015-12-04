@@ -467,7 +467,7 @@ h3, .h3
   margin-top: 16px; 
 }
 
-.spanNousJoindre,.infoDetail, .spanServices, .selectService, .optionSelectService, .spanInscription
+.spanNousJoindre,.infoDetail, .spanServices, .selectService, .optionSelectService, .spanInscription, .spanInfolettre
 {
   color: #732876;
 }
@@ -533,11 +533,10 @@ h3, .h3
 
 .infolettre
 {
-  width:600px;
+  width:500px;
   text-align:justify;
   font-size: 0.8em;
   float: left;
-  color: #732876;
   margin-top: 20px;
   margin-bottom: 20px;
 }
