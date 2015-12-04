@@ -1,46 +1,82 @@
-<?php
-//Retirer
+﻿<?php
+//formate le texte
 function formaterTexte($texte = "")
 {
-  echo "TEST <br/>";
-  for($i=0; $i<strlen($texte); $i++)
-  {
-    echo $texte[$i] . "<br/>";
-    // echo substr($texte, $i, 1) . "<br/>";
-  }
-  // echo substr($texte, 0, strlen($texte)) . "<br/>";
+  $texte = retirerApostrophe($texte);
+  $texte = convertirCaractere($texte, ' ', '_');
+  $texte = convertirMinuscule($texte);
   return $texte;
 }
-$texte = "Boucle d'oreille";
-// $texteSansApo = substr($texte, 0, 6) . substr($texte, 9);
-// echo $texteSansApo;
-echo $texte;
-
+  
+//Fonction qui tranche ce qu'il y a entre l'apostrophe et l'espace
+function retirerApostrophe($texte = "")
+{
   $indexApostrophe = 0;
   $indexEspace = 0;
-  
+
   for($i = 0; $i < strlen($texte); $i++)
   {
     if($texte[$i] == "'")
     {
       $indexApostrophe = $i;
-      echo $indexApostrophe;
-      for($y = $indexApostrophe; $y >= 1; $y--)
+      for($y = $indexApostrophe; $y > 0; $y--)
       {
         if($texte[$y] == " ")
         {
           $indexEspace = $y;
-          echo $indexEspace;
           
-          //trancher ce qu'il y a entre l'apostrophe (inclusivement) et l'espace (exclusivement)
-          $texteSansApo = substr($texte, 0, $indexEspace) . substr($texte, $indexApostrophe+1);
+          //$indexEspace+1, car le 0 compte  //$indexApostrophe+1, car on ne veut pas l'apostrophe
+          $texte = substr($texte, 0, $indexEspace+1) . substr($texte, $indexApostrophe+1);
           
-          $y = 0;
-          $i = $indexEspace;
+          $i = 0;
           break;
         }
       }
     }
   }
-echo $texteSansApo . "<br/>"; 
+  
+  return $texte;
+}
+
+//Convertion d'un caractère en un autre, pour tout le texte
+function convertirCaractere($texte, $aConvertir, $convertion)
+{
+  for($i = 0; $i < strlen($texte); $i++)
+  {
+    if($texte[$i] == $aConvertir)
+    {
+      $texte[$i] = $convertion;
+    }
+  }
+  
+  return $texte;
+}
+
+//Convertion du texte en minuscule
+function convertirMinuscule($texte = "")
+{
+  for($i=0; $i<strlen($texte); $i++)
+  {
+    if(ord($texte[$i]) >= 65 && ord($texte[$i]) <= 90)
+    {
+      $texte[$i] = chr(ord($texte[$i])+32);
+    }
+  }
+  
+  return $texte;
+}
+
+//Convertion du texte en Majuscule
+function convertirMajuscule($texte = "")
+{
+  for($i=0; $i<strlen($texte); $i++)
+  {
+    if(ord($texte[$i]) >= 97 && ord($texte[$i]) <= 122)
+    {
+      $texte[$i] = chr(ord($texte[$i])-32);
+    }
+  }
+  
+  return $texte;
+}
 ?>

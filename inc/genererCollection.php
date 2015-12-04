@@ -65,15 +65,20 @@ function getAllProduit($idTypeProduit = 0)
     $mesProduits = getAllProduit($idTypeProduit);
     $nbProduitSurLigne = 1;
     
-    echo count($mesProduits);
+    include("outil.php");
     
     echo "<div class='row'>";
     for($i=0; $i<count($mesProduits)-1; $i++) 
     {
+      $nomDossier = $mesProduits[$i]->getTypeProduit()->getNom();
+      $nomDossier = retirerApostrophe($nomDossier);
+      $nomDossier = formaterTexte($nomDossier);
+      $nomDossier = convertirMinuscule($nomDossier);
+      
       echo "<div class='col-md-4'>";
       echo "<h2>" . $mesProduits[$i]->getNom() . "</h2>";
-      echo "<img class='img-responsive img-produit' src='img/" . $mesProduits[$i]->getTypeProduit()->getNom() . "/" . $mesProduits[$i]->getId() . ".jpg' alt='" . $mesProduits[$i]->getId() . "'>";
-      echo "<h3 class='prix'>" . $mesProduits[$i]->getPrix() . " CAD$</h3>";
+      echo "<img class='img-responsive img-produit' src='img/" . $nomDossier . "/" . $mesProduits[$i]->getId() . ".jpg' alt='" . $mesProduits[$i]->getId() . "'>";
+      echo "<h3 class='prix'>" . number_format($mesProduits[$i]->getPrix(), 2); . " CAD$</h3>";
       echo "<button type='button' class='btn btn-primary bouton-detail' href='#'>Détails</button>";
       echo "</div>";
       

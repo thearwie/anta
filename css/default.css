@@ -375,9 +375,8 @@ h3, .h3
 /* Collection */
 .collection
 {
-  width: 96%;
+  width: 100%;
   margin-top: 100px;
-  margin-left: 2%;
   padding-left: 20px;
   padding-right: 20px;
 }
