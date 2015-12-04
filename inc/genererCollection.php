@@ -42,14 +42,14 @@ function getAllProduit($idTypeProduit = 0)
    { 
       $produit = new Produit();
       $idTypeProduit = $row[7];
-	  $row2 = null;
+      $row2 = null;
       if($resultat2 = mysqli_query($link, "select * from type_produit where id = " . $idTypeProduit))
       {
         $row2 = mysqli_fetch_array($resultat2, MYSQLI_BOTH);
       }
-	  $mesProduits[$iterateur] = new Produit();
+      $mesProduits[$iterateur] = new Produit();
       $mesProduits[$iterateur]->init($row[0], $row[1], $row[2], $row[3], $row[4], $row[5], $row[6], $row2[0], $row2[1]);
-	  $iterateur ++;
+      $iterateur ++;
    }
    mysqli_free_result($resultat2);
    mysqli_free_result($resultat);
@@ -63,37 +63,34 @@ function getAllProduit($idTypeProduit = 0)
  function afficherCollection($idTypeProduit)
  {
     $mesProduits = getAllProduit($idTypeProduit);
-    $nbProduitSurLigne = 0;
+    $nbProduitSurLigne = 1;
     
-    for($i=0; $i<count($mesProduits); $i++) 
+    echo count($mesProduits);
+    
+    echo "<div class='row'>";
+    for($i=0; $i<count($mesProduits)-1; $i++) 
     {
-      if($nbProduitSurLigne == 3)
-      {
-        echo "<div class='row'>";
-      }
+      echo "<div class='col-md-4'>";
+      echo "<h2>" . $mesProduits[$i]->getNom() . "</h2>";
+      echo "<img class='img-responsive img-produit' src='img/" . $mesProduits[$i]->getTypeProduit()->getNom() . "/" . $mesProduits[$i]->getId() . ".jpg' alt='" . $mesProduits[$i]->getId() . "'>";
+      echo "<h3 class='prix'>" . $mesProduits[$i]->getPrix() . " CAD$</h3>";
+      echo "<button type='button' class='btn btn-primary bouton-detail' href='#'>Détails</button>";
+      echo "</div>";
       
-        echo "<div class='col-md-4'>";
-        echo "<h2>" . $mesProduits[$iterateur]->getNom() . "</h2>";
-        echo "<img class='img-responsive img-produit' src='img/" . $mesProduits[$iterateur]->getTypeProduit()->getNom() . "/" . $mesProduits[$iterateur]->getId() . ".jpg' alt='" . $mesProduits[$iterateur]->getId() . "'>";
-        echo "<h3 class='prix'>" . $mesProduits[$iterateur]->getPrix() . " CAD$</h3>";
-        echo "<button type='button' class='btn btn-primary bouton-detail' href='#'>Détails</button>";
-        echo "</div>";
-        
       if($nbProduitSurLigne == 3)
       {
         echo "</div>";
-        $nbProduitSurLigne = 0;
+        echo "<div class='row'>";
+        $nbProduitSurLigne = 1;
+      }
+      else if($nbProduitSurLigne == 3 && $i == count($mesProduits)-1)
+      {
+        echo "</div>";
       }
       else
       {
         $nbProduitSurLigne++;
       }
    }
-   echo $mesProduits[1]->getTypeProduit()->getNom();
-}
-
-function enleverEspaceMot($mot)
-{
-	
 }
 ?>
