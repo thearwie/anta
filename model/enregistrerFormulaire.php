@@ -24,12 +24,9 @@
     else 
     {
       echo "Merci pour s'inscrire";  
-      <script>alert("<?php echo htmlspecialchars('Merci pour s'inscrire', ENT_QUOTES); ?>")</script>
       
     }
     mysql_close($connexionDB);
- 
-  
-  
+
   
 ?>
