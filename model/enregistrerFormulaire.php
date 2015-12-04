@@ -27,10 +27,11 @@
     
     if($total)
     {
-      $row = mysql_fetch_row($result);
-      $idUtilisateur = $row["idUtilisateur"];      
-      
-      echo  $idUtilisateur ;
+      while($row = mysql_fetch_array($result))
+      {
+        $idUtilisateur = $row["idUtilisateur"];      
+        
+        echo  $idUtilisateur ;
       
       
       
@@ -45,7 +46,7 @@
          echo "Merci pour s'inscrire";  
       }*/
         
-        
+       } 
      
     }
     else{
