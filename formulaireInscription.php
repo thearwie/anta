@@ -129,8 +129,8 @@
       </div> 
       
       <div class = "infolettre">
-        <input type="checkbox" name="checkboxInfolettre" value="checkbox">J'accepte que la Bijouterie Anta950 me transmettre des messages par voie électronique contenant des offres et de l'information sur des produits et services 
-        susceptibles de m'intéresser. Je peux retirer ce consentement en tout temps en annulant mon abonnement à ses messages.        
+        <input type="checkbox" name="checkboxInfolettre" value="checkbox"><span class="spanInfolettre">PJ'accepte que la Bijouterie Anta950 me transmettre des messages par voie électronique contenant des offres et de l'information sur des produits et services 
+        susceptibles de m'intéresser. Je peux retirer ce consentement en tout temps en annulant mon abonnement à ses messages.</span>        
       </div>
      
       <div class = "buttonEnvoyerInscription">
