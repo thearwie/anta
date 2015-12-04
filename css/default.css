@@ -379,17 +379,15 @@ h3, .h3
 
 .descriptionDroite
 {
-  margin-left:40px;
-
+  margin-left: 40px;
 }
 
 
 /* Collection */
 .collection
 {
-  width: 96%;
+  width: 100%;
   margin-top: 100px;
-  margin-left: 2%;
   padding-left: 45px;
   padding-right: 45px;
   padding-bottom: 30px;
@@ -462,9 +460,9 @@ h3, .h3
 /* Formulaires Nous Joindre et Services*/
 .formulaireNousJoindre, .formulaireServices, .formulaireInscription
 {
-  width:415px;
+  width: 415px;
   text-align: left;
-  margin-left:60px; 
+  margin-left: 60px; 
   color: #732876;
 }
 
