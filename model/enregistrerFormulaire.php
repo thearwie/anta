@@ -6,9 +6,12 @@
   $password = $_POST['txtPassword']; 
   $adresse = $_POST['txtAdresse']; 
   $codePostal = $_POST['txtCodePostale']; 
-  $infolettre = '0';
+  //$infolettre = '0';
   $ville = '10000'; 
+  $infolettre = $_POST['checkboxInfolettre']; 
  
+  echo $infolettre;
+  
   
     $connexionDB = mysql_connect("webc.cegepsherbrooke.qc.ca", "viauma", "rurove") or die ("Couldn't connect to server");
     
