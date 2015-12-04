@@ -40,10 +40,12 @@
       }
       else
       {
-        // echo "Merci pour s'inscrire";
-         header("Status: 301 Moved Permanently", false, 301);
+         echo "Merci pour s'inscrire";
+         echo '<a href="http://webc.cegepsherbrooke.qc.ca/~viauma/index.php">Retourner Accueil</a>';
+         
+        /* header("Status: 301 Moved Permanently", false, 301);
          header('Location: http://webc.cegepsherbrooke.qc.ca/~viauma/index.php');
-         exit();
+         exit();*/
       }
         
     }
