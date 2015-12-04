@@ -29,7 +29,7 @@
     {
       while($row = mysql_fetch_array($result))
       {
-        $idUtilisateur = $row["idUtilisateur"];      
+        $idUtilisateur = $row["idUtilisateur"] + 1;      
         
         echo  $idUtilisateur ;
       
