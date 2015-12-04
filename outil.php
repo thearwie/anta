@@ -9,7 +9,9 @@ function formaterTexte($texte = "")
     echo substr($texte, $i, 1) . "<br/>";
   }
   // echo substr($texte, 0, strlen($texte)) . "<br/>";
+  return $texte;
 }
+$texte = formaterTexte("Boucle d'oreille");
 
   $indexApostrophe = 0;
   $indexEspace = 0;
@@ -33,6 +35,4 @@ function formaterTexte($texte = "")
     }
     $i++;
   }
-
-formaterTexte("Boucle d'oreille");
 ?>
