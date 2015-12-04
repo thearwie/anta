@@ -24,36 +24,17 @@
     <meta name="keywords" content="Bijou, bague, collier, boucle d'oreille, bracelet">
     <meta name="author" content="Michaël Bilodeau, Paola Carranza, Maxime Viau">
 
-    <style> 
-      html, body {
-      height: 100%;
-      overflow: hidden;
-      }
-      .wrapper {
-      height: 150px;
-      width: auto;
-      overflow: auto;
-      }
-      .lblCheckbox {
-        display: block;
-        width: 200px;
-      }
-      
-      
-    </style> 
+    <link rel="stylesheet" type="text/css"  href="css/admin.css" />
+
+
+
   </head>
   <body>
-
-    <!-- CONTROLLER -->
-
-    <!-- VIEW -->
-
     <div class='page'>
-    <h1>Gestion des produits</h1>
+      <h1>Gestion des produits</h1>
 
-    <form action="">
-
-      <label>Action</label>
+      <form action="">
+            <label>Action</label>
       <br/>
       <select>
         <option value="ajouter" selected>Ajouter</option>
@@ -147,7 +128,11 @@
 
     
 
-    </form>
+        <br/>
+        <br/>
+        <input type="button" name="enregistrer" value="Enregistrer">
+        <input type="button" name="annuler" value="Annuler">
+      </form>
 
     </div>
   </body>

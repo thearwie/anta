@@ -78,7 +78,7 @@ function getAllProduit($idTypeProduit = 0)
       echo "<div class='col-md-4'>";
       echo "<h2>" . $mesProduits[$i]->getNom() . "</h2>";
       echo "<img class='img-responsive img-produit' src='img/" . $nomDossier . "/" . $mesProduits[$i]->getId() . ".jpg' alt='" . $mesProduits[$i]->getId() . "'>";
-      echo "<h3 class='prix'>" . number_format($mesProduits[$i]->getPrix(), 2); . " CAD$</h3>";
+      echo "<h3 class='prix'>" . number_format((float)$mesProduits[$i]->getPrix(), 2, '.', '') . " CAD$</h3>";
       echo "<button type='button' class='btn btn-primary bouton-detail' href='#'>Détails</button>";
       echo "</div>";
       
