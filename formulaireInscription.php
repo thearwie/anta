@@ -127,6 +127,11 @@
             <option class="optionSelectInscription" value="value1">Canada</option> 
         </select>
       </div> 
+      
+      <div class = "infolettre">
+        <input type="checkbox" name="checkboxInfolettre" value="checkbox">J'accepte que la Bijouterie Anta950 me transmettre des messages par voie électronique contenant des offres et de l'information sur des produits et services 
+        susceptibles de m'intéresser. Je peux retirer ce consentement en tout temps en annulant mon abonnement à ses messages.        
+      </div>
      
       <div class = "buttonEnvoyerInscription">
         <a class="button"  href="javascript:{}" onclick = "if(formulaireComplet()){document.getElementById('formulaireInscription').submit();}">Envoyer</a>
