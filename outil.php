@@ -16,7 +16,7 @@ $texte = formaterTexte("Boucle d'oreille");
   $indexApostrophe = 0;
   $indexEspace = 0;
   
-  while($i<strlen($texte)
+  while($i<strlen($texte))
   {
     if($texte[$i] == "\'")
     {
