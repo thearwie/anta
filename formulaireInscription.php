@@ -76,7 +76,7 @@
           <span class="spanInscription">Confirmez le mot de passe</span>
           </div>	
         <div class = "input">
-        <input type="password" id="txtPasswordConfirmation" size="40" />
+        <input type="password" id="txtPasswordConfirmation" name="txtPasswordConfirmation"  size="40" />
         </div>
       </div>
       <div class="adresse1">
@@ -129,7 +129,7 @@
       </div> 
      
       <div class = "buttonEnvoyerInscription">
-        <a class="button"  href="javascript:{}" onclick=" if(formulaireComplet()){document.getElementById('formulaireInscription').submit();}">Envoyer</a>
+        <a class="button"  href="javascript:{}" onclick = "if(formulaireComplet()){document.getElementById('formulaireInscription').submit();}">Envoyer</a>
       </div>
       
     </form>
@@ -142,7 +142,7 @@
 /*****************************************************************************/
       /* VARIABLES GLOBALES                                                        */
       /*****************************************************************************/
-      var idControlInput = ['txtCodePostale', 'txtCourriel']; 
+      var idControlInput = ['txtPrenom', 'txtNom', 'txtCourriel', 'txtPassword', 'txtPasswordConfirmation' , 'txtAdresse','txtCodePostale', ]; 
 
       var nomChamp = ['Prénom', 'Nom', 'Courriel', 'Mot de passe', 'Confirmation de mot de passe', 'Adresse', 'Code postal' ]; 						 
 	
