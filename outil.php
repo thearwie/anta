@@ -5,8 +5,8 @@ function formaterTexte($texte = "")
   echo "TEST <br/>";
   for($i=0; $i<strlen($texte); $i++)
   {
-    // echo $texte[$i] . "<br/>";
-    echo substr($texte, $i, 1) . "<br/>";
+    echo $texte[$i] . "<br/>";
+    // echo substr($texte, $i, 1) . "<br/>";
   }
   // echo substr($texte, 0, strlen($texte)) . "<br/>";
   return $texte;
@@ -16,6 +16,7 @@ $texte = formaterTexte("Boucle d'oreille");
   $indexApostrophe = 0;
   $indexEspace = 0;
   
+  $i = 0;
   while($i<strlen($texte))
   {
     if($texte[$i] == "\'")
@@ -31,8 +32,10 @@ $texte = formaterTexte("Boucle d'oreille");
         }
       }
       //trancher ce qu'il y a entre l'apostrophe et l'espace
-      $texte = substr($texte, 0, $indexEspace+1) + substr($texte, $indexApostrophe, ($indexApostrophe+1) - strlen($texte));
+      $texteSansApo = substr($texte, 0, $indexEspace) + substr($texte, $indexApostrophe+1, ($indexApostrophe+2) - strlen($texte));
     }
     $i++;
   }
+echo "<br/>";
+$texteSansApo = formaterTexte($substr($texte, 0, $indexEspace));
 ?>
