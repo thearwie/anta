@@ -1,0 +1,31 @@
+$iterateur = 1;
+for($i=0; $i<count($mesProduit); $i++)
+{
+  if($iterateur == 1)
+  {
+    echo "<div class='ligne'>";
+    $divOuvert = true;
+  }
+  else if($iterateur == 3)
+  {
+    echo "</div>";
+    $divOuvert = false;
+  }
+  
+  //ici tu insère ton autre div
+  
+  if($iterateur <3)
+  {
+    $iterateur++;
+  }
+  else
+  {
+    $iterateur = 1;
+  }
+  
+}
+
+if(divOuvert == true)
+{
+  echo "</div>";
+}

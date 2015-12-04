@@ -52,6 +52,13 @@ hr {
 {
   color: #000000;
 }
+
+html, body
+{
+  overflow: hidden;
+  height: 100%;
+}
+
 html
 {
   background-color: #FFFFFF;
