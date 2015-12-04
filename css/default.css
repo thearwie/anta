@@ -235,6 +235,11 @@ footer ul li
 
 
 /* Footer */
+footer
+{
+  bottom: 0%;
+}
+
 .partage
 {
   margin-top: 25px;
