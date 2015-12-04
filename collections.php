@@ -49,7 +49,7 @@
         <div class='col-xs-4 combobox-group'>
           <label class='control-label h3'>Classement</label>
           <div class='combobox'>
-          <select class='form-control' name='classement' onchange='this.form.submit()'>
+          <select class='form-control' id="select-classement" name='classement'>
             <option value=''>Choisir un classement</option>
             <option value='pop'>Popularité</option>
             <option value='crois'>Prix - moins élevé au plus élevé</option>
@@ -61,7 +61,7 @@
        <div class='col-xs-4 combobox-group'>
         <label class='control-label h3'>Catégorie</label>
         <div class='combobox'>
-        <select class='form-control' name='categorie' onchange='reloadCollection()'>
+        <select class='form-control' id="select-categogie" name='categorie'>
           <option value='tout'>Tous les produits</option>
           <option value='ba'>Bague (BA)</option>
           <option value='bo'>Boucle d'oreille (BO)</option>
@@ -81,3 +81,9 @@
   </div>
 </div>
 <?php include('/inc/footer.php')?>
+
+<script>
+  $('#select-categogie').on('change', function() {
+    $( ".collection-produit").empty();
+});
+</script>
