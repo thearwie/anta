@@ -9,8 +9,14 @@
   $infolettre = '0';
   $ville = '10000'; 
  
-   if(!empty($prenom))
-   {
+  if($_POST['txtPrenom'] == '')
+  {
+     $errors[1] = '<span class="error">Remplir le prénom</span>';
+  }
+  
+  else
+  {
+  
     $connexionDB = mysql_connect("webc.cegepsherbrooke.qc.ca", "viauma", "rurove") or die ("Couldn't connect to server");
     
     mysql_select_db("viauma",  $connexionDB) or die ("Couldn't select database");
@@ -24,14 +30,13 @@
     }
     else 
     {
-       echo "Merci pour s'inscrire";  
+      // echo "Merci pour s'inscrire";  
+      <script>alert("<?php echo htmlspecialchars('Merci pour s'inscrire', ENT_QUOTES); ?>")</script>
       
     }
     mysql_close($connexionDB);
+ 
   }
-  else 
-  {
-      $alerte = "Vous devez remplir tous les champs";
-  }
+  
   
 ?>

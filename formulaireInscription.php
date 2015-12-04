@@ -44,7 +44,7 @@
           <span class="spanInscription">Prénom</span>
         </div>	
         <div class = "input">
-          <input type="text" id="txtPrenom" name = "txtPrenom" size="40" />
+          <input type="text" id="txtPrenom" name = "txtPrenom" size="40" /><?php echo $errors[1]; ?>
         </div>
       </div>
       <div class="nom">
