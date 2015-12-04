@@ -31,7 +31,7 @@ $texte = formaterTexte("Boucle d'oreille");
         }
       }
       //trancher ce qu'il y a entre l'apostrophe et l'espace
-      $texte = substr($texte, 0, $indexEspace+1) + substr($texte, $indexApostrophe, ($indexApostrophe+1) - strlen($texte))
+      $texte = substr($texte, 0, $indexEspace+1) + substr($texte, $indexApostrophe, ($indexApostrophe+1) - strlen($texte));
     }
     $i++;
   }
