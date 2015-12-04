@@ -40,13 +40,9 @@
       }
       else
       {
-        /* echo "Merci pour s'inscrire";
-         <script language="javascript"> 
-            window.location="webc.cegepsherbrooke.qc.ca/~viauma/index.php"; 
-          </script>*/
-         /*  echo "<script>alert('Merci pour s'inscrire'); location.href='index.php'</script>";*/
-         
-          Header("Location: webc.cegepsherbrooke.qc.ca/~viauma/index.php");
+        // echo "Merci pour s'inscrire";
+         header('Location: http://webc.cegepsherbrooke.qc.ca/~viauma/index.php');
+         exit();
       }
         
     }
