@@ -28,7 +28,9 @@
       $row = mysql_fetch_row($result);
       $idUtilisateur = $row["idUtilisateur"]+1;      
       
+      echo  $idUtilisateur ;
       
+      /*
       
       if(!mysql_query($queryInsertUtilisateur, $connexionDB))
       {
@@ -37,7 +39,7 @@
       else
       {
          echo "Merci pour s'inscrire";  
-      }
+      }*/
         
         
      
