@@ -40,10 +40,11 @@
       }
       else
       {
-         echo "Merci pour s'inscrire";
+        /* echo "Merci pour s'inscrire";
          <script language="javascript"> 
             window.location="webc.cegepsherbrooke.qc.ca/~viauma/index.php"; 
-          </script>
+          </script>*/
+          echo "<script>alert('Merci pour s'inscrire'); location.href='index.php'</script>";
       }
         
     }
