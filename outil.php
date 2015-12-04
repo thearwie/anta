@@ -5,6 +5,7 @@ function formaterTexte($texte = "")
   $texte = retirerApostrophe($texte);
   $texte = convertirCaractere($texte, ' ', '_');
   $texte = convertirMinuscule($texte);
+  
   return $texte;
 }
   
@@ -19,6 +20,7 @@ function retirerApostrophe($texte = "")
     if($texte[$i] == "'")
     {
       $indexApostrophe = $i;
+      
       for($y = $indexApostrophe; $y > 0; $y--)
       {
         if($texte[$y] == " ")
