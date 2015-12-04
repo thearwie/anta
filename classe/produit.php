@@ -19,7 +19,7 @@
       $this->setCommentaire("");
       $this->setEnVente(0);
       $this->setNouveaute(0);
-      $this->$typeProduit = new TypeProduit();
+      $this->typeProduit = new TypeProduit();
     }
 
     function init($nvId, $nvNom, $nvQuantite, $nvPrix, $nvCommentaire, $nvEnVente, $nvNouveaute, $idTypeProduit, $nomTypeProduit)

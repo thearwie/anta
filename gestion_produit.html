@@ -27,99 +27,106 @@
     <link rel="stylesheet" type="text/css"  href="css/admin.css" />
 
 
+
   </head>
   <body>
     <div class='page'>
       <h1>Gestion des produits</h1>
 
       <form action="">
-        <label>Action</label>
-        <br/>
-        <select>
-          <option value="ajouter" selected>Ajouter</option>
-          <option value="modifier/supprimer">Modifier/Supprimer</option>
-        </select>
-        <br/>
-        <br/>
-        <ul>
-          <li><input type="radio" name="produit" value="bague">Bague</li><br/>
-          <li><input type="radio" name="produit" value="collier">Collier</li><br/>
-          <li><input type="radio" name="produit" value="boucleOreille">Boucle d'oreille</li><br/>
-          <li><input type="radio" name="produit" value="bracelet">Bracelet</li><br/>
-        </ul>
-        <br/>
-
-        <div class="groupe">
-          <div class="colonneGauche">
-            <label>Code</label>
-            <br/>
-            <input type="text" name="code">
-            <br/><br/>
+            <label>Action</label>
+      <br/>
+      <select>
+        <option value="ajouter" selected>Ajouter</option>
+        <option value="modifier/supprimer">Modifier/Supprimer</option>
+      </select>
+      <br/>
+      <br/>
+      <ul style="display:flex; list-style:none;">
+        <li><input type="radio" name="produit" value="bague">Bague</li><br/>
+        <li><input type="radio" name="produit" value="collier">Collier</li><br/>
+        <li><input type="radio" name="produit" value="boucleOreille">Boucle d'oreille</li><br/>
+        <li><input type="radio" name="produit" value="bracelet">Bracelet</li><br/>
+      </ul>
+      <br/>
 
 
+      <div>
+        <div style="float:left;">
+          <label>Code</label>
+          <br/>
+          <input type="text" name="code">
+          <br/><br/>
 
-            <label>Matériel principal</label>
-            <br/>
-            <select>
-              <option value="Argent 950" selected>Argent 950</option>
-              <option value="Argent 925">Argent 925</option>
-              <option value="or 14k">Or 14k</option>
-            </select>
-            <br/><br/>
+          <label>Matériel principal</label>
+          <br/>
+          <select>
+            <option value="Argent 950" selected>Argent 950</option>
+            <option value="Argent 925">Argent 925</option>
+            <option value="or 14k">Or 14k</option>
+          </select>
+          <br/><br/>
 
-            <label>Autres matériaux</label>
-            <br/>
-            <!--<select size="3" multiple>
-            <option value="diamand">Diamand</option>
-            <option value="rubis">Rubis</option>
-            <option value="zircon">zircon</option>
-            </select>-->
-            <div id="wrapper">
-              <input type="checkbox" name="diamand" value="Diamand">Diamand<br/>
-              <input type="checkbox" name="rubis" value="Rubis">Rubis<br/>
-              <input type="checkbox" name="zircon" value="Zircon">Zircon<br/>
-              <input type="checkbox" name="diamand" value="Diamand">Diamand<br/>
-              <input type="checkbox" name="rubis" value="Rubis">Rubis<br/>
-              <input type="checkbox" name="zircon" value="Zircon">Zircon<br/>
-              <input type="checkbox" name="diamand" value="Diamand">Diamand<br/>
-              <input type="checkbox" name="rubis" value="Rubis">Rubis<br/>
-              <input type="checkbox" name="zircon" value="Zircon">Zircon<br/>
-              <input type="checkbox" name="diamand" value="Diamand">Diamand<br/>
-              <input type="checkbox" name="rubis" value="Rubis">Rubis<br/>
-              <input type="checkbox" name="zircon" value="Zircon">Zircon<br/>
-              <input type="checkbox" name="diamand" value="Diamand">Diamand<br/>
-              <input type="checkbox" name="rubis" value="Rubis">Rubis<br/>
-              <input type="checkbox" name="zircon" value="Zircon">Zircon<br/>
+          <label>Autres matériaux</label>
+          <br/>
+          <!--<select size="3" multiple>
+          <option value="diamand">Diamand</option>
+          <option value="rubis">Rubis</option>
+          <option value="zircon">zircon</option>
+          </select>-->
+          <div class="wrapper">
+            <!--<input type="checkbox" name="diamand" value="Diamand">Diamand <br/>
+            <input type="checkbox" name="rubis" value="Rubis">Rubis <br/>
+            <input type="checkbox" name="zircon" value="Zircon">Zircon <br/>
+            <input type="checkbox" name="diamand" value="Diamand">Diamand <br/>
+            <input type="checkbox" name="rubis" value="Rubis">Rubis <br/>
+            <input type="checkbox" name="zircon" value="Zircon">Zircon <br/>
+            <input type="checkbox" name="diamand" value="Diamand">Diamand <br/>
+            <input type="checkbox" name="rubis" value="Rubis">Rubis <br/>
+            <input type="checkbox" name="zircon" value="Zircon">Zircon <br/>
+            <input type="checkbox" name="diamand" value="Diamand">Diamand <br/>
+            <input type="checkbox" name="rubis" value="Rubis">Rubis <br/>
+            <input type="checkbox" name="zircon" value="Zircon">Zircon <br/>-->
+            
+            <div class="colonneGauche">
+              <label class="lblCheckbox" for="diamand">Diamand</label>
+              <label class="lblCheckbox" for="rubis">Rubis</label>
+              <label class="lblCheckbox" for="zircon">Zircon</label>
             </div>
-
-          </div>
-          <div>
-            <label>Image</label>
-            <br/>
-          </div>
-        </div>
-        <br/>
-        <br/>
-        <div class="groupe">
-          <div class="colonneGauche">
-            <label>Prix ($)</label>
-            <br/>
-            <input type="text" name="prix">
-            <br/>
-            <br/>
-          </div>
-          <div>
-            <label>Produit en vente?</label>
-            <br/>
-            <input type="radio" name="enVente" value="oui">Oui
-            <input type="radio" name="enVente" value="non">Non<br>
+            <div>
+              <input type="checkbox" id="diamand" name="diamand" value="Diamand"><br/>
+              <input type="checkbox" id="rubis" name="rubis" value="Rubis"><br/>
+              <input type="checkbox" id="zircon" name="zircon" value="Zircon"><br/>
+            </div>
           </div>
         </div>
-        <br/>
+      <div>
+      <label>Image</label>
+      <br/>
+      </div>
+      </div>
+      <div style="padding: 10px; padding-left: 0px;">
+      <div style="float:left;">
+      <label>Prix ($)</label>
+      <br/>
+      <input type="text" name="prix">
+      <br/>
+      <br/>
+      </div>
+      <div>
+      <label>Produit en vente?</label>
+      <br/>
+      <input type="radio" name="enVente" value="oui">Oui
+      <input type="radio" name="enVente" value="non">Non<br>
+      </div>
+      </div>
+      <br/>
 
-        <label>Quantité</label>
-        <br/>
-        <input type="number" name="quantite" value="0">
+      <label>Quantité</label>
+      <br/>
+      <input type="number" name="quantite" value="0">
+
+    
 
         <br/>
         <br/>

@@ -1,4 +1,4 @@
-<?php
+ï»¿<?php
 function connectionBD()
 {
   $domainName = "webc.cegepsherbrooke.qc.ca";
@@ -8,10 +8,10 @@ function connectionBD()
 
  $link = mysqli_connect($domainName, $userName, $password, $dbName);
 
- /* Vérification de la connexion */
+ /* VÃ©rification de la connexion */	
  if (mysqli_connect_errno())
  {
-   printf("Échec de la connexion : %s\n", mysqli_connect_error());
+   printf("Ã‰chec de la connexion : %s\n", mysqli_connect_error());	
    exit();
  }
   return $link;
@@ -32,50 +32,68 @@ function getAllProduit($idTypeProduit = 0)
   
  if($resultat = mysqli_query($link, $sql))
  { 
-   include('/classe/produit.php');
-   include('/classe/type_produit.php');
+   include("produit.php");
+   include("type_produit.php");
    $nbLigne = mysqli_num_rows($resultat);
-   $mesProduits = array();
+   //$mesProduits = array();
+   $mesProduits[$nbLigne] = new Produit();
+   $iterateur = 0;
    while($row = mysqli_fetch_array($resultat, MYSQLI_BOTH))
    { 
       $produit = new Produit();
       $idTypeProduit = $row[7];
+	  $row2 = null;
       if($resultat2 = mysqli_query($link, "select * from type_produit where id = " . $idTypeProduit))
       {
         $row2 = mysqli_fetch_array($resultat2, MYSQLI_BOTH);
       }
-      $produit->init($row[0], $row[1], $row[2], $row[3], $row[4], $row[5], $row[6], $row2[0], $row2[1]);
-      array_push($mesProduits, $produit);
+	  $mesProduits[$iterateur] = new Produit();
+      $mesProduits[$iterateur]->init($row[0], $row[1], $row[2], $row[3], $row[4], $row[5], $row[6], $row2[0], $row2[1]);
+	  $iterateur ++;
    }
-   mysqli_free_result($resultat);
    mysqli_free_result($resultat2);
+   mysqli_free_result($resultat);
    
    mysqli_close($link);
    
    return $mesProduits;
- }
+  }
 }
    
  function afficherCollection($idTypeProduit)
  {
-   $mesProduits = getAllProduit($idTypeProduit);
-   
-   $nbLigneParPage = 3;
-   $nbProduitParLigne = 3;
-   for($i=0; $i<$nbLigneParPage; $i++) 
-   {
-      echo "<div class='row'>";
-      for($y=0; $y<$nbProduitParLigne; $y++)
+    $mesProduits = getAllProduit($idTypeProduit);
+    $nbProduitSurLigne = 0;
+    
+    for($i=0; $i<count($mesProduits); $i++) 
+    {
+      if($nbProduitSurLigne == 3)
       {
-        $iterateur = 3 * $i + $y;
+        echo "<div class='row'>";
+      }
+      
         echo "<div class='col-md-4'>";
         echo "<h2>" . $mesProduits[$iterateur]->getNom() . "</h2>";
-        echo "<img class='img-responsive img-produit' src='img/" . strtolower($mesProduits[$iterateur]->getTypeProduit()->getNom()) . "/" . $mesProduits[$iterateur]->getId() . ".jpg' alt='" . $mesProduits[$iterateur]->getId() . "'>";
+        echo "<img class='img-responsive img-produit' src='img/" . $mesProduits[$iterateur]->getTypeProduit()->getNom() . "/" . $mesProduits[$iterateur]->getId() . ".jpg' alt='" . $mesProduits[$iterateur]->getId() . "'>";
         echo "<h3 class='prix'>" . $mesProduits[$iterateur]->getPrix() . " CAD$</h3>";
-        echo "<button type='button' class='btn btn-primary bouton-detail' href='#'>Détails</button>";
+        echo "<button type='button' class='btn btn-primary bouton-detail' href='#'>DÃ©tails</button>";
         echo "</div>";
+        
+      if($nbProduitSurLigne == 3)
+      {
+        echo "</div>";
+        $nbProduitSurLigne = 0;
       }
-      echo "</div>";
+      else
+      {
+        $nbProduitSurLigne++;
+      }
    }
+   echo $mesProduits[1]->getTypeProduit()->getNom();
 }
- ?>
+
+function enleverEspaceMot($mot)
+{
+	
+}
+?>

@@ -5,6 +5,7 @@ function formaterTexte($texte = "")
   $texte = retirerApostrophe($texte);
   $texte = convertirCaractere($texte, ' ', '_');
   $texte = convertirMinuscule($texte);
+  
   return $texte;
 }
   
@@ -19,12 +20,13 @@ function retirerApostrophe($texte = "")
     if($texte[$i] == "'")
     {
       $indexApostrophe = $i;
+
       for($y = $indexApostrophe; $y > 0; $y--)
       {
         if($texte[$y] == " ")
         {
           $indexEspace = $y;
-          
+    
           //$indexEspace+1, car le 0 compte  //$indexApostrophe+1, car on ne veut pas l'apostrophe
           $texte = substr($texte, 0, $indexEspace+1) . substr($texte, $indexApostrophe+1);
           
@@ -79,4 +81,5 @@ function convertirMajuscule($texte = "")
   
   return $texte;
 }
+
 ?>

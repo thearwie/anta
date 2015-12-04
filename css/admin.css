@@ -47,7 +47,7 @@ hr {
   width: 90%;
 }
 
-/*default*/
+/* default */
 *
 {
   color: #000000;
@@ -89,10 +89,17 @@ ul
 
 .colonneGauche
 {
-  float:left;
+  float: left;
+  display: inline-flex;
 }
 
-#wrapper 
+.lblCheckbox 
+{
+  display: block;
+  width: 150px;
+}
+
+.wrapper 
 {
   height: 150px;
   width: auto;

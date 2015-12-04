@@ -1,39 +1,52 @@
 ﻿<?php 
 
   $prenom = $_POST['txtPrenom'];
-  $nom = $_POST['txtPrenom']; 
+  $nom = $_POST['txtNom']; 
   $courriel = $_POST['txtCourriel']; 
   $password = $_POST['txtPassword']; 
   $adresse = $_POST['txtAdresse']; 
   $codePostal = $_POST['txtCodePostale']; 
-  $infolettre = '0';
   $ville = '10000'; 
- 
-   if( $prenom != null and $nom != null and $courriel !=null and $password != null and $adresse != null and $codePostal !=null)
-   {
+  $infolettre=0;
+  if(isset($_POST['checkboxInfolettre']))
+  {
+   $infolettre=1;
+  }
+  
     $connexionDB = mysql_connect("webc.cegepsherbrooke.qc.ca", "viauma", "rurove") or die ("Couldn't connect to server");
     
     mysql_select_db("viauma",  $connexionDB) or die ("Couldn't select database");
     
-    $query = "INSERT INTO utilisateur (id, nom, prenom, courriel, motPasse, adresse, codePostal, infolettre, idVille ) VALUES ('10002', ' $nom', '$prenom', ' $courriel', '$password', '$adresse', '$codePostal', '$infolettre', '$ville')";
+    $queryDernierIdUtilisateur = "SELECT MAX(id) as idUtilisateur FROM utilisateur";
     
-
-    if(!mysql_query($query, $connexionDB))
+    
+    
+    $result = mysql_query($queryInsertUtilisateur) or die ('Query failed: '.mysql_error());
+    $total = mysql_num_rows($result);
+    if($total)
     {
-      die('Error: ' .mysql_error());
-    }
-    else 
-   
-       echo "Merci pour s'inscrire<br/>
-             Bijouterie Anta950!<br/><br/>
-             <a href="http://webc.cegepsherbrooke.qc.ca/~viauma/">Retour à la page d\'accueil</a>";  
+      $row = mysql_fetch_row($result);
+      $idUtilisateur = $row["idUtilisateur"]+1;      
       
-    
+      echo  $idUtilisateur ;
+      
+      /*
+      
+      if(!mysql_query($queryInsertUtilisateur, $connexionDB))
+      {
+        die('Error: ' .mysql_error());
+      }$queryInsertUtilisateur = "INSERT INTO utilisateur (id, nom, prenom, courriel, motPasse, adresse, codePostal, infolettre, idVille ) VALUES ('$idUtilisateur', ' $nom', '$prenom', ' $courriel', '$password', '$adresse', '$codePostal', '$infolettre', '$ville')";
+      else
+      {
+         echo "Merci pour s'inscrire";  
+      }*/
+        
+        
+     
+    }
+    else{
+      echo "Pas d'enregistrements...";
+    }
     mysql_close($connexionDB);
-  }
-  else 
-  {
-      $alerte = "Vous devez remplir tous les champs";
-  }
-  
+    
 ?>

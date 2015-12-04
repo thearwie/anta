@@ -474,7 +474,7 @@ h3, .h3
   margin-top: 16px; 
 }
 
-.spanNousJoindre,.infoDetail, .spanServices, .selectService, .optionSelectService, .spanInscription
+.spanNousJoindre,.infoDetail, .spanServices, .selectService, .optionSelectService, .spanInscription, .spanInfolettre
 {
   color: #732876;
 }
@@ -536,6 +536,16 @@ h3, .h3
 {
   font-size: 1.2em;
   color: #732876;
+}
+
+.infolettre
+{
+  width:500px;
+  text-align:justify;
+  font-size: 0.8em;
+  float: left;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .buttonEnvoyerInscription
