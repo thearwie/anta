@@ -185,7 +185,7 @@
       function formulaireComplet()
       /*=============================================================================*/
       {
-       /* var listeInputVide = 'Remplir le(s) champ(s):\n';	
+        var listeInputVide = 'Remplir le(s) champ(s):\n';	
         var flagVerifChampsVides = 0;
         var nombreControl = 0;
         var idControl = '';
@@ -217,10 +217,12 @@
           for( nombreControl = 0; nombreControl < 7; nombreControl++)
           {
             document.getElementById(idControlInput[nombreControl]).value = '';
-          }	  
-        }*/
+          }
+
+           return true;
+        }
         
-        return true;
+       
         
       } 
   
