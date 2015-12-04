@@ -5,7 +5,7 @@
 /*  Fichier....................:  collections.php                                                      */
 /*  Type.......................:  Document PHP                                                         */
 /*  Titre......................:  Bijouterie Anta950                                                   */
-/*  Auteurs....................:  ©Michaël Bilodeau, 2015                                			         */
+/*  Auteurs....................:  ©Michaël Bilodeau, 2015                                			   */
 /*  Date de création...........:  2015-11-19                                                           */
 /*  Date de mise en production.:                                                                       */
 /*                                                                                                     */
@@ -24,6 +24,7 @@
 <!-- VIEW -->
 
 <?php include('/inc/header.php');?>
+
 <div class='page'>
 
     <div class = "ism-slider" data-play_type="loop" data-interval="8000">
@@ -40,7 +41,7 @@
       </ol>
     </div>
     
-  <div class='collection'>"
+  <div class='collection'>
 
    <div class='row'>
       <div class='col-xs-4'>
@@ -70,8 +71,13 @@
      </div>
   </div>
     
-    <?php include('/inc/genererCollection.php');?>
-    <?php afficherCollection(0);?>
+    <?php 
+	  //echo "<br/> début des test";
+	  include("genererCollection2.php");
+	  
+	  afficherCollection(0);
+	  //echo "<br/> fin des test";
+	?>
 
       <!-- Projects Row -->
       <!-- <div class="row">
@@ -173,5 +179,5 @@
       </div>
       <!-- /.row -->
     </div>
-</div>
+</div></div>
 <?php include('/inc/footer.php')?>
