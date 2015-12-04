@@ -129,7 +129,7 @@
       </div> 
      
       <div class = "buttonEnvoyerInscription">
-        <a class="button"  href="javascript:{}" onclick="document.getElementById('formulaireInscription').submit();">Envoyer</a>
+        <a class="button"  href="javascript:{}" onclick=" if(formulaireComplet()){document.getElementById('formulaireInscription').submit();}">Envoyer</a>
       </div>
       
     </form>
@@ -144,7 +144,7 @@
       /*****************************************************************************/
       var idControlInput = ['txtCodePostale', 'txtCourriel']; 
 
-     // var nomChamp = ['Téléphone', 'Code postal', 'Date', 'NAS', 'Courriel', 'Adresse Int.', 'Decimal']; 						 
+      var nomChamp = ['Prénom', 'Nom', 'Courriel', 'Mot de passe', 'Confirmation de mot de passe', 'Adresse', 'Code postal' ]; 						 
 	
       /*=============================================================================*/
       function valider(idObjet)
@@ -181,6 +181,48 @@
         
       } 
 	  
+     /*=============================================================================*/
+      function formulaireComplet()
+      /*=============================================================================*/
+      {
+        var listeInputVide = 'Remplir le(s) champ(s):\n';	
+        var flagVerifChampsVides = 0;
+        var nombreControl = 0;
+        var idControl = '';
+		 
+        for( nombreControl = 0; nombreControl < 7; nombreControl++)
+        {
+          if(document.getElementById(idControlInput[nombreControl]).value == '')  
+          {	
+            listeInputVide = listeInputVide + nomChamp[nombreControl] +'\n';
+            flagVerifChampsVides = 1;
+          }  
+        }
+		
+        if (flagVerifChampsVides == 1)
+        {
+          alert(listeInputVide);
+          nombreControl = 0;
+		  
+          while(document.getElementById(idControlInput[nombreControl]).value != '')
+          {
+            nombreControl++;
+          }
+          document.getElementById(idControlInput[nombreControl]).focus();
+          return false;
+
+        } 
+        else
+        {
+          for( nombreControl = 0; nombreControl < 7; nombreControl++)
+          {
+            document.getElementById(idControlInput[nombreControl]).value = '';
+          }	  
+        }
+        
+        return true;
+        
+      } 
   
 </script>
   
