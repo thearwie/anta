@@ -30,24 +30,19 @@
       while($row = mysql_fetch_array($result))
       {
         $idUtilisateur = $row["idUtilisateur"] + 1;      
+      }
+      
+      $queryInsertUtilisateur = "INSERT INTO utilisateur (id, nom, prenom, courriel, motPasse, adresse, codePostal, infolettre, idVille ) VALUES ('$idUtilisateur', ' $nom', '$prenom', ' $courriel', '$password', '$adresse', '$codePostal', '$infolettre', '$ville')";
         
-        echo  $idUtilisateur ;
-      
-      
-      
-      /*
-      
       if(!mysql_query($queryInsertUtilisateur, $connexionDB))
       {
         die('Error: ' .mysql_error());
-      }$queryInsertUtilisateur = "INSERT INTO utilisateur (id, nom, prenom, courriel, motPasse, adresse, codePostal, infolettre, idVille ) VALUES ('$idUtilisateur', ' $nom', '$prenom', ' $courriel', '$password', '$adresse', '$codePostal', '$infolettre', '$ville')";
+      }
       else
       {
          echo "Merci pour s'inscrire";  
-      }*/
+      }
         
-       } 
-     
     }
     else{
       echo "Pas d'enregistrements...";
