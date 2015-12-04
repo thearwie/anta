@@ -41,7 +41,7 @@
       else
       {
          echo "Merci pour s'inscrire";
-         echo '</br></br><a href="http://webc.cegepsherbrooke.qc.ca/~viauma/index.php">Retourner à la page d'"'"'accueil</a>';
+         echo '</br></br><a href="http://webc.cegepsherbrooke.qc.ca/~viauma/index.php">Accueil</a>';
          
  
       }
