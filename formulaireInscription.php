@@ -214,15 +214,9 @@
         } 
         else
         {
-          for( nombreControl = 0; nombreControl < 7; nombreControl++)
-          {
-            document.getElementById(idControlInput[nombreControl]).value = '';
-          }
 
            return true;
         }
-        
-       
         
       } 
   
