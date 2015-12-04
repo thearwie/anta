@@ -9,11 +9,14 @@
   $infolettre = '0';
   $ville = '10000'; 
  
-  if($_POST['txtPrenom'] == '')
+  if(empty($_POST['txtPrenom']))
   {
      $errors[1] = '<span class="error">Remplir le prénom</span>';
   }
-  
+  else if (empty($_POST['txtNom']))
+  {
+     $errors[2] = '<span class="error">Remplir le nom</span>';
+  }
   else
   {
   

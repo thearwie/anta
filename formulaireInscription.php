@@ -52,7 +52,7 @@
           <span class="spanInscription">Nom</span>
         </div>	
         <div class = "input">
-          <input type="text" id="txtNom"  name = "txtNom" size="40" />
+          <input type="text" id="txtNom"  name = "txtNom" size="40" /><?php echo $errors[2]; ?>
         </div>
       </div>
       <div class="courriel">
