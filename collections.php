@@ -147,10 +147,10 @@
       </div> -->
       <!-- /.row -->
 
-      <hr/>
+      <!-- <hr/> -->
 
       <!-- Pagination -->
-      <div class="row text-center">
+      <!-- <div class="row text-center">
           <div class="col-lg-12">
               <ul class="pagination">
                   <li>
@@ -176,7 +176,7 @@
                   </li>
               </ul>
           </div>
-      </div>
+      </div> -->
       <!-- /.row -->
     </div>
 </div></div>

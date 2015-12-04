@@ -63,24 +63,33 @@ function getAllProduit($idTypeProduit = 0)
  function afficherCollection($idTypeProduit)
  {
     $mesProduits = getAllProduit($idTypeProduit);
-   
-    $nbLigneParPage = 3;
-    $nbProduitParLigne = 3;
-    for($i=0; $i<$nbLigneParPage; $i++) 
+    $nbProduitSurLigne = 0;
+    
+    for($i=0; $i<count($mesProduits); $i++) 
     {
-      echo "<div class='row'>";
-      for($y=0; $y<$nbProduitParLigne; $y++)
+      if($nbProduitSurLigne == 3)
       {
-        $iterateur = 3 * $i + $y;
+        echo "<div class='row'>";
+      }
+      
         echo "<div class='col-md-4'>";
         echo "<h2>" . $mesProduits[$iterateur]->getNom() . "</h2>";
         echo "<img class='img-responsive img-produit' src='img/" . $mesProduits[$iterateur]->getTypeProduit()->getNom() . "/" . $mesProduits[$iterateur]->getId() . ".jpg' alt='" . $mesProduits[$iterateur]->getId() . "'>";
         echo "<h3 class='prix'>" . $mesProduits[$iterateur]->getPrix() . " CAD$</h3>";
         echo "<button type='button' class='btn btn-primary bouton-detail' href='#'>Détails</button>";
         echo "</div>";
+        
+      if($nbProduitSurLigne == 3)
+      {
+        echo "</div>";
+        $nbProduitSurLigne = 0;
       }
-      echo "</div>";
+      else
+      {
+        $nbProduitSurLigne++;
+      }
    }
+   echo $mesProduits[1]->getTypeProduit()->getNom();
 }
 
 function enleverEspaceMot($mot)
