@@ -44,7 +44,7 @@
           <span class="spanInscription">Prénom</span>
         </div>	
         <div class = "input">
-          <input type="text" id="txtPrenom" name = "txtPrenom" size="40" /><?php echo $errors[1]; ?>
+          <input type="text" id="txtPrenom" name = "txtPrenom" size="40" />
         </div>
       </div>
       <div class="nom">
@@ -52,7 +52,7 @@
           <span class="spanInscription">Nom</span>
         </div>	
         <div class = "input">
-          <input type="text" id="txtNom"  name = "txtNom" size="40" /><?php echo $errors[2]; ?>
+          <input type="text" id="txtNom"  name = "txtNom" size="40" />
         </div>
       </div>
       <div class="courriel">
@@ -60,7 +60,7 @@
           <span class="spanInscription">Courriel</span>
           </div>	
         <div class = "input">
-        <input type="text" id="txtCourriel" name = "txtCourriel" size="40" />
+        <input type="text" id="txtCourriel" name = "txtCourriel" size="40" onblur="valider('txtCourriel');" />
         </div>
       </div>
       <div class="motPasse">
@@ -93,7 +93,7 @@
             <span class="spanInscription">Code Postale</span>
           </div>	
           <div class = "input">
-            <input type="text" id="txtCodePostale" name = "txtCodePostale" size="12" />
+            <input type="text" id="txtCodePostale" name = "txtCodePostale" size="12" onblur="valider('txtCodePostale');"/>
           </div>
         </div>
         <div class="ville">
@@ -136,6 +136,55 @@
       
     </div>
   </div>
+  
+  
+<script type="text/javascript">
+/*****************************************************************************/
+      /* VARIABLES GLOBALES                                                        */
+      /*****************************************************************************/
+      var idControlInput = ['txtCodePostale', 'txtCourriel']; 
+
+     // var nomChamp = ['Téléphone', 'Code postal', 'Date', 'NAS', 'Courriel', 'Adresse Int.', 'Decimal']; 						 
+	
+      /*=============================================================================*/
+      function valider(idObjet)
+      /*=============================================================================*/
+      { 
+        var var_id = document.getElementById(idObjet);
+		
+        if(var_id.id == "txtCodePostale" && var_id.value != '')
+        {
+          var_expReg = /^[a-zA-Z]\d[a-zA-Z](-?|\s)\d[a-zA-Z]\d$/;
+		  
+          if(var_expReg.test(var_id.value) == false)
+          {
+            alert('Le code postal entré est incorrect\n \n Les formats possibles sont: \n'+
+                  'A9A 9A9|A9A-9A9|A9A9A9');
+            window.setTimeout(function(){var_id.select()},0);
+            return false;	         
+          }
+          return true;  
+        }
+        else if(var_id.id == "txtCourriel" && var_id.value != '')
+        {
+          var_expReg = /^((\w+([\.-]?\w+)*@((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)))|(\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+))$/
+   
+          if(var_expReg.test(var_id.value) == false)
+          {
+            alert('Le courriel entré est incorrecte\n\nLe format est:\n'+
+                  'compte@domaine.ext | compte@255.255.255.0');
+            window.setTimeout(function(){var_id.select()},0);	
+            return false;		  
+          } 	
+          return true;  
+        }
+        
+      } 
+	  
+  
+</script>
+  
+  
 <?php include('/inc/footer.php')?>
 
 
