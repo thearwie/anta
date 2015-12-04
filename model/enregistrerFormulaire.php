@@ -21,7 +21,8 @@
     
     
     
-    $result = mysql_query($queryInsertUtilisateur) or die ('Query failed: '.mysql_error());
+    $result = mysql_query($queryDernierIdUtilisateur) or die ('Query failed: '.mysql_error());
+   
     $total = mysql_num_rows($result);
     if($total)
     {
