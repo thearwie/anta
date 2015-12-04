@@ -44,7 +44,9 @@
          <script language="javascript"> 
             window.location="webc.cegepsherbrooke.qc.ca/~viauma/index.php"; 
           </script>*/
-          echo "<script>alert('Merci pour s'inscrire'); location.href='index.php'</script>";
+         /*  echo "<script>alert('Merci pour s'inscrire'); location.href='index.php'</script>";*/
+         
+          header("Location: index.php");
       }
         
     }
