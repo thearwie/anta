@@ -8,10 +8,13 @@
   $codePostal = $_POST['txtCodePostale']; 
   //$infolettre = '0';
   $ville = '10000'; 
-  
-  $infolettreAux = $_POST['checkboxInfolettre'];
-  if ( $infolettreAux=='on')
-   { $infolettre=1;}
+  $infolettre=0;
+  //$infolettreAux = $_POST['checkboxInfolettre'];
+  if(isset($_POST['checkboxInfolettre']))
+  {
+   $infolettre=1;
+  }
+ 
    
  
   echo $infolettre;
