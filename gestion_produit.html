@@ -1,132 +1,127 @@
 ﻿<!DOCTYPE html>
+<!--
+/*******************************************************************************************************/
+/*                                                                                                     */
+/*  Fichier....................:  gestion_produit.php                                                  */
+/*  Type.......................:  Document PHP                                                         */
+/*  Titre......................:  Bijouterie Anta950                                                   */
+/*  Auteurs....................:  ©Maxime Viau, 2015                                                   */
+/*  Date de création...........:  2015-11-16                                                           */
+/*  Date de mise en production.:                                                                       */
+/*                                                                                                     */
+/*******************************************************************************************************/
+/*                                                                                                     */
+/*  - Page de gestion des produits                                                                     */
+/*                                                                                                     */
+/*******************************************************************************************************/
+-->
 <html>
-  <!--
-  /*******************************************************************************************************/
-  /*                                                                                                     */
-  /*  Fichier....................:  gestion_produit.php                                                  */
-  /*  Type.......................:  Document PHP                                                         */
-  /*  Titre......................:  Bijouterie Anta950                                                   */
-  /*  Auteurs....................:  ©Maxime Viau, 2015                                                   */
-  /*  Date de création...........:  2015-11-16                                                           */
-  /*  Date de mise en production.:                                                                       */
-  /*                                                                                                     */
-  /*******************************************************************************************************/
-  /*                                                                                                     */
-  /*  - Page de gestion des produits                                                                     */
-  /*                                                                                                     */
-  /*******************************************************************************************************/
-  -->
-
   <head>
     <title>Gestion des produits</title>
+
     <meta charset="UTF-8">
     <meta name="description" content="Site de vente de la bijouterie avec exposition des créations">
     <meta name="keywords" content="Bijou, bague, collier, boucle d'oreille, bracelet">
     <meta name="author" content="Michaël Bilodeau, Paola Carranza, Maxime Viau">
 
     <link rel="stylesheet" type="text/css"  href="css/admin.css" />
-
-
-
   </head>
   <body>
     <div class='page'>
       <h1>Gestion des produits</h1>
 
       <form action="">
-            <label>Action</label>
-      <br/>
-      <select>
-        <option value="ajouter" selected>Ajouter</option>
-        <option value="modifier/supprimer">Modifier/Supprimer</option>
-      </select>
-      <br/>
-      <br/>
-      <ul style="display:flex; list-style:none;">
-        <li><input type="radio" name="produit" value="bague">Bague</li><br/>
-        <li><input type="radio" name="produit" value="collier">Collier</li><br/>
-        <li><input type="radio" name="produit" value="boucleOreille">Boucle d'oreille</li><br/>
-        <li><input type="radio" name="produit" value="bracelet">Bracelet</li><br/>
-      </ul>
-      <br/>
+        <label>Action</label>
+        <br/>
+        <select>
+          <option value="ajouter" selected>Ajouter</option>
+          <option value="modifier/supprimer">Modifier/Supprimer</option>
+        </select>
+        <br/>
+        <br/>
+        <ul style="display:flex; list-style:none;">
+          <li><input type="radio" name="produit" value="bague">Bague</li><br/>
+          <li><input type="radio" name="produit" value="collier">Collier</li><br/>
+          <li><input type="radio" name="produit" value="boucleOreille">Boucle d'oreille</li><br/>
+          <li><input type="radio" name="produit" value="bracelet">Bracelet</li><br/>
+        </ul>
+        <br/>
 
 
-      <div>
-        <div style="float:left;">
-          <label>Code</label>
-          <br/>
-          <input type="text" name="code">
-          <br/><br/>
+        <div class="groupe">
+          <div class="colonneGauche">
+            <label>Code</label>
+            <br/>
+            <input type="text" name="code">
+            <br/><br/>
 
-          <label>Matériel principal</label>
-          <br/>
-          <select>
+            <label>Matériel principal</label>
+            <br/>
+            <select>
             <option value="Argent 950" selected>Argent 950</option>
             <option value="Argent 925">Argent 925</option>
             <option value="or 14k">Or 14k</option>
-          </select>
-          <br/><br/>
+            </select>
+            <br/><br/>
 
-          <label>Autres matériaux</label>
-          <br/>
-          <!--<select size="3" multiple>
-          <option value="diamand">Diamand</option>
-          <option value="rubis">Rubis</option>
-          <option value="zircon">zircon</option>
-          </select>-->
-          <div class="wrapper">
-            <!--<input type="checkbox" name="diamand" value="Diamand">Diamand <br/>
-            <input type="checkbox" name="rubis" value="Rubis">Rubis <br/>
-            <input type="checkbox" name="zircon" value="Zircon">Zircon <br/>
-            <input type="checkbox" name="diamand" value="Diamand">Diamand <br/>
-            <input type="checkbox" name="rubis" value="Rubis">Rubis <br/>
-            <input type="checkbox" name="zircon" value="Zircon">Zircon <br/>
-            <input type="checkbox" name="diamand" value="Diamand">Diamand <br/>
-            <input type="checkbox" name="rubis" value="Rubis">Rubis <br/>
-            <input type="checkbox" name="zircon" value="Zircon">Zircon <br/>
-            <input type="checkbox" name="diamand" value="Diamand">Diamand <br/>
-            <input type="checkbox" name="rubis" value="Rubis">Rubis <br/>
-            <input type="checkbox" name="zircon" value="Zircon">Zircon <br/>-->
-            
-            <div class="colonneGauche">
-              <label class="lblCheckbox" for="diamand">Diamand</label>
-              <label class="lblCheckbox" for="rubis">Rubis</label>
-              <label class="lblCheckbox" for="zircon">Zircon</label>
-            </div>
-            <div>
-              <input type="checkbox" id="diamand" name="diamand" value="Diamand"><br/>
-              <input type="checkbox" id="rubis" name="rubis" value="Rubis"><br/>
-              <input type="checkbox" id="zircon" name="zircon" value="Zircon"><br/>
+            <label>Autres matériaux</label>
+            <br/>
+            <!--<select size="3" multiple>
+            <option value="diamand">Diamand</option>
+            <option value="rubis">Rubis</option>
+            <option value="zircon">zircon</option>
+            </select>-->
+            <div class="wrapper">
+              <!--<input type="checkbox" name="diamand" value="Diamand">Diamand <br/>
+              <input type="checkbox" name="rubis" value="Rubis">Rubis <br/>
+              <input type="checkbox" name="zircon" value="Zircon">Zircon <br/>
+              <input type="checkbox" name="diamand" value="Diamand">Diamand <br/>
+              <input type="checkbox" name="rubis" value="Rubis">Rubis <br/>
+              <input type="checkbox" name="zircon" value="Zircon">Zircon <br/>
+              <input type="checkbox" name="diamand" value="Diamand">Diamand <br/>
+              <input type="checkbox" name="rubis" value="Rubis">Rubis <br/>
+              <input type="checkbox" name="zircon" value="Zircon">Zircon <br/>
+              <input type="checkbox" name="diamand" value="Diamand">Diamand <br/>
+              <input type="checkbox" name="rubis" value="Rubis">Rubis <br/>
+              <input type="checkbox" name="zircon" value="Zircon">Zircon <br/>-->
+
+              <div class="colonneGauche">
+                <label class="lblCheckbox" for="diamand">Diamand</label>
+                <label class="lblCheckbox" for="rubis">Rubis</label>
+                <label class="lblCheckbox" for="zircon">Zircon</label>
+              </div>
+              <div>
+                <input type="checkbox" id="diamand" name="diamand" value="Diamand"><br/>
+                <input type="checkbox" id="rubis" name="rubis" value="Rubis"><br/>
+                <input type="checkbox" id="zircon" name="zircon" value="Zircon"><br/>
+              </div>
             </div>
           </div>
+          <div>
+            <label>Image</label>
+            <br/>
+          </div>
         </div>
-      <div>
-      <label>Image</label>
-      <br/>
-      </div>
-      </div>
-      <div style="padding: 10px; padding-left: 0px;">
-      <div style="float:left;">
-      <label>Prix ($)</label>
-      <br/>
-      <input type="text" name="prix">
-      <br/>
-      <br/>
-      </div>
-      <div>
-      <label>Produit en vente?</label>
-      <br/>
-      <input type="radio" name="enVente" value="oui">Oui
-      <input type="radio" name="enVente" value="non">Non<br>
-      </div>
-      </div>
-      <br/>
+        <div class="groupe" style="padding: 10px; padding-left: 0px;">
+          <div class="colonneGauche">
+            <label>Prix ($)</label>
+            <br/>
+            <input type="text" name="prix">
+            <br/>
+            <br/>
+          </div>
+          <div>
+            <label>Produit en vente?</label>
+            <br/>
+            <input type="radio" id="rBtnOui" name="enVente" value="oui"><label for="rBtnOui">Oui</label>
+            <input type="radio" id="rBtnNon" name="enVente" value="non"><label for="rBtnNon">Non</label><br/>
+          </div>
+        </div>
+        <br/>
 
-      <label>Quantité</label>
-      <br/>
-      <input type="number" name="quantite" value="0">
-
-    
+        <label>Quantité</label>
+        <br/>
+        <input type="number" name="quantite" value="0">
 
         <br/>
         <br/>
@@ -134,6 +129,6 @@
         <input type="button" name="annuler" value="Annuler">
       </form>
 
-    </div>
+  </div>
   </body>
 </html>
