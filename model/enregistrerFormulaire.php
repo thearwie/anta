@@ -21,14 +21,18 @@
     
     
     
-    $result = mysql_query($queryInsertUtilisateur) or die ('Query failed: '.mysql_error());
+    $result = mysql_query($queryDernierIdUtilisateur) or die ('Query failed: '.mysql_error());
+   
     $total = mysql_num_rows($result);
+    
     if($total)
     {
       $row = mysql_fetch_row($result);
-      $idUtilisateur = $row["idUtilisateur"]+1;      
+      $idUtilisateur = $row["idUtilisateur"];      
       
       echo  $idUtilisateur ;
+      
+      
       
       /*
       
