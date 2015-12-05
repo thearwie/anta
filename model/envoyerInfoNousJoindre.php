@@ -7,9 +7,9 @@
   
   $from="De: $name<$email>\r\nReturn-path: $email"; 
   $subject="Message envoyé à partir du formulaire nous joindre"; 
-  mail("email@adress.com", $subject, $message, $from);
+  mail("pcarranza10@hotmail.com", $subject, $message, $from);
             
-  echo "Message envoyé!<br/><br/><a href='index.php'>Retourner à la page d'accueil</a><br/><a href='nous_joindre.php'>Retourner au formulaire de contact</a>";
+  echo "Message envoyé!<br/><br/><a href='http://webc.cegepsherbrooke.qc.ca/~viauma/index.php'>Retourner à la page d'accueil</a><br/><a href='http://webc.cegepsherbrooke.qc.ca/~viauma/nousJoindre.php'>Retourner au formulaire nous joindre</a>";
   
   
 ?>
