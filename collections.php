@@ -61,7 +61,7 @@
        <div class='col-xs-4 combobox-group'>
         <label class='control-label h3'>Catégorie</label>
         <div class='combobox'>
-        <select class='form-control' id="select-categogie" name='categorie'>
+        <select class='form-control' id="select-categogie" name='categorie' onchange="afficherProduits(this.selectedIndex)">
           <option value='tout'>Tous les produits</option>
           <option value='ba'>Bague (BA)</option>
           <option value='bo'>Boucle d'oreille (BO)</option>
@@ -72,10 +72,10 @@
       </div>
     </div>
      
-    <div class="collection-produit">
+    <div class="collection-produit" id="collection-produit" onload="afficherProduits(select-categogie.selectedIndex)">
       <?php 
       include("genererCollection.php");
-      afficherCollection(0);
+      //afficherCollection();
       ?>
     </div>
   </div>
@@ -83,7 +83,29 @@
 <?php include('/inc/footer.php')?>
 
 <script>
-  $('#select-categogie').on('change', function() {
-    $( ".collection-produit").empty();
-});
+  /* function afficherProduits(idTypeProduit) {
+    var xmlhttp;
+    if (idTypeProduit == -1) {
+      document.getElementById("collection-produit").innerHTML = "";
+      return;
+    }
+    else {
+      if (window.XMLHttpRequest) {
+        // code for IE7+, Firefox, Chrome, Opera, Safari
+        xmlhttp = new XMLHttpRequest();
+      }
+      else {
+        // code for IE6, IE5
+        xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+      }
+      xmlhttp.onreadystatechange = function() {
+        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+          document.getElementById("collection-produit").innerHTML = xmlhttp.responseText;
+        }
+      };
+      
+    xmlhttp.open("GET", "genererCollection.php?idTypeProduit=" + idTypeProduit, true);
+    xmlhttp.send();
+   }
+  } */
 </script>
