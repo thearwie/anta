@@ -61,7 +61,7 @@
        <div class='col-xs-4 combobox-group'>
         <label class='control-label h3'>Catégorie</label>
         <div class='combobox'>
-        <select class='form-control' id="select-categogie" name='categorie' onchange="afficherProduits(this.selectedIndex)">
+        <select class='form-control' id="select-categogie" name='categorie' onchange="afficherProduits()">
           <option value='tout'>Tous les produits</option>
           <option value='ba'>Bague (BA)</option>
           <option value='bo'>Boucle d'oreille (BO)</option>
@@ -72,7 +72,7 @@
       </div>
     </div>
      
-    <div class="collection-produit" id="collection-produit" onload="afficherProduits(select-categogie.selectedIndex)">
+    <div class="collection-produit" id="collection-produit" onload="afficherProduits()">
       <?php 
       include("genererCollection.php");
       //afficherCollection();
