@@ -10,7 +10,9 @@
   
   $from="De: $nomComplet<$courriel>\r\nReturn-path: $courriel"; 
   
+  echo $prenom;
   echo $from;
+  echo $courriel;
   
   $subject="Message envoyé à partir du formulaire nous joindre"; 
   mail("pcarranza10@hotmail.com", $subject, $message, $from);
