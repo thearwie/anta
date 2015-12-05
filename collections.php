@@ -61,7 +61,7 @@
        <div class='col-xs-4 combobox-group'>
         <label class='control-label h3'>Catégorie</label>
         <div class='combobox'>
-        <select class='form-control' id="select-categogie" name='categorie' onchange="afficherProduits()">
+        <select class='form-control' id="select-categogie" name='categorie' onchange="afficherProduits();">
           <option value='tout'>Tous les produits</option>
           <option value='ba'>Bague (BA)</option>
           <option value='bo'>Boucle d'oreille (BO)</option>
@@ -73,16 +73,15 @@
     </div>
      
     <div class="collection-produit" id="collection-produit" onload="afficherProduits()">
-      <?php 
-      include("genererCollection.php");
-      //afficherCollection();
-      ?>
     </div>
+    
   </div>
 </div>
 <?php include('/inc/footer.php')?>
 
-<script>
+<script src="js/collection.js" defer="defer"></script>
+
+<!-- <script> -->
   /* function afficherProduits(idTypeProduit) {
     var xmlhttp;
     if (idTypeProduit == -1) {
@@ -108,4 +107,4 @@
     xmlhttp.send();
    }
   } */
-</script>
+<!-- </script> -->

@@ -67,7 +67,7 @@ function getAllProduit($idTypeProduit = 0)
     header("Content-Type: text/xml");
     echo "<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>";
     
-    echo "<response>";
+    echo "<collection>";
     
       $idTypeProduit = $_GET['idTypeProduit'];
       $mesProduits = getAllProduit($idTypeProduit);
@@ -102,7 +102,8 @@ function getAllProduit($idTypeProduit = 0)
         {
           $nbProduitSurLigne++;
         }
-     }
-  echo "</response>";
+      }
+      
+    echo "</collection>";
 }
 ?>
