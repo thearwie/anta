@@ -106,4 +106,5 @@ function getAllProduit($idTypeProduit = 0)
       
     echo "</collection>";
 }
+afficherCollection();
 ?>

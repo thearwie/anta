@@ -81,7 +81,7 @@
 
 <script src="js/collection.js" defer="defer"></script>
 
-<!-- <script> -->
+<!-- <script>
   /* function afficherProduits(idTypeProduit) {
     var xmlhttp;
     if (idTypeProduit == -1) {
@@ -107,4 +107,4 @@
     xmlhttp.send();
    }
   } */
-<!-- </script> -->
+</script> -->
