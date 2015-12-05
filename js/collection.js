@@ -50,7 +50,7 @@ function handleServerResponse() {
       // document.getElementById("collection-produit").innerHTML = xmlDocumentElement.firstChild;
       // document.getElementById("collection-produit").innerHTML = xmlResponse;
       document.getElementById("collection-produit").innerHTML = collection;
-      // setTimeout(afficherProduits(), 1000);
+      setTimeout(afficherProduits(), 1000);
     } else {
     alert("La génération de produits a échouée!");
     }
