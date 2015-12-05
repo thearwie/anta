@@ -1,19 +1,15 @@
 ﻿<?php 
 
-  function check_input($data)
- {
-    $data = trim($data);
-    $data = stripslashes($data);
-    $data = htmlspecialchars($data);
-    return $data;
- }
   
-  $prenom = check_input($_POST['txtPrenom']);
-  $nom = check_input($_POST['txtNom']); 
-  $courriel = check_input($_POST['txtCourriel']); 
-  $message = check_input($_POST['txtAreaCommentaire']); 
+  $prenom = $_POST['txtPrenom'];
+  $nom = $_POST['txtNom']; 
+  $courriel = $_POST['txtCourriel']; 
+  $message = $_POST['txtAreaCommentaire']; 
   
-  $from="De: $name<$email>\r\nReturn-path: $email"; 
+  $nomComplet = $prenom." ".$nom;
+  
+  $from="De: $nomComplet<$courriel>\r\nReturn-path: $courriel"; 
+  
   $subject="Message envoyé à partir du formulaire nous joindre"; 
   mail("pcarranza10@hotmail.com", $subject, $message, $from);
             
