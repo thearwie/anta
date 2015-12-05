@@ -60,20 +60,18 @@ function getAllProduit($idTypeProduit = 0)
   }
 }
    
- function afficherCollection()
+ function envoyerProduits()
  {
     include("outil.php");
    
     header("Content-Type: text/xml");
-    echo "<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>";
+    echo "<? xml version='1.0' encoding='UTF-8' standalone='yes' ?>\n";
     
-    echo "<collection>";
+    echo "<collection>\n";
     
-      $idTypeProduit = $_GET['idTypeProduit'];
+      $idTypeProduit = $_GET["idTypeProduit"];
       $mesProduits = getAllProduit($idTypeProduit);
-      $nbProduitSurLigne = 1;
     
-      echo "<div class='row'>";
       for($i=0; $i<count($mesProduits)-1; $i++) 
       {
         $nomDossier = $mesProduits[$i]->getTypeProduit()->getNom();
@@ -81,30 +79,15 @@ function getAllProduit($idTypeProduit = 0)
         $nomDossier = formaterTexte($nomDossier);
         $nomDossier = convertirMinuscule($nomDossier);
         
-        echo "<div class='col-md-4'>";
-        echo "<h2>" . $mesProduits[$i]->getNom() . "</h2>";
-        echo "<img class='img-responsive img-produit' src='img/" . $nomDossier . "/" . $mesProduits[$i]->getId() . ".jpg' alt='" . $mesProduits[$i]->getId() . "'>";
-        echo "<h3 class='prix'>" . number_format((float)$mesProduits[$i]->getPrix(), 2, '.', '') . " CAD$</h3>";
-        echo "<button type='button' class='btn btn-primary bouton-detail' href='#'>Détails</button>";
-        echo "</div>";
-        
-        if($nbProduitSurLigne == 3)
-        {
-          echo "</div>";
-          echo "<div class='row'>";
-          $nbProduitSurLigne = 1;
-        }
-        else if($nbProduitSurLigne == 3 && $i == count($mesProduits)-1)
-        {
-          echo "</div>";
-        }
-        else
-        {
-          $nbProduitSurLigne++;
-        }
+        echo "<produit>\n";
+        echo "<id>" . $mesProduits[$i]->getId() . "</id>\n";
+        echo "<nom>" . $mesProduits[$i]->getNom() . "</nom>\n";
+        echo "<sourceimage>img/" . $nomDossier . "/" . $mesProduits[$i]->getId() . ".jpg" . "</sourceimage>\n";
+        echo "<prix>" . number_format((float)$mesProduits[$i]->getPrix(), 2, '.', '') . "</prix>\n";
+        echo "</produit>\n";
       }
       
     echo "</collection>";
 }
-afficherCollection();
+envoyerProduits();
 ?>
