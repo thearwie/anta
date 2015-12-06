@@ -5,8 +5,8 @@
 /*  Fichier....................:  produit_detail.php                                                   */
 /*  Type.......................:  Document PHP                                                         */
 /*  Titre......................:  Bijouterie Anta950                                                   */
-/*  Auteurs....................:  �Micha�l Bilodeau, 2015                                			         */
-/*  Date de cr�ation...........:  2015-12-01                                                           */
+/*  Auteurs....................:  ©Michaël Bilodeau, 2015                                			         */
+/*  Date de création...........:  2015-12-01                                                           */
 /*  Date de mise en production.:                                                                       */
 /*                                                                                                     */
 /*******************************************************************************************************/
@@ -29,59 +29,112 @@
     <div class="detail-produit">
     
       <div class="row">
+      
         <div class="col-md-4">
           <h1 class="titre-produit">Bracelet BR-0003</h1>
           <img class="img-responsive img-produit" src="img/bracelet/BR-0003-1.jpg" alt="BR-0003-1">
         </div>
+        
         <div class="col-md-8">
+        
           <div class="row">
-            <div class="col-sm-4">
-              <label></label>
-            </div>
-            <div class="col-sm-8">
+            <div class="col-sm-12">
             </div>
           </div>
+          
+          <div class="row">
+            <div class="col-sm-4">
+              <label>22.75 CAD$</label>
+            </div>
+            <div class="col-sm-8">
+              <label class="col-droite">Ajouter au panier</label>
+            </div>
+          </div>
+          
           <div class="row">
             <div class="col-sm-4">
               <input class="quantite" type="number" name="quantity" value="0" min="0" max="5" />
             </div>
             <div class="col-sm-8">
+              <label class="col-droite">Ajouter à la liste de souhait</label>
             </div>
           </div>
+          
           <div class="row">
             <div class="col-sm-4">
               <div class='col-xs-4 combobox-group'>
                 <label class='control-label h3'>Taille</label>
                 <div class='combobox'>
-                <select class='form-control' name='taille' onchange='this.form.submit()'>
-                  <option value=''>Choisir un la taille</option>
-                  <option value='52'>52</option>
-                  <option value='54'>54</option>
-                  <option value='56'>56</option>
-                </select>
+                  <select class='form-control' name='taille' onchange='this.form.submit()'>
+                    <option value=''>Choisir la taille</option>
+                    <option value='52'>52</option>
+                    <option value='54'>54</option>
+                    <option value='56'>56</option>
+                  </select>
+                </div>
               </div>
             </div>
             <div class="col-sm-8">
+              <a class="col-droite" href="#">Charte de dimensions</a>
             </div>
           </div>
+          
           <div class="row">
             <div class="col-sm-4">
+              <label>Disponibilié :</label>
             </div>
             <div class="col-sm-8">
+              <label>2 bracelets restants</label>
             </div>
           </div>
-          <div class="row">
           
+          <div class="row">
+            <div class="col-sm-4">
+              <label>Partager :</label>
+            </div>
+            <div class="col-sm-8">
+              <label>icônes de partage...</label>
+            </div>
           </div>
+          
         </div>
+        
       </div>
       
       <div class="row">
         <div class="col-md-4">
+          <table>
+            <thead>
+              <tr>
+                <th colspan="2">Détails du produit</th>
+              </tr>
+            </head>
+            <tbody>
+              <tr>
+                <td>Catégorie</td>
+                <td>Bracelet</td>
+              </tr>
+              <tr>
+                <td>Matériau</td>
+                <td>Argent 950</td>
+              </tr>
+              <tr>
+                <td>Dimensions</td>
+                <td>58 mm x 46 mm</td>
+              </tr>
+              <tr>
+                <td>Couleur</td>
+                <td>Blanc</td>
+              </tr>
+            </tbody>            
+          </table>
         </div>
         <div class="col-md-8">
+          <h2>Autres produits</h2>
         </div>
       </div>
+      
+      
     </div>
     
 </div>

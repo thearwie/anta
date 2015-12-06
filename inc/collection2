@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<collection>
+  <produit>
+    <id>BO-0002-1</id>
+    <nom>Boucle d'oreille BO-0002</nom>
+    <sourceimage>img/boucle_oreille/BO-0002-1.jpg</sourceimage>
+    <prix>17.00 CDN$</prix>
+  </produit>
+  <produit>
+    <id>BO-0003-1</id>
+    <nom>Boucle d'oreille BO-0003</nom>
+    <sourceimage>img/boucle_oreille/BO-0003-1.jpg</sourceimage>
+    <prix>14.00 CDN$</prix>
+  </produit>
+</collection>

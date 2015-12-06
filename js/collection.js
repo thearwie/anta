@@ -1,179 +1,115 @@
-var xmlHttp = createXmlHttpRequestObject();
-
-function createXmlHttpRequestObject() {
-  var xmlHttp;
-  
-  if(window.XMLHttpRequest) {
-    xmlHttp = new XMLHttpRequest();
-  } else {
-    xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
-  }
-  
-  return xmlHttp;
-}
+var nbAfficherDetailsAppels = 0;
+var idProduit = 0;
 
 function afficherProduits() {
-  if(xmlHttp) {
-    try {
-      // idTypeProduit = encodeURIComponent(document.getElementById("select-categogie").selectedIndex);
-      idTypeProduit = document.getElementById("select-categogie").selectedIndex;
-      xmlHttp.open("GET", "genererCollection.php?idTypeProduit="+idTypeProduit, true);
-      
-      //Appel de fonction quand on reçoit la réponse xml
-      xmlHttp.onreadystatechange = handleRequestState;
-      
-      xmlHttp.send(null);
-    } catch(e) {
-      alert(e.toString());
-    }
-}
-
-function handleRequestState() {
-  //done communicating
-  if(xmlHttp.readyState == 1) {
-    alert("Status 1: server connection established.");
-  } else if(xmlHttp.readyState == 2) {
-    alert("Status 2: request received.");
-  } else if(xmlHttp.readyState == 3) {
-    alert("Status 3: processing request.");
-  } else if(xmlHttp.readyState == 4) {
+  var idTypeProduit = document.getElementById("select-categogie").selectedIndex;
+  var idClassement = document.getElementById("select-classement").selectedIndex;
+  
+  $.get("genererCollection.php", {idClassement: idClassement, idTypeProduit: idTypeProduit}, function() {
+    var nomFichier = "";
+    if(idTypeProduit > 0)
+      nomFichier = "collection" + idTypeProduit + ".xml";
+    else
+      nomFichier = "collection.xml";
     
-    if(xmlHttp.status == 200) { //la communication s'est bien passé
-      try {
-        handleResponse();
-      } catch(e) {
-        alert(e.toString());
+    $.ajax({
+      type: "GET",
+      url: nomFichier,
+      dataType: "xml",
+      success: function (xml) {
+        $(".collection-produit").empty();
+        
+        var collection = xml.getElementsByTagName("collection");
+        var ids = collection[0].getElementsByTagName("id");
+        var idproduits = collection[0].getElementsByTagName("idproduit");
+        var noms = collection[0].getElementsByTagName("nom");
+        var sourceimages = collection[0].getElementsByTagName("sourceimage");
+        var listePrix = collection[0].getElementsByTagName("prix");
+        var collectionProduit = document.getElementById("collection-produit");
+        var boutons = [];
+        var nbProduitSurLigne = 1;
+        var row = null;
+        
+        for(var i = 0; i < ids.length; i++) {
+          var produit = null;
+          var titre = null;
+          var image = null;
+          var prix = null;
+          var bouton = null;
+          var text = null;
+          var idProduit = idproduits.item(i).firstChild.nodeValue;
+          
+          if(nbProduitSurLigne == 1) {
+            row = document.createElement("div");
+            row.setAttribute("class", "row");
+            collectionProduit.appendChild(row);
+          }
+          
+          produit = document.createElement("div");
+          produit.setAttribute("class", "col-md-4");
+          row.appendChild(produit);
+          
+          titre = document.createElement("h2");
+          text = document.createTextNode(noms.item(i).firstChild.nodeValue);
+          titre.appendChild(text);
+          produit.appendChild(titre);
+          
+          image = document.createElement("img");
+          image.setAttribute("class", "img-responsive img-produit");
+          image.setAttribute("src", sourceimages.item(i).firstChild.nodeValue);
+          image.setAttribute("alt", ids.item(i).firstChild.nodeValue);
+          produit.appendChild(image);
+          
+          prix = document.createElement("h3");
+          prix.setAttribute("class", "prix");
+          text = document.createTextNode(listePrix.item(i).firstChild.nodeValue);
+          prix.appendChild(text);
+          produit.appendChild(prix);
+          
+          bouton = document.createElement("button");
+          bouton.setAttribute("id", "bouton" + i);
+          bouton.setAttribute("class", "btn btn-primary bouton-detail");
+          bouton.setAttribute("type", "button");
+          bouton.onclick = function(event) {
+            var idProduitInterne = idProduit;
+            afficherDetail(idProduitInterne);
+          };
+          // boutons[i].setAttribute("href", "#");
+          // boutons[i].setAttribute("onclick", "afficherDetail(idProduit);");
+           
+          /* boutons[i].addEventListener("click", function(){
+            afficherDetail(idProduit)
+          }); */
+          // bouton.setAttribute("onclick", "afficherDetail(idProduit);");
+           // $("#bouton" + i).click(afficherDetail(idProduit));
+           // $("#bouton" + i).on("click", afficherDetail(idProduit));
+          // boutons[i].onclick = afficherDetail(idProduit);
+          text = document.createTextNode("Détails");
+          bouton.appendChild(text);
+          produit.appendChild(bouton);
+          
+          nbAfficherDetailsAppels = 0;
+          
+          if(nbProduitSurLigne < 3) {
+            nbProduitSurLigne++;
+          } else {
+            nbProduitSurLigne = 1;
+          }
+        }
       }
-    } else {
-    alert(xmlHttp.statusText);
-    }
-  } 
+    });
+  });
+  nbAfficherDetailsAppels = 1;
 }
 
-function handleResponse() {
-  var xmlResponse = xmlHttp.responseXML;
-  var collection = xmlResponse.documentElement;
-  var ids = collection.getElementsByTagName("id");
-  var noms = collection.getElementsByTagName("nom");
-  var sourceimages = collection.getElementsByTagName("sourceimage");
-  var prix = collection.getElementsByTagName("prix");
-  var collectionProduit = document.getElementById("collection-produit");
-  var nbProduitSurLigne = 1;
-  
-  row = document.createElement("div");
-  row.setAttribute("class", "row");
-  collectionProduit.appendChild(row);
-  
-  for(var i = 0; i < ids.length; i++) {
-    var row;
-    var produit;
-    var titre;
-    var image;
-    var prix;
-    var bouton;
-    var text;
-    
-    if(nbProduitSurLigne == 1) {
-      row = document.createElement("div");
-      row.setAttribute("class", "row");
-      collectionProduit.appendChild(row);
-    }
-    
-    produit = document.createElement("div");
-    produit.setAttribute("class", "col-md-4");
-    row.appendChild(produit);
-    
-    titre = document.createElement("h2");
-    text = document.createTextNode(noms.item(i).firstChild.data);
-    titre.appendChild(text);
-    produit.appendChild(titre);
-    
-    image = document.createElement("img");
-    image.setAttribute("class", "img-responsive img-produit");
-    image.setAttribute("src", sourceimages.item(i).firstChild.data);
-    image.setAttribute("alt", ids.item(i).firstChild.data);
-    produit.appendChild(image);
-    
-    prix = document.createElement("h3");
-    prix.setAttribute("class", "prix");
-    text = document.createTextNode(prix.item(i).firstChild.data);
-    prix.appendChild(text);
-    produit.appendChild(prix);
-    
-    bouton = document.createElement("button");
-    bouton.setAttribute("class", "btn btn-primary bouton-detail");
-    bouton.setAttribute("type", "button");
-    bouton.setAttribute("href", "#");
-    text = document.createTextNode("Détails");
-    bouton.appendChild(text);
-    produit.appendChild(bouton);
-    
-    if(nbProduitSurLigne < 3) {
-      nbProduitSurLigne++;
-    } else {
-      nbProduitSurLigne = 1;
-    }
-    
-    /* echo "<div class='col-md-4'>\n";
-    echo "<h2>" . $mesProduits[$i]->getNom() . "</h2>\n";
-    echo "<img class='img-responsive img-produit' src='img/" . $nomDossier . "/" . $mesProduits[$i]->getId() . ".jpg' alt='" . $mesProduits[$i]->getId() . "'>\n";
-    echo "<h3 class='prix'>" . number_format((float)$mesProduits[$i]->getPrix(), 2, '.', '') . " CAD$</h3>\n";
-    echo "<button type='button' class='btn btn-primary bouton-detail' href='#'>Détails</button>\n";
-    echo "</div>\n";
-    
-    if($nbProduitSurLigne == 3)
-    {
-      echo "</div>\n";
-      echo "<div class='row'>\n";
-      $nbProduitSurLigne = 1;
-    }
-    else if($nbProduitSurLigne == 3 && $i == count($mesProduits)-1)
-    {
-      echo "</div>\n";
-    }
-    else
-    {
-      $nbProduitSurLigne++;
-    } */
-  }
-  
-  /* alert("Status 4: request is finished and response is ready.");
-  xmlDoc = xmlHttp.responseXML;
-  collection = xmlDoc.getElementsByTagName("collection");
-  document.getElementById("collection-produit").innerHTML = xmlDocumentElement.firstChild;
-  document.getElementById("collection-produit").innerHTML = xmlDoc;
-  document.getElementById("collection-produit").innerHTML = collection;
-  setTimeout(afficherProduits(), 1000);
-  
-  $idTypeProduit = $_GET["idTypeProduit"];
-  $mesProduits = getAllProduit($idTypeProduit);
-  $nbProduitSurLigne = 1;
-
-  echo "<div class='row'>";
-  for($i=0; $i<count($mesProduits)-1; $i++) 
+function afficherDetail(idProduit) {
+  // $.get("produit_detail.php", {idProduit: idProduit});
+  if(nbAfficherDetailsAppels >= 1)
   {
-    echo "<div class='col-md-4'>\n";
-    echo "<h2>" . $mesProduits[$i]->getNom() . "</h2>\n";
-    echo "<img class='img-responsive img-produit' src='img/" . $nomDossier . "/" . $mesProduits[$i]->getId() . ".jpg' alt='" . $mesProduits[$i]->getId() . "'>\n";
-    echo "<h3 class='prix'>" . number_format((float)$mesProduits[$i]->getPrix(), 2, '.', '') . " CAD$</h3>\n";
-    echo "<button type='button' class='btn btn-primary bouton-detail' href='#'>Détails</button>\n";
-    echo "</div>\n";
-    
-    if($nbProduitSurLigne == 3)
-    {
-      echo "</div>\n";
-      echo "<div class='row'>\n";
-      $nbProduitSurLigne = 1;
-    }
-    else if($nbProduitSurLigne == 3 && $i == count($mesProduits)-1)
-    {
-      echo "</div>\n";
-    }
-    else
-    {
-      $nbProduitSurLigne++;
-    }
-  } */
+    location = "produit_detail.php?idProduit=" + idProduit;
+    // alert("it worked!");
+  }
+  nbAfficherDetailsAppels++;
 }
 
 afficherProduits();

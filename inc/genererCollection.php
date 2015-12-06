@@ -17,17 +17,31 @@ function connectionBD()
   return $link;
 }
 
-function getAllProduit($idTypeProduit = 0)
+function getAllProduit($idClassement, $idTypeProduit)
 {
   $link = connectionBD();
   
-  if($idTypeProduit == 0)
-  {
-    $sql = "select * from produit";
-  }
-  else
-  {
-    $sql = "select * from produit where id_type_produit = " . $idTypeProduit;
+  if($idTypeProduit == 0) {
+    switch($idClassement)
+    {
+      case 0:
+      $sql = "select * from produit";
+      break;
+      
+      case 1:
+      $sql = "select * from produit order by prix asc";
+      break;
+      
+      case 2:
+      $sql = "select * from produit order by prix desc";
+      break;
+    } 
+  } else {
+    if($idClassement == 1) {
+      $sql = "select * from produit where id_type_produit = " . $idTypeProduit . " order by prix asc";
+    } else {
+      $sql = "select * from produit where id_type_produit = " . $idTypeProduit . " order by prix desc";
+    }
   }
   
  if($resultat = mysqli_query($link, $sql))
@@ -35,7 +49,6 @@ function getAllProduit($idTypeProduit = 0)
    include("produit.php");
    include("type_produit.php");
    $nbLigne = mysqli_num_rows($resultat);
-   //$mesProduits = array();
    $mesProduits[$nbLigne] = new Produit();
    $iterateur = 0;
    while($row = mysqli_fetch_array($resultat, MYSQLI_BOTH))
@@ -62,32 +75,53 @@ function getAllProduit($idTypeProduit = 0)
    
  function envoyerProduits()
  {
+    header('Content-type: text/xml');
     include("outil.php");
-   
-    header("Content-Type: text/xml");
-    echo "<? xml version='1.0' encoding='UTF-8' standalone='yes' ?>\n";
+
+    $xml = new DomDocument("1.0");
+    $xml->formatOutput = true;    
     
-    echo "<collection>\n";
+    $collection = $xml->createElement("collection");
+    $xml->appendChild($collection);
     
-      $idTypeProduit = $_GET["idTypeProduit"];
-      $mesProduits = getAllProduit($idTypeProduit);
-    
-      for($i=0; $i<count($mesProduits)-1; $i++) 
-      {
-        $nomDossier = $mesProduits[$i]->getTypeProduit()->getNom();
-        $nomDossier = retirerApostrophe($nomDossier);
-        $nomDossier = formaterTexte($nomDossier);
-        $nomDossier = convertirMinuscule($nomDossier);
-        
-        echo "<produit>\n";
-        echo "<id>" . $mesProduits[$i]->getId() . "</id>\n";
-        echo "<nom>" . $mesProduits[$i]->getNom() . "</nom>\n";
-        echo "<sourceimage>img/" . $nomDossier . "/" . $mesProduits[$i]->getId() . ".jpg" . "</sourceimage>\n";
-        echo "<prix>" . number_format((float)$mesProduits[$i]->getPrix(), 2, '.', '') . "</prix>\n";
-        echo "</produit>\n";
-      }
+    $idTypeProduit = $_GET["idTypeProduit"];
+    $idClassement  = $_GET["idClassement"];
+    $mesProduits = getAllProduit($idClassement, $idTypeProduit);
+  
+    for($i=0; $i<count($mesProduits)-1; $i++) 
+    {
+      $nomDossier = $mesProduits[$i]->getTypeProduit()->getNom();
+      $nomDossier = retirerApostrophe($nomDossier);
+      $nomDossier = formaterTexte($nomDossier);
+      $nomDossier = convertirMinuscule($nomDossier);
       
-    echo "</collection>";
+      $produit = $xml->createElement("produit");
+      $collection->appendChild($produit);
+      
+      $id = $xml->createElement("id", $mesProduits[$i]->getId());
+      $produit->appendChild($id);
+      
+      $idproduit = $xml->createElement("idproduit", substr($mesProduits[$i]->getId(), 0, strrpos($mesProduits[$i]->getId(), "-")));
+      $produit->appendChild($idproduit);
+      
+      $nom = $xml->createElement("nom", $mesProduits[$i]->getNom());
+      $produit->appendChild($nom);
+      
+      $sourceimage = $xml->createElement("sourceimage", "img/" . $nomDossier . "/" . $mesProduits[$i]->getId() . ".jpg");
+      $produit->appendChild($sourceimage);
+      
+      $prix = $xml->createElement("prix", number_format((float)$mesProduits[$i]->getPrix(), 2, '.', '') . " CDN$");
+      $produit->appendChild($prix);
+    }
+    
+    if($idTypeProduit > 0)
+      $nomFichier = "collection" . $idTypeProduit. ".xml";
+    else
+      $nomFichier = "collection.xml";
+    
+    $xml->save($nomFichier);
+    $file = file_get_contents($nomFichier);
+    echo $file;
 }
 envoyerProduits();
 ?>

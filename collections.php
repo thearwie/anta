@@ -49,9 +49,8 @@
         <div class='col-xs-4 combobox-group'>
           <label class='control-label h3'>Classement</label>
           <div class='combobox'>
-          <select class='form-control' id="select-classement" name='classement'>
-            <option value=''>Choisir un classement</option>
-            <option value='pop'>Popularité</option>
+          <select class='form-control' id="select-classement" name='classement' onchange="afficherProduits();">
+            <option value=''>Aucun classement</option>
             <option value='crois'>Prix - moins élevé au plus élevé</option>
             <option value='dec'>Prix - plus élevé au moins élevé</option>
           </select>
@@ -77,32 +76,6 @@
     
   </div>
 </div>
-<?php include('/inc/footer.php')?>
+<?php //include('/inc/footer.php')?>
 
-<!-- <script>
-  /* function afficherProduits(idTypeProduit) {
-    var xmlhttp;
-    if (idTypeProduit == -1) {
-      document.getElementById("collection-produit").innerHTML = "";
-      return;
-    }
-    else {
-      if (window.XMLHttpRequest) {
-        // code for IE7+, Firefox, Chrome, Opera, Safari
-        xmlhttp = new XMLHttpRequest();
-      }
-      else {
-        // code for IE6, IE5
-        xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-      }
-      xmlhttp.onreadystatechange = function() {
-        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-          document.getElementById("collection-produit").innerHTML = xmlhttp.responseText;
-        }
-      };
-      
-    xmlhttp.open("GET", "genererCollection.php?idTypeProduit=" + idTypeProduit, true);
-    xmlhttp.send();
-   }
-  } */
-</script> -->
+<script src="js/collection.js" defer="defer"></script>
