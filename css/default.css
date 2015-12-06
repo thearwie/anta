@@ -461,6 +461,7 @@ h3, .h3
 .test
 {
   float: left !important;
+  margin-right: 12px !important;
 }
 
 /* Formulaires Nous Joindre et Services*/
