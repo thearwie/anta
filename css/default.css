@@ -460,7 +460,7 @@ h3, .h3
 /* Produit_detail */
 .col-droite
 {
-  float: left;
+  float: left !important;
 }
 
 /* Formulaires Nous Joindre et Services*/
