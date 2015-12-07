@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+﻿
 <?php 
 
   
@@ -15,7 +15,7 @@
  
   $subject="Message envoyé à partir du formulaire nous joindre"; 
   
-  mail("pcarranza10@hotmail.com", $subject, $message, "paolita.carranza@yahoo.com");
+  mail("pcarranza10@hotmail.com", $subject, $message, $courriel);
             
   echo "Message envoyé!<br/><br/><a href='http://webc.cegepsherbrooke.qc.ca/~viauma/index.php'>Retourner à la page d'accueil</a><br/><a href='http://webc.cegepsherbrooke.qc.ca/~viauma/nousJoindre.php'>Retourner au formulaire nous joindre</a>";
   
