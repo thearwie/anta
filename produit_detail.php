@@ -135,7 +135,7 @@
         <div class="col-md-1">
         </div>
         <div class="col-md-3">
-          <table class="table table-striped">
+          <table class="table table-striped tableau-detail">
             <thead>
               <tr>
                 <th colspan="2"><h3 class="titre-detail">Détails du produit</h3></th>
