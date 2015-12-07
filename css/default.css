@@ -527,7 +527,7 @@ label
   float: right;
 }
 
-.row-bas
+.autres-produits
 {
 	margin-top: 3%;
 }
@@ -565,7 +565,6 @@ label
 .col-bas-droite
 {
 	float: left !important;
-	margin-left: 8% !important;
 	margin-top: 0;
 }
 
@@ -582,7 +581,7 @@ label
 .img-autres-produits
 {
   width: 90% !important;
-	margin-top: 5%;
+	margin-top: 10%;
 }
 
 /* Formulaires Nous Joindre et Services*/
