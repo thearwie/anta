@@ -80,10 +80,19 @@
             </div>
           </div>
           
+          <div class="row row1-info-produit">
+            <div class="col-sm-4">
+              <label class='col-gauche h3 titre-taille'>Taille</label>
+            </div>
+            <div class="col-sm-4">
+            </div>
+            <div class="col-sm-4">
+            </div>
+          </div>
+          
           <div class="row row-info-produit">
             <div class="col-sm-4">
               <div class='col-xs-4 combobox-group-detail col-gauche'>
-                <label class='col-gauche h3 titre-taille'>Taille</label>
                 <div class='combobox-taille'>
                   <select class='form-control' name='taille' onchange='this.form.submit()'>
                     <option value=''>Choisir la taille</option>
