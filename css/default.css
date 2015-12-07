@@ -293,6 +293,11 @@ h3, .h3
    color: #3f3f3f !important; 
 }
 
+label 
+{
+	font-weight: none !important;
+}
+
 .button 
 {
   transition-duration: 0.4s;
