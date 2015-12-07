@@ -530,7 +530,6 @@ label
 .col-gauche
 {
   float: left !important;
-  margin-left: 100px !important;
 }
 
 .col-droite
@@ -540,16 +539,15 @@ label
 
 .quantite
 {
-	width: 78% !important;
-	margin-left: 97px;
+	width: 100% !important;
 	height: 31px;
   padding-left: 12px;
 }
 
 .combobox-group-detail
 {
-	width: 87% !important;
-	margin-left: 75px !important;
+	width: 100% !important;
+	padding: 0 !important;
 }
 
 .col-charte
