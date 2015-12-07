@@ -103,10 +103,10 @@
       
       <div class="row row-bas">
         <div class="col-md-4">
-          <table>
+          <table class="table table-striped">
             <thead>
               <tr>
-                <th colspan="2">Détails du produit</th>
+                <th colspan="2"><h3>Détails du produit</h3></th>
               </tr>
             </head>
             <tbody>

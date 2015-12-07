@@ -510,6 +510,11 @@ h3, .h3
 	margin-top: 0;
 }
 
+.titre-detail
+{
+	margin-top: 0 !important;
+}
+
 /* Formulaires Nous Joindre et Services*/
 .formulaireNousJoindre, .formulaireServices, .formulaireInscription
 {
