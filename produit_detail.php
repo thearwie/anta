@@ -82,7 +82,7 @@
           
           <div class="row row1-info-produit">
             <div class="col-sm-4">
-              <label class='col-gauche h3 titre-taille'>Taille</label>
+              <label class='col-gauche h3'>Taille</label>
             </div>
             <div class="col-sm-4">
             </div>
