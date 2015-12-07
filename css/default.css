@@ -295,7 +295,7 @@ h3, .h3
 
 label 
 {
-	font-weight: none !important;
+	font-weight: normal !important;
 }
 
 .button 
