@@ -507,13 +507,12 @@ label
 .row2-col-droite2
 {
   margin-top: 4% !important;
-  float: left;
-  margin-left: 10%;
+  float: right;
 }
 
 .col-droite1
 {
-  margin-left: 10%;
+  float: right;
 }
 
 .row-col-droite2
@@ -541,8 +540,7 @@ label
 
 .col-droite
 {
-  float: left !important;
-  margin-left: 35% !important;
+  float: right;
 }
 
 .quantite

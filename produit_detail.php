@@ -84,8 +84,10 @@
                 </div>
               </div>
             </div>
-            <div class="col-sm-8">
+            <div class="col-sm-4">
               <a class="col-droite col-charte" href="#">Charte de dimensions</a>
+            </div>
+            <div class="col-sm-4">
             </div>
           </div>
           
@@ -93,8 +95,10 @@
             <div class="col-sm-4">
               <label class="col-gauche">Disponibilié :</label>
             </div>
-            <div class="col-sm-8">
+            <div class="col-sm-4">
               <label class="col-droite">2 bracelets restants</label>
+            </div>
+            <div class="col-sm-4">
             </div>
           </div>
           
@@ -102,8 +106,10 @@
             <div class="col-sm-4">
               <label class="col-gauche">Partager :</label>
             </div>
-            <div class="col-sm-8">
+            <div class="col-sm-4">
               <label class="col-droite">icônes de partage...</label>
+            </div>
+            <div class="col-sm-4">
             </div>
           </div>
           
