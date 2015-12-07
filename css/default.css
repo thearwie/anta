@@ -503,6 +503,7 @@ label
 {
   margin-top: 4% !important;
   float: left;
+  background-image: url('img/icones/ajout_wishlist.png');
 }
 
 .col-droite1
@@ -513,6 +514,14 @@ label
 .row-col-droite2
 {
   float: left;
+  background-image: url('img/icones/ajout_cart.png');
+}
+
+.row-col-droite2, .row2-col-droite2
+{
+  background-repeat: no-repeat;
+  background-position: left center;
+  padding-left: 50px;
 }
 
 .row-bas
