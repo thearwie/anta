@@ -474,7 +474,7 @@ label
     border-color: rgba(63, 63, 63, 0.5);
 }
 
-.titre-detail
+.titre-produit
 {
 	margin-top: 15px !important;
   margin-bottom: 15px !important;
@@ -494,7 +494,7 @@ label
 
 .info-produit
 {
-	margin-top: 5%;
+	margin-top: 2%;
 }
 
 .row-info-produit
@@ -509,7 +509,7 @@ label
 
 .row2-info-produit
 {
-  margin-bottom: 8% !important;
+  margin-bottom: 15% !important;
 }
 
 .row2-col-droite2
@@ -579,6 +579,11 @@ label
 .icone-partage
 {
   margin-left: 15px;
+}
+
+.titre-detail
+{
+	margin-top: 0px !important;
 }
 
 .row-bas
