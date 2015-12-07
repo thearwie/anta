@@ -1,11 +1,10 @@
 ﻿
 <?php 
-
-  
-  $prenom = $_REQUEST['txtPrenom'];
-  $nom = $_REQUEST['txtNom']; 
-  $courriel = $_REQUEST['txtCourriel']; 
-  $message = $_REQUEST['txtAreaCommentaire']; 
+ 
+  $prenom = $_POST['txtPrenom'];
+  $nom = $_POST['txtNom']; 
+  $courriel = $_POST['txtCourriel']; 
+  $message = $_POST['txtAreaCommentaire']; 
   
  
   $nomComplet = $prenom." ".$nom;
