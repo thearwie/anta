@@ -541,9 +541,10 @@ label
 
 .quantite
 {
-	width: 100px !important;
-	margin-left: 25%;
+	width: 78% !important;
+	margin-left: 97px;
 	height: 31px;
+  padding-left: 12px;
 }
 
 .combobox-group-detail
