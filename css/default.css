@@ -564,20 +564,22 @@ label
 
 .quantite
 {
-	width: 100% !important;
+	width: 75% !important;
+  float: left;
 	height: 31px;
   padding-left: 12px;
 }
 
 .titre-taille
 {
-  margin-top: 15% !important;
+  margin-bottom: 3% !important;
 }
 
 .combobox-group-detail
 {
-	width: 100% !important;
+	width: 75% !important;
 	padding: 0 !important;
+  height: 82px;
 }
 
 .combobox-taille
