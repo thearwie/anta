@@ -47,7 +47,7 @@
               <label class="col-gauche">22.75 CAD$</label>
             </div>
             <div class="col-sm-8">
-              <label class="col-droite">Ajouter au panier</label>
+              <label class="col-droite">Ajouter au panier</label><input type="button" src="">
             </div>
           </div>
           
@@ -56,7 +56,7 @@
               <input class="quantite" type="number" name="quantity" value="0" min="0" max="5" />
             </div>
             <div class="col-sm-8">
-              <label class="col-droite">Ajouter à la liste de souhait</label>
+              <label class="col-droite">Ajouter à la liste de souhait</label><input type="button" src="">
             </div>
           </div>
           
