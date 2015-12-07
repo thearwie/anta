@@ -47,10 +47,10 @@
               <label class="col-gauche">22.75 CAD$</label>
             </div>
             <div class="col-sm-6">
-              <label class="col-droite1">Ajouter au panier</label>
+              <label class="col-droite1">Ajouter au panier</label><button class="row-col-droite2" type="button"><img class="icon" src="img/icones/ajout_cart.png"/></button>
             </div>
             <div class="col-sm-2">
-              <button class="row-col-droite2" type="button"><img class="icon" src="img/icones/ajout_cart.png"/></button>
+              
             </div>
           </div>
           
@@ -59,10 +59,10 @@
               <input class="quantite" type="number" name="quantity" value="0" min="0" max="5" />
             </div>
             <div class="col-sm-6">
-              <label class="row2-col-droite">Ajouter à la liste de souhait</label>
+              <label class="row2-col-droite">Ajouter à la liste de souhait</label><button class="row2-col-droite2" type="button"><img class="icon" src="img/icones/ajout_wishlist.png"/></button>
             </div>
             <div class="col-sm-2">
-              <button class="row2-col-droite2" type="button"><img class="icon" src="img/icones/ajout_wishlist.png"/></button>
+              
             </div>
           </div>
           

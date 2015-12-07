@@ -473,6 +473,11 @@ label
 	border-width: 1px;
 }
 
+.titre-produit
+{
+  float: left;
+}
+
 .info-produit
 {
 	margin-top: 5%;
@@ -518,6 +523,7 @@ label
 .icon
 {
   width: 25px;
+  float: right;
 }
 
 .row-bas
