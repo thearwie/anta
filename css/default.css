@@ -508,6 +508,7 @@ label
 {
   margin-top: 4% !important;
   float: left;
+  margin-left: 10%;
 }
 
 .col-droite1
@@ -518,6 +519,7 @@ label
 .row-col-droite2
 {
   float: left;
+  margin-left: 10%;
 }
 
 .icon
