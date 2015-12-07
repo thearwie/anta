@@ -122,7 +122,7 @@
         
       </div>
       
-      <div class="row">
+      <div class="row row-bas">
         <div class="col-md-4">
           <table class="table table-striped">
             <thead>
