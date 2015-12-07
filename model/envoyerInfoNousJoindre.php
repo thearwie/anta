@@ -9,10 +9,7 @@
   $nomComplet = $prenom." ".$nom;
   
   //$from="De: $nomComplet<$courriel>\r\nReturn-path: $courriel"; 
-  $from="De: <$courriel>\r\n "; 
-  
-  echo $from;
-
+  $from="De: $courriel "; 
   
   
   //$from = "MIME-Version: 1.0" . "\r\n";
