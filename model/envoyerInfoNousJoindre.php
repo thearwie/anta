@@ -17,6 +17,9 @@
   //$from = "Content-type:text/html;charset=UTF-8" . "\r\n";
   //$from .= "From: <$courriel>";
  
+ 
+ 
+ $from = "De: Miguel Angel Alvarez <pepito@desarrolloweb.com>\r\n"; 
   echo $from;
  
   $subject="Message envoyé à partir du formulaire nous joindre"; 
