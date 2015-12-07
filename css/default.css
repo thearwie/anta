@@ -465,6 +465,19 @@ label
 
 
 /* Produit_detail */
+.row-titre
+{
+  border-style: solid;
+  border-style-left: none;
+  border-style-right: none;
+  border-width: 1px;
+}
+
+.titre-detail
+{
+	margin-top: 0 !important;
+}
+
 .img-produit-detail
 {
 	width: 100% !important;
@@ -559,11 +572,6 @@ label
 {
 	float: left !important;
 	margin-top: 0;
-}
-
-.titre-detail
-{
-	margin-top: 0 !important;
 }
 
 .icone-partage

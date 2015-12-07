@@ -29,14 +29,19 @@
     <div class="detail-produit">
     
       <div class="row">
-      
-        <div class="col-md-4">
+        <div class="col-sm-12">
           <h1 class="titre-produit">Bracelet BR-0003</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-1">
+        </div>
+        <div class="col-md-4">
           <img class="img-responsive img-produit-detail" src="img/bracelet/BR-0003-1.jpg" alt="BR-0003-1">
         </div>
         <div class="col-md-1">
         </div>
-        <div class="col-md-7 info-produit">
+        <div class="col-md-6 info-produit">
         
           <div class="row row-info-produit">
             <div class="col-sm-12">
@@ -123,7 +128,9 @@
       </div>
       
       <div class="row row-bas">
-        <div class="col-md-4">
+        <div class="col-md-1">
+        </div>
+        <div class="col-md-3">
           <table class="table table-striped">
             <thead>
               <tr>
