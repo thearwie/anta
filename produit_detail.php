@@ -106,7 +106,7 @@
           <table class="table table-striped">
             <thead>
               <tr>
-                <th colspan="2"><h3>Détails du produit</h3></th>
+                <th colspan="2"><h3 class="titre-detail">Détails du produit</h3></th>
               </tr>
             </head>
             <tbody>
