@@ -75,7 +75,7 @@
               </div>
             </div>
             <div class="col-sm-8">
-              <a class="col-droite" href="#">Charte de dimensions</a>
+              <a class="col-droite col-charte" href="#">Charte de dimensions</a>
             </div>
           </div>
           
