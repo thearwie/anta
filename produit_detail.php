@@ -149,13 +149,13 @@
             </tbody>            
           </table>
         </div>
-        <div class="col-md-8 autres-produits">
-          <div class="row">
-            <div class="col-sm-12">
+        <div class="col-md-8">
+          <div class="row row-autres-produits"">
+            <div class="col-sm-12>
               <h2 class="col-bas-droite">Autres produits</h2>
             </div>
           </div>
-          <div class="row">
+          <div class="row row-autres-produits">
             <div class="col-md-4">
               <img class="img-responsive img-autres-produits" src="img/bracelet/BR-0001-1.jpg" alt="BR-0001-1">
             </div>
