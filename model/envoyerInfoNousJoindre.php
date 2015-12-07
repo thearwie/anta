@@ -13,7 +13,8 @@
   $from="De: $prenom<$courriel>\r\nReturn-path: $courriel"; 
 
   
-  $headers="De: $prenom<$courriel>"
+  $headers .= "Reply-To: $courriel\r\n"; 
+
  
   $subject="Message envoyé à partir du formulaire nous joindre"; 
   
