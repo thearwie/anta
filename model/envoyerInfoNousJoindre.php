@@ -19,8 +19,8 @@
 
 // $from = "De: Miguel Angel Alvarez <pepito@desarrolloweb.com>\r\n"; 
 
-  $headers = 'From: emilioroy@hotmail.com' . "\r\n" .
-             'Reply-To: paolita.carranza@yahoo.com' . "\r\n" .
+  $headers = 'From: emilioroy@hotmail.com' . "\n" .
+             'Reply-To: paolita.carranza@yahoo.com' . "\n" .
              'X-Mailer: PHP/' . phpversion();
  
  // $from="De: $prenom<$courriel>\n Return-path: $courriel"; 
