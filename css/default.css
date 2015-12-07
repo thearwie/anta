@@ -575,6 +575,11 @@ label
 	padding: 0 !important;
 }
 
+.combobox-taille
+{
+  margin-left: 0px !important;
+}
+
 .col-charte
 {
 	margin-top: 22% !important;
