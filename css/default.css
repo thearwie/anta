@@ -467,15 +467,17 @@ label
 /* Produit_detail */
 .row-titre
 {
-  border-style: solid;
-  border-style-left: none;
-  border-style-right: none;
-  border-width: 1px;
+    border-style: solid;
+    border-left: none;
+    border-right: none;
+    border-width: 1px;
+    border-color: rgba(63, 63, 63, 0.5);
 }
 
 .titre-detail
 {
-	margin-top: 0 !important;
+	margin-top: 15px !important;
+  margin-bottom: 15px !important;
 }
 
 .img-produit-detail
