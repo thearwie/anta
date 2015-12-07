@@ -29,7 +29,7 @@
 
   <div class= "formulaireNousJoindre">
   
-    <form id="formulaireNousJoindre" method="POST" action = "model/envoyerInfoNousJoindre.php" > 
+    <form id="formulaireNousJoindre" method="POST" enctype="multipart/form-data"  action = "model/envoyerInfoNousJoindre.php" > 
     
       <div class = "titreFormulaire">
         <span class="spanNousJoindre">Laissez-nous vous commentaires</span>	
