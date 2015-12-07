@@ -14,7 +14,7 @@
 
   $headers .= "Content-type: text/html; charset=iso-8859-1\r\n";
 
-  $headers .= "Reply-To: <$courriel>\r\n"; 
+  $headers .= "Reply-To:$nomComplet<$courriel>\r\n"; 
  
  
   $subject="Message envoyé à partir du formulaire nous joindre"; 
