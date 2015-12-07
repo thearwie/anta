@@ -16,17 +16,19 @@
   //$from = "MIME-Version: 1.0" . "\r\n";
   //$from = "Content-type:text/html;charset=UTF-8" . "\r\n";
   //$from .= "From: <$courriel>";
- 
- 
- 
+
 // $from = "De: Miguel Angel Alvarez <pepito@desarrolloweb.com>\r\n"; 
+
+  $headers = 'From: emilioroy@hotmail.com' . "\r\n" .
+             'Reply-To: paolita.carranza@yahoo.com' . "\r\n" .
+             'X-Mailer: PHP/' . phpversion();
  
-  $from="De: $prenom<$courriel>\r\nReturn-path: $courriel"; 
-  echo $from;
+ // $from="De: $prenom<$courriel>\n Return-path: $courriel"; 
+  echo $headers;
  
   $subject="Message envoyé à partir du formulaire nous joindre"; 
   
-  mail("pcarranza10@hotmail.com", $subject, $message, $from);
+  mail("pcarranza10@hotmail.com", $subject, $message, $headers);
             
   echo "Message envoyé!<br/><br/><a href='http://webc.cegepsherbrooke.qc.ca/~viauma/index.php'>Retourner à la page d'accueil</a><br/><a href='http://webc.cegepsherbrooke.qc.ca/~viauma/nousJoindre.php'>Retourner au formulaire nous joindre</a>";
   
