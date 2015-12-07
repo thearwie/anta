@@ -458,9 +458,17 @@ h3, .h3
 
 
 /* Produit_detail */
+.img-produit-detail
+{
+	width: 100% !important;
+	margin-top: 10%;
+	border-style: solid;
+	border-width: 1px;
+}
+
 .info-produit
 {
-	margin-top: 3%;
+	margin-top: 5%;
 }
 
 .row-info-produit
