@@ -569,6 +569,11 @@ label
   padding-left: 12px;
 }
 
+.titre-taille
+{
+  margin-top: 15% !important;
+}
+
 .combobox-group-detail
 {
 	width: 100% !important;
@@ -578,7 +583,6 @@ label
 .combobox-taille
 {
   margin-left: 0px !important;
-  margin-top: 15% !important;
 }
 
 .col-charte
