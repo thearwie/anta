@@ -497,6 +497,13 @@ label
 {
   margin-top: 4% !important;
   float: left;
+  margin-left: 10%;
+}
+
+.row2-col-droite
+{
+  margin-top: 4% !important;
+  float: right;
 }
 
 .col-droite1

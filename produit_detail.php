@@ -61,7 +61,7 @@
               <input class="quantite" type="number" name="quantity" value="0" min="0" max="5" />
             </div>
             <div class="col-sm-4">
-              <label class="col-droite">Ajouter à la liste de souhait</label>
+              <label class="row2-col-droite">Ajouter à la liste de souhait</label>
             </div>
             <div class="col-sm-2">
               <button class="row2-col-droite2" type="button"><img class="icon" src="img/icones/ajout_wishlist.png"/></button>
