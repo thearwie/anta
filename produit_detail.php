@@ -83,7 +83,7 @@
           <div class="row row-info-produit">
             <div class="col-sm-4">
               <div class='col-xs-4 combobox-group-detail col-gauche'>
-                <label class='col-gauche'>Taille</label>
+                <label class='col-gauche h3'>Taille</label>
                 <div class='combobox-taille'>
                   <select class='form-control' name='taille' onchange='this.form.submit()'>
                     <option value=''>Choisir la taille</option>
