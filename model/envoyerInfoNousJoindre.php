@@ -12,10 +12,12 @@
   
   $from="De: $prenom<$courriel>\r\nReturn-path: $courriel"; 
 
+  
+  $headers="De: $prenom<$courriel>"
  
   $subject="Message envoyé à partir du formulaire nous joindre"; 
   
-  mail("pcarranza10@hotmail.com", $subject, $message, $courriel);
+  mail("pcarranza10@hotmail.com", $subject, $message, $headers);
             
   echo "Message envoyé!<br/><br/><a href='http://webc.cegepsherbrooke.qc.ca/~viauma/index.php'>Retourner à la page d'accueil</a><br/><a href='http://webc.cegepsherbrooke.qc.ca/~viauma/nousJoindre.php'>Retourner au formulaire nous joindre</a>";
   
