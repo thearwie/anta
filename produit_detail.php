@@ -44,7 +44,7 @@
           
           <div class="row">
             <div class="col-sm-4">
-              <label>22.75 CAD$</label>
+              <label class="col-gauche">22.75 CAD$</label>
             </div>
             <div class="col-sm-8">
               <label class="col-droite">Ajouter au panier</label>
@@ -62,7 +62,7 @@
           
           <div class="row">
             <div class="col-sm-4">
-              <div class='col-xs-4 combobox-group-detail'>
+              <div class='col-xs-4 combobox-group-detail col-gauche'>
                 <label class='control-label h3'>Taille</label>
                 <div class='combobox'>
                   <select class='form-control' name='taille' onchange='this.form.submit()'>
@@ -81,7 +81,7 @@
           
           <div class="row">
             <div class="col-sm-4">
-              <label>Disponibilié :</label>
+              <label class="col-gauche">Disponibilié :</label>
             </div>
             <div class="col-sm-8">
               <label>2 bracelets restants</label>
@@ -90,7 +90,7 @@
           
           <div class="row">
             <div class="col-sm-4">
-              <label>Partager :</label>
+              <label class="col-gauche">Partager :</label>
             </div>
             <div class="col-sm-8">
               <label>icônes de partage...</label>
