@@ -35,7 +35,7 @@
           <img class="img-responsive img-produit" src="img/bracelet/BR-0003-1.jpg" alt="BR-0003-1">
         </div>
         
-        <div class="col-md-8">
+        <div class="col-md-8 info-produit">
         
           <div class="row">
             <div class="col-sm-12">

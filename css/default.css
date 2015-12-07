@@ -458,7 +458,12 @@ h3, .h3
 
 
 /* Produit_detail */
-.test
+.info-produit
+{
+	margin-top: 5%;
+}
+
+.col-droite
 {
   float: left !important;
   margin-right: 12px !important;
