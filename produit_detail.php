@@ -50,7 +50,7 @@
               <label class="col-droite1">Ajouter au panier</label>
             </div>
             <div class="col-sm-2">
-              <input class="row-col-droite2" type="button">
+              <button class="row-col-droite2" type="button"><img src="img/icones/ajout_cart.png"/></button>
             </div>
           </div>
           
@@ -62,7 +62,7 @@
               <label class="row2-col-droite">Ajouter à la liste de souhait</label>
             </div>
             <div class="col-sm-2">
-              <input class="row2-col-droite2" type="button">
+              <button class="row2-col-droite2" type="button"><img src="img/icones/ajout_wishlist.png"/></button>
             </div>
           </div>
           
