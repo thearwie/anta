@@ -134,7 +134,7 @@
       <div class="row row-bas">
         <div class="col-md-1">
         </div>
-        <div class="col-md-3">
+        <div class="col-md-4">
           <table class="table table-striped tableau-detail">
             <thead>
               <tr>
@@ -163,7 +163,7 @@
         </div>
         <div class="col-md-1">
         </div>
-        <div class="col-md-7 autres-produits">
+        <div class="col-md-6 autres-produits">
           <div class="row">
             <div class="col-sm-12">
               <h2 class="col-bas-droite">Autres produits</h2>

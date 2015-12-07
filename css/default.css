@@ -465,6 +465,11 @@ label
 
 
 /* Produit_detail */
+.detail-produit
+{
+  margin-top: 2%;
+}
+
 .row-titre
 {
     border-style: solid;
