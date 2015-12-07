@@ -25,7 +25,7 @@ function getAllProduit($idClassement, $idTypeProduit)
     switch($idClassement)
     {
       case 0:
-      $sql = "select * from produit";
+      $sql = "select * from produit order by nom";
       break;
       
       case 1:
@@ -37,11 +37,20 @@ function getAllProduit($idClassement, $idTypeProduit)
       break;
     } 
   } else {
-    if($idClassement == 1) {
+    switch($idClassement)
+    {
+      case 0:
+      $sql = "select * from produit where id_type_produit = " . $idTypeProduit . " order by nom";
+      break;
+      
+      case 1:
       $sql = "select * from produit where id_type_produit = " . $idTypeProduit . " order by prix asc";
-    } else {
+      break;
+      
+      case 2:
       $sql = "select * from produit where id_type_produit = " . $idTypeProduit . " order by prix desc";
-    }
+      break;
+    } 
   }
   
  if($resultat = mysqli_query($link, $sql))

@@ -1,4 +1,3 @@
-var nbAfficherDetailsAppels = 0;
 var idProduit = 0;
 
 function afficherProduits() {
@@ -29,6 +28,7 @@ function afficherProduits() {
         var boutons = [];
         var nbProduitSurLigne = 1;
         var row = null;
+				var idBouton = 0;
         
         for(var i = 0; i < ids.length; i++) {
           var produit = null;
@@ -37,7 +37,6 @@ function afficherProduits() {
           var prix = null;
           var bouton = null;
           var text = null;
-          var idProduit = idproduits.item(i).firstChild.nodeValue;
           
           if(nbProduitSurLigne == 1) {
             row = document.createElement("div");
@@ -66,29 +65,13 @@ function afficherProduits() {
           prix.appendChild(text);
           produit.appendChild(prix);
           
-          bouton = document.createElement("button");
-          bouton.setAttribute("id", "bouton" + i);
+					idBouton = "bouton" + i;
+          bouton = document.createElement("input");
+          bouton.setAttribute("id", idBouton);
           bouton.setAttribute("class", "btn btn-primary bouton-detail");
           bouton.setAttribute("type", "button");
-          bouton.onclick = function(event) {
-            var idProduitInterne = idProduit;
-            afficherDetail(idProduitInterne);
-          };
-          // boutons[i].setAttribute("href", "#");
-          // boutons[i].setAttribute("onclick", "afficherDetail(idProduit);");
-           
-          /* boutons[i].addEventListener("click", function(){
-            afficherDetail(idProduit)
-          }); */
-          // bouton.setAttribute("onclick", "afficherDetail(idProduit);");
-           // $("#bouton" + i).click(afficherDetail(idProduit));
-           // $("#bouton" + i).on("click", afficherDetail(idProduit));
-          // boutons[i].onclick = afficherDetail(idProduit);
-          text = document.createTextNode("Détails");
-          bouton.appendChild(text);
+					bouton.setAttribute("value", "Détails");
           produit.appendChild(bouton);
-          
-          nbAfficherDetailsAppels = 0;
           
           if(nbProduitSurLigne < 3) {
             nbProduitSurLigne++;
@@ -96,20 +79,21 @@ function afficherProduits() {
             nbProduitSurLigne = 1;
           }
         }
+				
+				for(var y = 0; y < idproduits.length; y++) {
+					idBouton = "bouton" + y;
+					var idProduit = idproduits.item(y).firstChild.nodeValue;
+					var nomMethode = "afficherDetail('" + idProduit + "');";
+					document.getElementById(idBouton).setAttribute("onclick", nomMethode);
+				}
+				
       }
     });
   });
-  nbAfficherDetailsAppels = 1;
 }
 
 function afficherDetail(idProduit) {
-  // $.get("produit_detail.php", {idProduit: idProduit});
-  if(nbAfficherDetailsAppels >= 1)
-  {
-    location = "produit_detail.php?idProduit=" + idProduit;
-    // alert("it worked!");
-  }
-  nbAfficherDetailsAppels++;
+	location = "produit_detail.php?idProduit=" + idProduit;
 }
 
 afficherProduits();

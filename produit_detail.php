@@ -47,7 +47,7 @@
               <label>22.75 CAD$</label>
             </div>
             <div class="col-sm-8">
-              <label class="test">Ajouter au panier</label>
+              <label class="col-droite">Ajouter au panier</label>
             </div>
           </div>
           
@@ -56,7 +56,7 @@
               <input class="quantite" type="number" name="quantity" value="0" min="0" max="5" />
             </div>
             <div class="col-sm-8">
-              <label class="test">Ajouter à la liste de souhait</label>
+              <label class="col-droite">Ajouter à la liste de souhait</label>
             </div>
           </div>
           
@@ -75,7 +75,7 @@
               </div>
             </div>
             <div class="col-sm-8">
-              <a class="test" href="#">Charte de dimensions</a>
+              <a class="col-droite" href="#">Charte de dimensions</a>
             </div>
           </div>
           
