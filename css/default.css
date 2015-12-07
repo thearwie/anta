@@ -549,7 +549,7 @@ label
 
 .combobox-group-detail
 {
-	width: 91% !important;
+	width: 87% !important;
 	margin-left: 75px !important;
 }
 
@@ -568,6 +568,11 @@ label
 .titre-detail
 {
 	margin-top: 0 !important;
+}
+
+.icone-partage
+{
+  margin-left: 15px;
 }
 
 /* Formulaires Nous Joindre et Services*/

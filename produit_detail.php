@@ -107,7 +107,11 @@
               <label class="col-gauche">Partager :</label>
             </div>
             <div class="col-sm-4">
-              <label class="col-droite">icônes de partage...</label>
+              <div class="col-droite">
+                <span class="st_facebook_large icone-partage" displayText="Facebook"></span>
+                <span class="st_twitter_large icone-partage" displayText="Tweet"></span>
+                <span class="st_pinterest_large icone-partage" displayText="Pinterest"></span>
+              </div>
             </div>
             <div class="col-sm-4">
             </div>
