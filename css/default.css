@@ -469,7 +469,14 @@ h3, .h3
   margin-right: 12px !important;
 }
 
-.combobox-group-detail, .quantite
+.quantite
+{
+	width: 71% !important;
+	margin-left: 20%;
+	height: 45px;
+}
+
+.combobox-group-detail
 {
 	width: 91% !important;
 	margin-left: 10%;
