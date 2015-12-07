@@ -14,7 +14,13 @@
   echo $from;
   echo $courriel;
   
+  
+  $from = "MIME-Version: 1.0" . "\r\n";
+  $from .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+  $from .= 'From: <'.$courriel.'>' . "\r\n";
+ 
   $subject="Message envoyé à partir du formulaire nous joindre"; 
+  
   mail("pcarranza10@hotmail.com", $subject, $message, $from);
             
   echo "Message envoyé!<br/><br/><a href='http://webc.cegepsherbrooke.qc.ca/~viauma/index.php'>Retourner à la page d'accueil</a><br/><a href='http://webc.cegepsherbrooke.qc.ca/~viauma/nousJoindre.php'>Retourner au formulaire nous joindre</a>";
