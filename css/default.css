@@ -469,6 +469,11 @@ h3, .h3
   margin-right: 12px !important;
 }
 
+.combobox-group-detail
+{
+	width: 50% !important;
+}
+
 /* Formulaires Nous Joindre et Services*/
 .formulaireNousJoindre, .formulaireServices, .formulaireInscription
 {
