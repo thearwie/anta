@@ -42,7 +42,7 @@
             </div>
           </div>
           
-          <div class="row row-info-produit">
+          <div class="row row1-info-produit">
             <div class="col-sm-4">
               <label class="col-gauche">22.75 CAD$</label>
             </div>
