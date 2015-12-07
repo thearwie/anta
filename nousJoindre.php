@@ -42,7 +42,7 @@
           <span class="spanNousJoindre">Prénom</span>
         </div>	
         <div class = "input">
-          <input type="text" id="txtPrenom" size="40" />
+          <input type="text" id="txtPrenom" name="txtPrenom"  size="40" />
         </div>
       </div>
       <div class="nom">
@@ -50,7 +50,7 @@
           <span class="spanNousJoindre">Nom</span>
         </div>	
         <div class = "input">
-          <input type="text" id="txtNom" size="40" />
+          <input type="text" id="txtNom" name="txtNom" size="40" />
         </div>
       </div>
       <div class="courriel">
@@ -58,7 +58,7 @@
           <span class="spanNousJoindre">Courriel</span>
           </div>	
         <div class = "input">
-        <input type="text" id="txtCourriel" size="40" />
+        <input type="text" id="txtCourriel" name="txtCourriel"  size="40" />
         </div>
       </div>
       <div class="message">
@@ -66,7 +66,7 @@
           <span class="spanNousJoindre">Message</span>
         </div>	
         <div class = "inputCommentaire">
-          <textarea id="txtAreaCommentaire"  rows="8" cols= "60"></textarea>
+          <textarea id="txtAreaCommentaire" name="txtAreaCommentaire"  rows="8" cols= "60"></textarea>
         </div>
       </div>    
       <div class = "buttonEnvoyer">
@@ -78,9 +78,10 @@
   </div>
   
   <script type="text/javascript">
-/*****************************************************************************/
-      /* VARIABLES GLOBALES                                                        */
-      /*****************************************************************************/
+  
+  /*****************************************************************************/
+  /* VARIABLES GLOBALES                                                        */
+  /*****************************************************************************/
       var idControlInput = ['txtPrenom', 'txtNom', 'txtCourriel', 'txtAreaCommentaire']; 
 
       var nomChamp = ['Prénom', 'Nom', 'Courriel', 'Message' ]; 						 
@@ -118,6 +119,7 @@
         } 
         else
         {
+           
            return true;
         }
         
