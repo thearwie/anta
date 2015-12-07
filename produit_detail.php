@@ -130,7 +130,7 @@
           </table>
         </div>
         <div class="col-md-8">
-          <h2 class="col-gauche">Autres produits</h2>
+          <h2 class="col-bas-droite">Autres produits</h2>
         </div>
       </div>
       
