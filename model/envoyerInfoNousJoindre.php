@@ -8,7 +8,7 @@
   
   $nomComplet = $prenom." ".$nom;
   
-  $from="De: $nomComplet<$courriel>\r\nReturn-path: $courriel"; 
+  //$from="De: $nomComplet<$courriel>\r\nReturn-path: $courriel"; 
   
   echo $prenom;
   echo $from;
@@ -17,7 +17,9 @@
   
   $from = "MIME-Version: 1.0" . "\r\n";
   $from .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-  $from .= 'From: <'.$courriel.'>' . "\r\n";
+  $from .= "From: <".$courriel.">" . "\r\n";
+ 
+  echo $from;
  
   $subject="Message envoyé à partir du formulaire nous joindre"; 
   
