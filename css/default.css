@@ -463,6 +463,11 @@ h3, .h3
 	margin-top: 5%;
 }
 
+.row-info-produit
+{
+	margin-bottom: 2% !important;
+}
+
 .col-gauche
 {
   float: left !important;

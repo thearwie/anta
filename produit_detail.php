@@ -37,12 +37,12 @@
         
         <div class="col-md-8 info-produit">
         
-          <div class="row">
+          <div class="row row-info-produit">
             <div class="col-sm-12">
             </div>
           </div>
           
-          <div class="row">
+          <div class="row row-info-produit">
             <div class="col-sm-4">
               <label class="col-gauche">22.75 CAD$</label>
             </div>
@@ -51,7 +51,7 @@
             </div>
           </div>
           
-          <div class="row">
+          <div class="row row-info-produit">
             <div class="col-sm-4">
               <input class="quantite" type="number" name="quantity" value="0" min="0" max="5" />
             </div>
@@ -60,7 +60,7 @@
             </div>
           </div>
           
-          <div class="row">
+          <div class="row row-info-produit">
             <div class="col-sm-4">
               <div class='col-xs-4 combobox-group-detail col-gauche'>
                 <label class='control-label h3'>Taille</label>
@@ -79,21 +79,21 @@
             </div>
           </div>
           
-          <div class="row">
+          <div class="row row-info-produit">
             <div class="col-sm-4">
               <label class="col-gauche">Disponibilié :</label>
             </div>
             <div class="col-sm-8">
-              <label>2 bracelets restants</label>
+              <label class="col-droite">2 bracelets restants</label>
             </div>
           </div>
           
-          <div class="row">
+          <div class="row row-info-produit">
             <div class="col-sm-4">
               <label class="col-gauche">Partager :</label>
             </div>
             <div class="col-sm-8">
-              <label>icônes de partage...</label>
+              <label class="col-droite">icônes de partage...</label>
             </div>
           </div>
           
