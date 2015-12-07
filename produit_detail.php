@@ -51,12 +51,12 @@
             </div>
           </div>
           
-          <div class="row row-info-produit">
+          <div class="row row2-info-produit">
             <div class="col-sm-4">
               <input class="quantite" type="number" name="quantity" value="0" min="0" max="5" />
             </div>
             <div class="col-sm-8">
-              <label class="col-droite">Ajouter à la liste de souhait</label><input type="button" src="">
+              <label class="row2-col-droite">Ajouter à la liste de souhait</label><input type="button" src="">
             </div>
           </div>
           
