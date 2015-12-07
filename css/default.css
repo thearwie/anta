@@ -276,7 +276,7 @@ h1
    font-size: 3em;
    text-align: center;
    width: 100%;
-	 color: #8C1A8C;
+	 color: #8C1A8C !important;
 }
 
 h2, .h2
