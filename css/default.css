@@ -527,11 +527,6 @@ label
   float: right;
 }
 
-.autres-produits
-{
-	margin-top: 3%;
-}
-
 .col-gauche
 {
   float: left !important;
@@ -577,6 +572,12 @@ label
 {
   margin-left: 15px;
 }
+
+.autres-produits
+{
+	margin-top: 3%;
+}
+
 
 .img-autres-produits
 {
