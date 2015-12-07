@@ -515,6 +515,11 @@ label
   float: left;
 }
 
+.icon
+{
+  width: 25px;
+}
+
 .row-bas
 {
 	margin-top: 3%;
