@@ -15,9 +15,9 @@
 
   
   
-  $from = "MIME-Version: 1.0" . "\r\n";
-  $from .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-  $from .= "From: <$courriel>" . "\r\n";
+  //$from = "MIME-Version: 1.0" . "\r\n";
+  //$from .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+ // $from .= "From: <$courriel>" . "\r\n";
  
   echo $from;
  
