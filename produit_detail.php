@@ -62,7 +62,7 @@
           
           <div class="row">
             <div class="col-sm-4">
-              <div class='col-xs-4 combobox-group'>
+              <div class='col-xs-4 combobox-group-detail'>
                 <label class='control-label h3'>Taille</label>
                 <div class='combobox'>
                   <select class='form-control' name='taille' onchange='this.form.submit()'>
