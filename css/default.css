@@ -572,7 +572,8 @@ label
 
 .titre-taille
 {
-  margin-bottom: 3% !important;
+  font-size: 16px !important;
+  color: #3f3f3f !important; 
 }
 
 .combobox-group-detail
@@ -585,6 +586,7 @@ label
 .combobox-taille
 {
   margin-left: 0px !important;
+  margin-top: 20% !important;
 }
 
 .col-charte
