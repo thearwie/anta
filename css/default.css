@@ -469,7 +469,11 @@ label
 {
 	width: 100% !important;
 	margin-top: 10%;
-	border-style: solid;
+}
+
+.img-produit-detail, .img-autres-produits
+{
+  border-style: solid;
 	border-width: 1px;
 }
 
@@ -573,6 +577,12 @@ label
 .icone-partage
 {
   margin-left: 15px;
+}
+
+.img-autres-produits
+{
+  width: 90% !important;
+	margin-top: 5%;
 }
 
 /* Formulaires Nous Joindre et Services*/

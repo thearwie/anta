@@ -150,7 +150,22 @@
           </table>
         </div>
         <div class="col-md-8">
-          <h2 class="col-bas-droite">Autres produits</h2>
+          <div class="row">
+            <div class="col-sm-12">
+              <h2 class="col-bas-droite">Autres produits</h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+              <img class="img-responsive img-autres-produits" src="img/bracelet/BR-0001-1.jpg" alt="BR-0001-1">
+            </div>
+            <div class="col-md-4">
+              <img class="img-responsive img-autres-produits" src="img/bracelet/BR-0003-1.jpg" alt="BR-0003-1">
+            </div>
+            <div class="col-md-4">
+              <img class="img-responsive img-autres-produits" src="img/bracelet/BR-0007-1.jpg" alt="BR-0007-1">
+            </div>
+          </div>
         </div>
       </div>
       
