@@ -466,7 +466,7 @@ h3, .h3
 .col-gauche
 {
   float: left !important;
-  margin-left: 10% !important;
+  margin-left: 17% !important;
 }
 
 .col-droite
@@ -485,6 +485,7 @@ h3, .h3
 .combobox-group-detail
 {
 	width: 91% !important;
+	margin-left: 15% !important;
 }
 
 /* Formulaires Nous Joindre et Services*/
