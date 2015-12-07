@@ -1,34 +1,23 @@
 ﻿<?php 
 
   
-  $prenom = $_POST['txtPrenom'];
-  $nom = $_POST['txtNom']; 
-  $courriel = $_POST['txtCourriel']; 
-  $message = $_POST['txtAreaCommentaire']; 
+  $prenom = $_REQUEST['txtPrenom'];
+  $nom = $_REQUEST['txtNom']; 
+  $courriel = $_REQUEST['txtCourriel']; 
+  $message = $_REQUEST['txtAreaCommentaire']; 
+  
+  
+  
   
   $nomComplet = $prenom." ".$nom;
   
-  //$from="De: $nomComplet<$courriel>\r\nReturn-path: $courriel"; 
-  // $from="De: $courriel "; 
-  
- // $from = 'De: Emilio <emilio@hotmail.com>' . "\r\n";
-  
-  //$from = "MIME-Version: 1.0" . "\r\n";
-  //$from = "Content-type:text/html;charset=UTF-8" . "\r\n";
-  //$from .= "From: <$courriel>";
+  $from="De: $prenom<$courriel>\r\nReturn-path: $courriel"; 
 
-// $from = "De: Miguel Angel Alvarez <pepito@desarrolloweb.com>\r\n"; 
-
-  $headers = 'From: emilioroy@hotmail.com' . "\n" .
-             'Reply-To: paolita.carranza@yahoo.com' . "\n" .
-             'X-Mailer: PHP/' . phpversion();
- 
- // $from="De: $prenom<$courriel>\n Return-path: $courriel"; 
-  echo $headers;
+ echo $headers;
  
   $subject="Message envoyé à partir du formulaire nous joindre"; 
   
-  mail("pcarranza10@hotmail.com", $subject, $message, $headers);
+  mail("pcarranza10@hotmail.com", $subject, $message, $from);
             
   echo "Message envoyé!<br/><br/><a href='http://webc.cegepsherbrooke.qc.ca/~viauma/index.php'>Retourner à la page d'accueil</a><br/><a href='http://webc.cegepsherbrooke.qc.ca/~viauma/nousJoindre.php'>Retourner au formulaire nous joindre</a>";
   
