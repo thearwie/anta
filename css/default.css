@@ -486,6 +486,11 @@ label
 	margin-top: 10%;
 }
 
+.img-produit-detail, .titre-detail
+{
+  float: right;
+}
+
 .img-produit-detail, .img-autres-produits
 {
   border-style: solid;
