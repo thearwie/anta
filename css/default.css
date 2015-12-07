@@ -503,6 +503,12 @@ h3, .h3
 	margin-top: 11% !important;
 }
 
+.col-bas-droite
+{
+	float: left !important;
+	float: left !important;
+}
+
 /* Formulaires Nous Joindre et Services*/
 .formulaireNousJoindre, .formulaireServices, .formulaireInscription
 {
