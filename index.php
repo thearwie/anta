@@ -24,18 +24,18 @@
 <!-- VIEW -->
 
 <?php include('inc/header.php');?>
-<div class='page'>
+  <div class='page'>
 
     <div class = "ism-slider" data-play_type="loop" data-interval="8000">
       <ol>
           <li>
-            <img src="img/banner/banner3.jpg">
+            <img src="img/banner/banner3.jpg" />
           </li>
           <li>
-            <img src="img/banner/banner2.jpg">
+            <img src="img/banner/banner2.jpg" />
           </li>
           <li>
-            <img src="img/banner/banner1.jpg">
+            <img src="img/banner/banner1.jpg" />
           </li>
       </ol>
     </div>
@@ -60,5 +60,5 @@
   
       </div>
     </div>
-</div>
+  </div>
 <?php include('inc/footer.php')?>
