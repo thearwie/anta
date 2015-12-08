@@ -42,8 +42,8 @@
              <span class="spanServices">Type de service</span>
            </div>	
            <select class = "selectService" name="selectService">
-             <option class="optionSelectService" value="value1">Nettoyage</option> 
-             <option class="optionSelectService" value="value2" selected>Fabrication à mesure</option>
+             <option class="optionSelectService" value="Nettoyage">Nettoyage</option> 
+             <option class="optionSelectService" value="Fabrication" selected>Fabrication à mesure</option>
            </select>
          </div>
          <div class="prenomService">
