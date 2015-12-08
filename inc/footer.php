@@ -1,12 +1,12 @@
 ﻿  <footer>
     <hr/>
     <div class="partage">
-  <span class='st_facebook_large' displayText='Facebook'></span>
+	  <!-- <span class='st_facebook_large' displayText='Facebook'></span>
       <span class='st_twitter_large' displayText='Tweet'></span>
-      <span class='st_pinterest_large' displayText='Pinterest'></span>
-  <!--    <span class='st_facebook_large'></span>
+      <span class='st_pinterest_large' displayText='Pinterest'></span> -->
+      <span class='st_facebook_large'></span>
       <span class='st_twitter_large' ></span>
-      <span class='st_pinterest_large'></span>-->
+      <span class='st_pinterest_large'></span>
     </div>
     <div class="footer_bas" >
       <div class="menuBottom">
