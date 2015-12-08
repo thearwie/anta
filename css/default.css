@@ -247,10 +247,14 @@ footer
   margin-left: 30px;
 }
 
+.menuBottom 
+{
+  float: left;
+}
+
 .copyright
 {
-  position: relative;
-  right: 0;
+  float: right;
 }
 
 .footer_bas
