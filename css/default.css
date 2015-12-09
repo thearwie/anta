@@ -493,7 +493,7 @@ label
   max-width: none !important;
 }
 
-.img-produit-detail, .tableau-detail
+.tableau-detail
 {
   float: right !important;
 }
