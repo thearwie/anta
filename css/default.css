@@ -489,6 +489,7 @@ label
 
 .img-produit-detail
 {
+  width: 100% !important;
 	margin-top: 10% !important;
   max-width: none !important;
 }
