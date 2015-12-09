@@ -489,12 +489,13 @@ label
 
 .img-produit-detail
 {
-	margin-top: 10%;
+	margin-top: 5% !important;
+  max-width: none !important;
 }
 
 .img-produit-detail, .tableau-detail
 {
-  float: right;
+  float: right !important;
 }
 
 .img-autres-produits
