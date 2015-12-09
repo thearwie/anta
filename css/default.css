@@ -492,6 +492,8 @@ label
   width: 100% !important;
 	margin-top: 10% !important;
   max-width: none !important;
+  border: none !important;
+  background: none !important;
 }
 
 .tableau-detail
