@@ -845,12 +845,12 @@ label
   
   .info-produit
    {
-    margin-top: 5%;
+    margin-top: 5% !important;
   }
   
   .img-3
     {
-    display: none;
+    display: none !important;
   }
 }
 
