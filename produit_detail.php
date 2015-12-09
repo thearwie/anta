@@ -34,8 +34,13 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-md-4">
-          <img class="img-responsive img-produit-detail" src="img/bracelet/BR-0003-1.jpg" alt="BR-0003-1">
+        <div class="col-md-4 img-produit-detail">
+          <!-- <img class="img-responsive img-produit-detail" src="img/bracelet/BR-0003-1.jpg" alt="BR-0003-1"> -->
+          <div class="sp-wrap">
+            <a href="img/bracelet/BR-0001-1.jpg"><img class="img-responsive" src="img/bracelet/BR-0001-1.jpg" alt="BR-0001-1"></a>
+            <a href="img/bracelet/BR-0003-1.jpg"><img class="img-responsive" src="img/bracelet/BR-0003-1.jpg" alt="BR-0003-1"></a>
+            <a href="img/bracelet/BR-0007-1.jpg"><img class="img-responsive" src="img/bracelet/BR-0007-1.jpg" alt="BR-0007-1"></a>
+          </div>
         </div>
         <div class="col-md-8 info-produit">
         
@@ -180,3 +185,11 @@
     
 </div>
 <?php include('/inc/footer.php')?>
+
+<script type="text/javascript" src="js/smoothproducts.min.js"></script>
+<script>
+  /* wait for images to load */
+  $(window).load(function() {
+    $('.sp-wrap').smoothproducts();
+  });
+</script>
