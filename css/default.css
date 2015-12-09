@@ -760,11 +760,6 @@ label
     text-align: center;
     float: none;
   }
-  
-  .info-produit
-   {
-    margin-top: 5%;
-  }
 }
 
 @media (max-width: 1064px)
@@ -790,8 +785,13 @@ label
 }
 
 /* Petite tablette */
-@media (max-width:  860px)
+@media (max-width: 860px)
 {
+  body
+    {
+    font-size: 16px;
+  }
+
   .logo {
     width: 225px;
     height: 228px;
@@ -805,10 +805,24 @@ label
     margin-left: 20px;
     margin-right: 20px;
   }
+  
+  .info-produit
+   {
+    margin-top: 5%;
+  }
 }
 
 /* Téléphone */
 @media (max-width: 360px)
 {
+  body
+    {
+    font-size: 16px;
+  }
+  
+  .info-produit
+   {
+    margin-top: 5%;
+  }
 }
 
