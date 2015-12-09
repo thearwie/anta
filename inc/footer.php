@@ -1,21 +1,27 @@
 ﻿  <footer>
     <hr/>
-    <div class="partage">
-	  <!-- <span class='st_facebook_large' displayText='Facebook'></span>
-      <span class='st_twitter_large' displayText='Tweet'></span>
-      <span class='st_pinterest_large' displayText='Pinterest'></span> -->
-      <span class='st_facebook_large'></span>
-      <span class='st_twitter_large' ></span>
-      <span class='st_pinterest_large'></span>
+    
+    <div class="row">
+      <div class="col-sm-12 partage">
+        <!-- <span class='st_facebook_large' displayText='Facebook'></span>
+        <span class='st_twitter_large' displayText='Tweet'></span>
+        <span class='st_pinterest_large' displayText='Pinterest'></span> -->
+        <span class='st_facebook_large'></span>
+        <span class='st_twitter_large' ></span>
+        <span class='st_pinterest_large'></span>
+      </div>
     </div>
-    <div class="footer_bas" >
-      <div class="menuBottom">
+    
+    
+    <div class="row footer_bas">
+      <div class="col-sm-6 menuBottom">
         <?php include('menu.php'); ?>
       </div>
-      <span class="copyright">
+      <div class="col-sm-6 copyright">
         Copyright © 2015 - Anta 950 - Tous droits réservés
-      </span>
+      </div>
     </div>
+    
   </footer>
   </body>
 </html>

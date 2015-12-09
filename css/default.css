@@ -248,12 +248,12 @@ footer
 
 .menuBottom 
 {
-  float: left;
+  text-align: left;
 }
 
 .copyright
 {
-  float: right;
+  text-align: right;
 }
 
 .footer_bas
