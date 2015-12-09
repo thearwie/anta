@@ -754,11 +754,16 @@ label
   }
   
   .copyright {
-  position: relative;
-  right: 0;
-  left: 0;
-  text-align: center;
-  float: none;
+    position: relative;
+    right: 0;
+    left: 0;
+    text-align: center;
+    float: none;
+  }
+  
+  .info-produit
+   {
+    margin-top: 5%;
   }
 }
 
