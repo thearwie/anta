@@ -34,13 +34,13 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-md-4 img-produit-detail">
+        <div class="col-md-4 sp-wrap img-produit-detail">
           <!-- <img class="img-responsive img-produit-detail" src="img/bracelet/BR-0003-1.jpg" alt="BR-0003-1"> -->
-          <div class="sp-wrap">
+          <!-- <div class=" img-produit-detail"> -->
             <a href="img/bracelet/BR-0001-1.jpg"><img class="img-responsive" src="img/bracelet/BR-0001-1.jpg" alt="BR-0001-1"></a>
             <a href="img/bracelet/BR-0003-1.jpg"><img class="img-responsive" src="img/bracelet/BR-0003-1.jpg" alt="BR-0003-1"></a>
             <a href="img/bracelet/BR-0007-1.jpg"><img class="img-responsive" src="img/bracelet/BR-0007-1.jpg" alt="BR-0007-1"></a>
-          </div>
+          <!-- </div> -->
         </div>
         <div class="col-md-8 info-produit">
         
