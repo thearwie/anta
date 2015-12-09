@@ -813,7 +813,7 @@ label
   
   .img-3
     {
-    display: none;
+    display: none !important;
   }
 }
 
