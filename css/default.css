@@ -824,5 +824,10 @@ label
    {
     margin-top: 5%;
   }
+  
+  .img-3
+    {
+    display: none;
+  }
 }
 

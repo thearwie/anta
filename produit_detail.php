@@ -161,13 +161,13 @@
           </div>
           <div class="row">
             <div class="col-md-3">
-              <img class="img-responsive img-autres-produits" src="img/bracelet/BR-0001-1.jpg" alt="BR-0001-1">
+              <img class="img-autres-produits" src="img/bracelet/BR-0001-1.jpg" alt="BR-0001-1">
             </div>
             <div class="col-md-3">
-              <img class="img-responsive img-autres-produits" src="img/bracelet/BR-0003-1.jpg" alt="BR-0003-1">
+              <img class="img-autres-produits" src="img/bracelet/BR-0003-1.jpg" alt="BR-0003-1">
             </div>
-            <div class="col-md-3">
-              <img class="img-responsive img-autres-produits" src="img/bracelet/BR-0007-1.jpg" alt="BR-0007-1">
+            <div class="col-md-3 img-3">
+              <img class="img-autres-produits" src="img/bracelet/BR-0007-1.jpg" alt="BR-0007-1">
             </div>
             <div class="col-md-3">
             </div>
