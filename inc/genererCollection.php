@@ -1,4 +1,6 @@
 ﻿<?php
+include("outil.php");
+
 function connectionBD()
 {
   $domainName = "webc.cegepsherbrooke.qc.ca";
@@ -69,9 +71,12 @@ function getAllProduit($idClassement, $idTypeProduit)
       {
         $row2 = mysqli_fetch_array($resultat2, MYSQLI_BOTH);
       }
-      $mesProduits[$iterateur] = new Produit();
-      $mesProduits[$iterateur]->init($row[0], $row[1], $row[2], $row[3], $row[4], $row[5], $row[6], $row2[0], $row2[1]);
-      $iterateur ++;
+      if(endsWith($row[0], "1"))
+      {
+        $mesProduits[$iterateur] = new Produit();
+        $mesProduits[$iterateur]->init($row[0], $row[1], $row[2], $row[3], $row[4], $row[5], $row[6], $row2[0], $row2[1]);
+        $iterateur ++;
+      }
    }
    mysqli_free_result($resultat2);
    mysqli_free_result($resultat);
@@ -85,7 +90,6 @@ function getAllProduit($idClassement, $idTypeProduit)
  function envoyerProduits()
  {
     header('Content-type: text/xml');
-    include("outil.php");
 
     $xml = new DomDocument("1.0");
     $xml->formatOutput = true;    
@@ -132,5 +136,6 @@ function getAllProduit($idClassement, $idTypeProduit)
     $file = file_get_contents($nomFichier);
     echo $file;
 }
+
 envoyerProduits();
 ?>

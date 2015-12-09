@@ -81,4 +81,12 @@ function convertirMajuscule($texte = "")
   
   return $texte;
 }
+
+function startsWith($text, $startWith) {
+    return $startWith === "" || strrpos($text, $startWith, -strlen($text)) !== FALSE;
+}
+
+function endsWith($text, $endWith) {
+  return $endWith === "" || (($temp = strlen($text) - strlen($endWith)) >= 0 && strpos($text, $endWith, $temp) !== FALSE);
+}
 ?>
