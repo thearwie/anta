@@ -43,15 +43,8 @@
         <div class="col-md-4">
           <img class="img-responsive img-produit-detail" src="img/bracelet/BR-0003-1.jpg" alt="BR-0003-1">
         </div>
-        <div class="col-md-1">
-        </div>
-        <div class="col-md-6 info-produit">
+        <div class="col-md-7 info-produit">
         
-          <div class="row row-info-produit">
-            <div class="col-sm-12">
-            </div>
-          </div>
-          
           <div class="row row1-info-produit">
             <div class="col-sm-4">
               <label class="col-gauche">22.75 CAD$</label>
