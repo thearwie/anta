@@ -1,7 +1,5 @@
 ﻿<?php
-header('Content-type: text/xml');
-
-include("outil.php");
+header('content-type:text/xml');
 
 function connectionBD()
 {
@@ -12,10 +10,9 @@ function connectionBD()
 
  $link = mysqli_connect($domainName, $userName, $password, $dbName);
 
- /* Vérification de la connexion */	
  if (mysqli_connect_errno())
  {
-   printf("Échec de la connexion : %s\n", mysqli_connect_error());	
+   printf("Échec de la connexion : %s\n", mysqli_connect_error());
    exit();
  }
   return $link;
@@ -24,14 +21,14 @@ function connectionBD()
 function getAllProduit($idClassement, $idTypeProduit)
 {
   $link = connectionBD();
-  
+
   if($idTypeProduit == 0) {
     switch($idClassement)
     {
       case 0:
       $sql = "select * from produit order by nom";
       break;
-      
+
       case 1:
       $sql = "select * from produit order by prix asc";
       break;
@@ -39,104 +36,108 @@ function getAllProduit($idClassement, $idTypeProduit)
       case 2:
       $sql = "select * from produit order by prix desc";
       break;
-    } 
+    }
   } else {
     switch($idClassement)
     {
       case 0:
       $sql = "select * from produit where id_type_produit = " . $idTypeProduit . " order by nom";
       break;
-      
+
       case 1:
       $sql = "select * from produit where id_type_produit = " . $idTypeProduit . " order by prix asc";
       break;
-      
+
       case 2:
       $sql = "select * from produit where id_type_produit = " . $idTypeProduit . " order by prix desc";
       break;
-    } 
+    }
   }
-  
- if($resultat = mysqli_query($link, $sql))
- { 
-   include("produit.php");
+
+ if($resultat = mysqli_query($link, $sql)) {
+   include("dimension.php");
    include("type_produit.php");
+   include("produit.php");
    $nbLigne = mysqli_num_rows($resultat);
    $mesProduits[$nbLigne] = new Produit();
    $iterateur = 0;
-   while($row = mysqli_fetch_array($resultat, MYSQLI_BOTH))
-   { 
-      $produit = new Produit();
+   while($row = mysqli_fetch_array($resultat, MYSQLI_BOTH)) {
       $idTypeProduit = $row[7];
       $row2 = null;
-      if($resultat2 = mysqli_query($link, "select * from type_produit where id = " . $idTypeProduit))
-      {
+      if($resultat2 = mysqli_query($link, "select * from type_produit where id = " . $idTypeProduit)) {
         $row2 = mysqli_fetch_array($resultat2, MYSQLI_BOTH);
       }
-      if(endsWith($row[0], "1"))
-      {
+      $idProduit = $row[0];
+      if(endsWith($idProduit, "1")) {
+        if($resultat3 = mysqli_query($link, "select d.nom, pd.quantite from produit as p, produit_dimension as pd, dimension as d where p.id = pd.id_produit and d.id = pd.id_dimension and p.id = '" . $idProduit . "'")) {
+          $nbLigne2 = mysqli_num_rows($resultat3);
+          $quantitesProduit[$nbLigne2] = new Dimension();
+          $row3 = null;
+          $iterateur2 = 0;
+       
+          while($row3 = mysqli_fetch_array($resultat3, MYSQLI_BOTH)) {
+            $quantitesProduit[$iterateur2] = new Dimension();
+            $quantitesProduit[$iterateur2]->init($row3[0], $row3[1]);
+            $iterateur2++;
+            echo $quantitesProduit->getNom() . ", ";
+            echo $quantitesProduit->getQuantite() . "<br/>";
+          }
+         }
         $mesProduits[$iterateur] = new Produit();
-        $mesProduits[$iterateur]->init($row[0], $row[1], $row[2], $row[3], $row[4], $row[5], $row[6], $row2[0], $row2[1]);
-        $iterateur ++;
+        $mesProduits[$iterateur]->init($idProduit, $row[1], $row[2], $row[3], $row[4], $row[5], $row2[0], $row2[1], $quantitesProduit);
+        $iterateur++;
       }
    }
+   mysqli_free_result($resultat3);
    mysqli_free_result($resultat2);
    mysqli_free_result($resultat);
-   
+
    mysqli_close($link);
-   
+
    return $mesProduits;
   }
 }
-   
+
+include("outil.php");
+
  function envoyerProduits()
  {
-    $xml = new DomDocument("1.0");
-    $xml->formatOutput = true;    
-    
+    $xml = new DOMDocument('1.0', 'iso-8859-1');
+    $xml->formatOutput = true;
+
     $collection = $xml->createElement("collection");
     $xml->appendChild($collection);
-    
+
     $idTypeProduit = $_GET["idTypeProduit"];
     $idClassement  = $_GET["idClassement"];
     $mesProduits = getAllProduit($idClassement, $idTypeProduit);
-  
-    for($i=0; $i<count($mesProduits)-1; $i++) 
+
+    for($i=0; $i<count($mesProduits)-1; $i++)
     {
       $nomDossier = $mesProduits[$i]->getTypeProduit()->getNom();
       $nomDossier = retirerApostrophe($nomDossier);
       $nomDossier = formaterTexte($nomDossier);
       $nomDossier = convertirMinuscule($nomDossier);
-      
+
       $produit = $xml->createElement("produit");
       $collection->appendChild($produit);
-      
+
       $id = $xml->createElement("id", $mesProduits[$i]->getId());
       $produit->appendChild($id);
-      
+
       $idproduit = $xml->createElement("idproduit", substr($mesProduits[$i]->getId(), 0, strrpos($mesProduits[$i]->getId(), "-")));
       $produit->appendChild($idproduit);
-      
+
       $nom = $xml->createElement("nom", $mesProduits[$i]->getNom());
       $produit->appendChild($nom);
-      
+
       $sourceimage = $xml->createElement("sourceimage", "img/" . $nomDossier . "/" . $mesProduits[$i]->getId() . ".jpg");
       $produit->appendChild($sourceimage);
-      
+
       $prix = $xml->createElement("prix", number_format((float)$mesProduits[$i]->getPrix(), 2, '.', '') . " CDN$");
       $produit->appendChild($prix);
     }
-    
-    if($idTypeProduit > 0)
-      $nomFichier = "collection" . $idTypeProduit. ".xml";
-    else
-      $nomFichier = "collection.xml";
-    
-    /* $xml->save($nomFichier); */
-    echo $xml;
-    /* $file = file_get_contents($nomFichier);
-    echo $file;$file = file_get_contents($nomFichier);
-    echo $file; */
+    echo $xml->saveXML();
 }
 
 envoyerProduits();

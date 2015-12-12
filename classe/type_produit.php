@@ -36,10 +36,10 @@
       return $this->nom;
     }
     
-    function printProduction()
+    function printTypeProduit()
     {
-      echo"Id: <br/>" . $this->getId() . "<br/>";
-      echo"Nom: <br/>" . $this->getNom() . "<br/><br/>";
+      echo"Id: " . $this->getId() . "<br/>";
+      echo"Nom: " . $this->getNom() . "<br/><br/>";
     }
   }
 ?>

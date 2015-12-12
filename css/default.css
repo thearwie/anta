@@ -57,7 +57,7 @@ html, body
 {
   /* overflow: hidden; */
   height: 100%;
-	font-family: Eras Demi ITC !important;
+	font-family: "Eras Demi ITC !important";
 }
 
 html
@@ -80,8 +80,8 @@ body
   float: left;
   margin-left: 40px;
   margin-top: 30px;
-  padding-top:20px;
-  text-align:center;
+  padding-top: 20px;
+  text-align: center;
 }
 
 header

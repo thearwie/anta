@@ -3,35 +3,35 @@
   {
     var $id;
     var $nom;
-    var $quantite;
     var $prix;
     var $commentaire;
     var $enVente;
     var $nouveaute;
     var $typeProduit;
+    var $dimension;
 
     function __construct()
     {
       $this->setId("");
       $this->setNom("");
-      $this->setQuantite(0);
       $this->setPrix(0);
       $this->setCommentaire("");
       $this->setEnVente(0);
       $this->setNouveaute(0);
       $this->typeProduit = new TypeProduit();
+      $this->dimension = array();
     }
 
-    function init($nvId, $nvNom, $nvQuantite, $nvPrix, $nvCommentaire, $nvEnVente, $nvNouveaute, $idTypeProduit, $nomTypeProduit)
+    function init($nvId, $nvNom, $nvPrix, $nvCommentaire, $nvEnVente, $nvNouveaute, $idTypeProduit, $nomTypeProduit, $dimension)
     {
       $this->setId($nvId);
       $this->setNom($nvNom);
-      $this->setQuantite($nvQuantite);
       $this->setPrix($nvPrix);
       $this->setCommentaire($nvCommentaire);
       $this->setEnVente($nvEnVente);
       $this->setNouveaute($nvNouveaute);
       $this->setTypeProduit($idTypeProduit, $nomTypeProduit);
+      $this->setDimension($dimension)
     }
     
     function setId($nvId)
@@ -42,11 +42,6 @@
     function setNom($nvNom)
     {
       $this->nom = $nvNom;
-    }
-    
-    function setQuantite($nvQuantite)
-    {
-      $this->quantite = $nvQuantite;
     }
     
     function setPrix($nvPrix)
@@ -74,6 +69,11 @@
       $this->typeProduit->init($idTypeProduit, $nomTypeProduit);
     }
     
+    function setDimension($dimension)
+    {
+      $this->dimension($dimension);
+    }
+    
     function getId()
     {
       return $this->id;
@@ -82,11 +82,6 @@
     function getNom()
     {
       return $this->nom;
-    }
-    
-    function getQuantite()
-    {
-      return $this->quantite;
     }
     
     function getPrix()
@@ -114,16 +109,25 @@
       return $this->typeProduit;
     }
     
-    function printProduction()
+    function getDimension()
     {
-      echo"Id: <br/>" . $this->getId() . "<br/>";
-      echo"Nom: <br/>" . $this->getNom() . "<br/>";
-      echo"Quantité: <br/>" . $this->getQuantite() . "<br/>";
-      echo"Prix: <br/>" . $this->getPrix() . "<br/>";
-      echo"Commentaire: <br/>" . $this->getCommentaire() . "<br/>";
-      echo"Si en vente: <br/>" . $this->getEnVente() . "<br/>";
-      echo"Si nouveauté: <br/>" . $this->getNouveaute() . "<br/>";
-      echo"Id du type de produit: <br/>" . $this->getTypeProduit()->getId() . "<br/><br/>";
+      return $this->dimension;
+    }
+    
+    function printProduit()
+    {
+      echo "Id: " . $this->getId() . "<br/>";
+      echo "Nom: " . $this->getNom() . "<br/>";
+      echo "Prix: " . $this->getPrix() . "<br/>";
+      echo "Commentaire: " . $this->getCommentaire() . "<br/>";
+      echo "Si en vente: " . $this->getEnVente() . "<br/>";
+      echo "Si nouveauté: " . $this->getNouveaute() . "<br/>";
+      echo "Id du type de produit: " . $this->getTypeProduit()->getId() . "<br/>";
+      for($i = 0; $i < count($this->getDimension()); $i++)
+      {
+        echo "Dimension " . $i + 1 . " : " . $this->getDimension()[$i]->getNom() . ", quantité :" . $this->getDimension()[$i]->getQuantite() . "<br/>";
+      }
+      echo "<br/>";
     }
   }
 ?>
