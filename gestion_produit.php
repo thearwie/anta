@@ -55,15 +55,7 @@
       </select>
       <br/>
       <br/>
-      <label>Catégorie</label>
-      <br/>
-      <ul class="ul_horizontal groupe_toggle_btn">
-        <li><input type="radio" name="produit" value="bague" class="toggle_btn" checked>Bague</li>
-        <li><input type="radio" name="produit" value="collier" class="toggle_btn">Collier</li>
-        <li><input type="radio" name="produit" value="boucleOreille" class="toggle_btn">Boucle d'oreille</li>
-        <li><input type="radio" name="produit" value="bracelet" class="toggle_btn">Bracelet</li>
-      </ul>
-      <br/>
+
       
       <div id="contenu_page">
       <?php include("ajouter_produit.php");?>

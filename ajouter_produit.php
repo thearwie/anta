@@ -1,7 +1,24 @@
-<?php include("requete_admin.php")
+<?php include("requete_admin.php");?>
+
+<label>Catégorie</label>
+<br/>
+<ul class="ul_horizontal groupe_toggle_btn">
+<?php 
+  for($i = 0; $i<count($typeProdruit); $i++)
+  {
+  echo "<li><input type=\"radio\" name=\"typeProduit\" value=\"" . $typeProduit[$i]->getAbreviation() . "\" class=\"toggle_btn\">Bague</li>";
+  }
+
+  // <li><input type="radio" name="produit" value="bague" class="toggle_btn" checked>Bague</li>
+  // <li><input type="radio" name="produit" value="collier" class="toggle_btn">Collier</li>
+  // <li><input type="radio" name="produit" value="boucleOreille" class="toggle_btn">Boucle d'oreille</li>
+  // <li><input type="radio" name="produit" value="bracelet" class="toggle_btn">Bracelet</li>
+  ?>
+</ul>
+<br/>
 
 <form action="ajouter_produit.php">
-  <label>Choisir bijou</label>
+  <label>Choisir un bijou</label>
   <!-- <br/> -->
   <div class="conteneur">
     <div class="cellule">

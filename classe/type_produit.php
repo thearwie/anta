@@ -4,17 +4,27 @@ ini_set("display_errors", 1);
   {
     var $id;
     var $nom;
+    var $abreviation;
 
     function __construct()
     {
       $this->setId(0);
       $this->setNom("");
+      $this->setAbreviation("");
     }
 
     function init($nvId, $nvNom)
     {
       $this->setId($nvId);
       $this->setNom($nvNom);
+      $this->setAbreviation("");
+    }
+    
+    function init($nvId, $nvNom, $nvAbreviation)
+    {
+      $this->setId($nvId);
+      $this->setNom($nvNom);
+      $this->setAbreviation($nvAbreviation);
     }
     
     function setId($nvId)
@@ -27,6 +37,11 @@ ini_set("display_errors", 1);
       $this->nom = $nvNom;
     }
     
+    function setAbreviation($nvAbreviation)
+    {
+      $this->abreviation = $nvAbreviation;
+    }
+    
     function getId()
     {
       return $this->id;
@@ -37,10 +52,16 @@ ini_set("display_errors", 1);
       return $this->nom;
     }
     
+    function getAbreviation()
+    {
+      return $this->abreviation
+    }
+    
     function printTypeProduit()
     {
       echo"Id: " . $this->getId() . "<br/>";
-      echo"Nom: " . $this->getNom() . "<br/><br/>";
+      echo"Nom: " . $this->getNom() . "<br/>";
+      echo"Abreviation: " . $this->getAbreviation() . "<br/>";
     }
   }
 ?>
