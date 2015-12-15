@@ -1,19 +1,17 @@
 <form action="ajouter_produit.php">
-  <ul class="ul_horizontal groupe_toggle_btn">
-    <li><input type="radio" name="produit" value="bague" class="toggle_btn">Bague</li>
-    <li><input type="radio" name="produit" value="collier" class="toggle_btn">Collier</li>
-    <li><input type="radio" name="produit" value="boucleOreille" class="toggle_btn">Boucle d'oreille</li>
-    <li><input type="radio" name="produit" value="bracelet" class="toggle_btn">Bracelet</li>
-  </ul>
-  <br/>
+<?php include("requete_admin.php")
 
-  <div class="conteneur">
+
+
+    <label>Choisir bijou</label>
+    <!-- <br/> -->
+    <div class="conteneur">
     <div class="cellule">
       <div class="image_cellule">
         <div style="width: 150px; height: 100px; background-color: #0000ff;"></div>
       </div>
       <div class="checkbox_cellule">
-        <input type="radio" id="nouveau" name="test" value="Nouveau">
+        <input type="radio" id="nouveau" name="test" value="Nouveau" checked>
         <label for="nouveau">Nouveau</label>
       </div>
     </div>
@@ -102,7 +100,7 @@
       <input type="button" id="parcourir" name="parcourir" value="parcourir">
     </div>
     <div class="colonne">
-      <div id="photo_produit"></div>
+      <div id="photo_produit">&nbsp;</div>
     </div>
   </div>
   <div class="groupe" style="padding: 10px; padding-left: 0px;">
