@@ -2,6 +2,7 @@
 header('Content-type: text/xml');
 
 include("outil.php");
+include("connexion_BD.php");
 
 function connectionBD()
 {

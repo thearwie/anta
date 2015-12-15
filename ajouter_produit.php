@@ -1,11 +1,9 @@
-<form action="ajouter_produit.php">
 <?php include("requete_admin.php")
 
-
-
-    <label>Choisir bijou</label>
-    <!-- <br/> -->
-    <div class="conteneur">
+<form action="ajouter_produit.php">
+  <label>Choisir bijou</label>
+  <!-- <br/> -->
+  <div class="conteneur">
     <div class="cellule">
       <div class="image_cellule">
         <div style="width: 150px; height: 100px; background-color: #0000ff;"></div>
