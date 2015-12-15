@@ -1,5 +1,5 @@
 <?php
-ini_set("display_errors", 1);
+// ini_set("display_errors", 1);
   class TypeProduit
   {
     var $id;
@@ -64,8 +64,4 @@ ini_set("display_errors", 1);
       echo "Abreviation: " . $this->getAbreviation() . "<br/>";
     }
   }
-  
-  $x = new TypeProduit();
-  $x->initialiser(1, "Bague", "BA");
-  $x->printTypeProduit();
 ?>

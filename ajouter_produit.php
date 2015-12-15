@@ -1,13 +1,22 @@
-<?php include("requete_admin.php");?>
+<?php 
+  include("requete_admin.php");
+  include("type_produit.php");
+?>
 
 <label>Catégorie</label>
 <br/>
 <ul class="ul_horizontal groupe_toggle_btn">
 <?php 
-  for($i = 0; $i<count($typeProdruit); $i++)
-  {
-  echo "<li><input type=\"radio\" name=\"typeProduit\" value=\"" . $typeProduit[$i]->getAbreviation() . "\" class=\"toggle_btn\">Bague</li>";
-  }
+  $typeProduit[0] = new TypeProduit();
+  $typeProduit[0]->initialiser(1, "Bague", "BA");
+  $typeProduit[0]->printTypeProduit();
+  echo"<br/>test<br/>"
+  //$typeProduit = getAllTypeProduit();
+  //getAllTypeProduit();
+  // for($i = 0; $i<count($typeProduit); $i++)
+  // {
+  // echo "<li><input type=\"radio\" name=\"typeProduit\" value=\"" . $typeProduit[$i]->getAbreviation() . "\" class=\"toggle_btn\">Bague</li>";
+  // }
 
   // <li><input type="radio" name="produit" value="bague" class="toggle_btn" checked>Bague</li>
   // <li><input type="radio" name="produit" value="collier" class="toggle_btn">Collier</li>
