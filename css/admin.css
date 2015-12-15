@@ -75,16 +75,38 @@ ul
   display:flex;
 }
 
-.groupe
+.ul_hozontal
 {
-  display: flex;  
-  padding: 10px; 
-  padding-left: 0px;
+  display: flex;
+  
 }
 
-.colonneGauche
+.toggle_btn
 {
-  float: left;
+  border-width: 1px;
+  border-style: solid;
+  /* http://jsfiddle.net/davidelrizzo/DYJkG/ */
+}
+
+.conteneur, .groupe
+{
+  padding: 10px;
+  padding-left: 0px;
+  display: table;
+}
+
+.conteneur
+{
+  height: 150px;
+  width: 650px;
+  overflow: auto;
+  display: table-caption;
+}
+
+.cellule, .colonne
+{
+display: table-cell;
+padding-right: 15px;
 }
 
 .lblCheckbox 
@@ -99,4 +121,12 @@ ul
   width: auto;
   overflow: auto;
   display: inline-flex;
+}
+
+#photo_produit
+{
+  height: 256px;
+  width: 383px;
+  background-color: #FF0000;
+  
 }
