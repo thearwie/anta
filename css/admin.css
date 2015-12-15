@@ -78,7 +78,14 @@ ul
 .ul_hozontal
 {
   display: flex;
-  
+}
+
+.groupe_toggle_btn
+{
+  background:#ff0000;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #ff0000 !important;
 }
 
 .toggle_btn
@@ -86,6 +93,19 @@ ul
   border-width: 1px;
   border-style: solid;
   /* http://jsfiddle.net/davidelrizzo/DYJkG/ */
+}
+
+.toggle_btn
+{
+  text-align:centre; 
+  margin:5px 2px;
+  padding:0.4em 3em; 
+  color:#000; 
+  background-color:#FFF; 
+  border-radius:10px; 
+  display:inline-block; 
+  border:solid 1px #CCC; 
+  cursor:pointer;
 }
 
 .conteneur, .groupe

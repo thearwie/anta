@@ -37,7 +37,7 @@
         <option value="modifier/supprimer">Modifier/Supprimer</option>
       </select>
       <br/>
-      
+      <br/>
       <?php include("ajouter_produit.php")?>
 
   </div>
