@@ -1,8 +1,4 @@
 <?php
-ini_set("display_errors", 1);
-include("dimension.php");
-include("type_produit.php");
-
   class Produit
   {
     var $id;
@@ -23,7 +19,7 @@ include("type_produit.php");
       $this->setEnVente(0);
       $this->setNouveaute(0);
       $this->typeProduit = new TypeProduit();
-      $this->dimension = array();
+      $this->dimension = new Dimension();
     }
 
     function init($nvId, $nvNom, $nvPrix, $nvCommentaire, $nvEnVente, $nvNouveaute, $idTypeProduit, $nomTypeProduit, $dimension)
@@ -75,7 +71,7 @@ include("type_produit.php");
     
     function setDimension($dimension)
     {
-      $this->dimension = $dimension;
+      $this->dimension($dimension);
     }
     
     function getId()
@@ -118,7 +114,7 @@ include("type_produit.php");
       return $this->dimension;
     }
     
-    /*function printProduit()
+    function printProduit()
     {
       echo "Id: " . $this->getId() . "<br/>";
       echo "Nom: " . $this->getNom() . "<br/>";
@@ -132,6 +128,6 @@ include("type_produit.php");
         echo "Dimension " . $i + 1 . " : " . $this->getDimension()[$i]->getNom() . ", quantité :" . $this->getDimension()[$i]->getQuantite() . "<br/>";
       }
       echo "<br/>";
-    }*/
+    }
   }
 ?>

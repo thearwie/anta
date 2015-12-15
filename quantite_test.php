@@ -1,8 +1,7 @@
-﻿<?php
-include("dimension.php");
-include("type_produit.php");
+﻿<?php 
+ini_set("display_errors", 1);
 include("produit.php");
-
+  
 function connectionBD()
 {
   $domainName = "webc.cegepsherbrooke.qc.ca";
@@ -22,38 +21,46 @@ function connectionBD()
 function getProduit($idProduit) {
   $link = connectionBD();
   
-  echo "Test 1 </br>";
-
+  print_r($idProduit . "<br/>");
+  
   $sql = "select d.nom, pd.quantite from produit as p, produit_dimension as pd, dimension as d where p.id = pd.id_produit and d.id = pd.id_dimension and p.id = '" . $idProduit . "'";
   
   if($resultat = mysqli_query($link, $sql)) {
-    $nbLigne = mysqli_num_rows($resultat);
-    $quantitesProduit[$nbLigne] = new Dimension();
     $iterateur = 0;
-    echo "Test 2 </br>";
  
     while($row = mysqli_fetch_array($resultat, MYSQLI_BOTH)) {
-      $quantitesProduit[$iterateur] = new Dimension();
-      $quantitesProduit[$iterateur]->init($row[0], $row[1]);
+      
+      /*$mesProduits[$iterateur] = new Produit();
+      $mesProduits[$iterateur]->init($idProduit, $row[1], $row[2], $row[3], $row[4], $row[5], $row2[0], $row2[1], $quantitesProduit);
       $iterateur++;
-      echo "Test 3 </br>";
+      */
+      
+      //$quantitesProduit[$iterateur] = new Dimension();
+      $dimension = new Dimension();
+      $dimension->init($row[0], $row[1]); 
+      $quantitesProduit[$iterateur] = $dimension;
+      
+      $iterateur++;
     }
    }
+   
    mysqli_free_result($resultat);
    mysqli_close($link);
    
+   for($i=0; $i<count($quantitesProduit)-1; $i++) {
+    echo $quantitesProduit[$i]->getNom() . " ";
+    echo $quantitesProduit[$i]->getQuantite() . "<br/>";
+  }
+   
    $produit = new Produit();
-   $produit->init($idProduit, "Bague BA-0001", 35.75, "Une bague en argent.", 1, 0, 1, "Bague", $quantitesProduit);
-   echo "Test 4 </br>";
-
+   $quantitesTemp = $quantitesProduit;
+   $produit->init($idProduit, "Bague BA-0001", 35.75, "Une bague en argent.", 1, 0, 1, "Bague", $quantitesTemp);
+   
    return $produit;
 }
-  
-echo "Test 5 </br>";
+
 $produit = getProduit("BA-0001-1");
-echo "Test 6 </br>";
 echo "<p>";
-  echo "Test 7 </br>";
   echo $produit->getId() . "<br/>";
   echo $produit->getNom() . "<br/>";
   echo $produit->getPrix() . "<br/>";
@@ -62,11 +69,12 @@ echo "<p>";
   echo $produit->getNouveaute() . "<br/>";
   echo $produit->getTypeProduit()->getId() . "<br/>";
   echo $produit->getTypeProduit()->getNom() . "<br/>";
-  /*for($i=0; $i<count($produit->getDimension())-1; $i++) {
-    echo $produit->getDimension()[$i]->getNom() . " ";
-    echo $produit->getDimension()[$i]->getQuantite() . "<br/>";
-  }*/
+  
+  $produitTemp2 = $produit->getDimension();
+  for($i=0; $i<count($produitTemp2); $i++) {
+    echo $produitTemp2[$i]->getNom() . " ";
+    echo $produitTemp2[$i]->getQuantite() . "<br/>";
+  }
   echo "<br/>";
 echo "</p>";
-echo "Test 8 </br>";
 ?>

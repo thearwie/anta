@@ -1,9 +1,10 @@
 ﻿<?php
+ini_set("display_errors", 1);
   class Dimension
   {
     var $nom;
     var $quantite;
-
+    
     function __construct()
     {
       $this->setNom("");

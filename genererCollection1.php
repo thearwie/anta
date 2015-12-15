@@ -40,11 +40,7 @@ function getAllProduit($idClassement, $idTypeProduit)
   }
 
  if($resultat = mysqli_query($link, $sql)) {
-   include("dimension.php");
-   include("type_produit.php");
    include("produit.php");
-   $nbLigne = mysqli_num_rows($resultat);
-   $mesProduits[$nbLigne] = new Produit();
    $iterateur = 0;
    while($row = mysqli_fetch_array($resultat, MYSQLI_BOTH)) {
       $idTypeProduit = $row[7];
@@ -55,21 +51,24 @@ function getAllProduit($idClassement, $idTypeProduit)
       $idProduit = $row[0];
       if(endsWith($idProduit, "1")) {
         if($resultat3 = mysqli_query($link, "select d.nom, pd.quantite from produit as p, produit_dimension as pd, dimension as d where p.id = pd.id_produit and d.id = pd.id_dimension and p.id = '" . $idProduit . "'")) {
-          $nbLigne2 = mysqli_num_rows($resultat3);
-          $quantitesProduit[$nbLigne2] = new Dimension();
           $row3 = null;
           $iterateur2 = 0;
        
           while($row3 = mysqli_fetch_array($resultat3, MYSQLI_BOTH)) {
-            $quantitesProduit[$iterateur2] = new Dimension();
-            $quantitesProduit[$iterateur2]->init($row3[0], $row3[1]);
+            $dimension = new Dimension();
+            $dimension->init($row3[0], $row3[1]);
+            $quantitesProduit[$iterateur2] = $dimension;
+            
             $iterateur2++;
-            echo $quantitesProduit->getNom() . ", ";
-            echo $quantitesProduit->getQuantite() . "<br/>";
+            
+            $quantiteTemps = $quantitesProduit;
+            echo $quantiteTemps[$iterateur2]->getNom() . ", ";
+            echo $quantiteTemps[$iterateur2]->getQuantite() . "<br/>";
           }
          }
-        $mesProduits[$iterateur] = new Produit();
-        $mesProduits[$iterateur]->init($idProduit, $row[1], $row[2], $row[3], $row[4], $row[5], $row2[0], $row2[1], $quantitesProduit);
+        $produit = new Produit();
+        $produit->init($idProduit, $row[1], $row[2], $row[3], $row[4], $row[5], $row2[0], $row2[1], $quantitesProduit);
+        $mesProduits[$iterateur] = $produit;
         $iterateur++;
       }
    }
@@ -87,7 +86,8 @@ include("outil.php");
 
  function envoyerProduits()
  {
-    $xml = new DOMDocument('1.0', 'iso-8859-1');
+    /* $xml = new DOMDocument('1.0', 'iso-8859-1'); */
+    $xml = new DOMDocument('1.0', 'utf-8');
     $xml->formatOutput = true;
 
     $collection = $xml->createElement("collection");

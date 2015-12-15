@@ -13,7 +13,7 @@ function afficherProduits() {
     
     $.ajax({
       type: "GET",
-      url: "genererCollection1.php?idClassement=" + idClassement + "&idProduit=" + idProduit,
+      url: "genererCollection1.php?idClassement=" + idClassement + "&idTypeProduit=" + idTypeProduit,
       dataType: "xml",
       success: function (xml) {
         $(".collection-produit").empty();
