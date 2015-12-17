@@ -28,16 +28,16 @@
         <a href='index.php' class='logo'></a>
       </div>
       <div class = "menuLinks">
-          <div class = "menuUtilisateur">
-            <ul>
-              <li class = "optionMenuUtilisateur"><a  class = "linkMenuUtilisateur" href='formulaireInscription.php'>S'inscrire</a></li>
-              <li class = "optionMenuUtilisateur"><a  class = "linkMenuUtilisateur" href='/anta/'>Se connecter</a></li>
-            </ul>
-          </div>
-          <div class = "menuPrincipal">
-            <nav>
-              <?php include('menu.php'); ?>
-            </nav>
-          </div>
+        <div class = "menuUtilisateur">
+          <ul>
+            <li class = "optionMenuUtilisateur"><a  class = "linkMenuUtilisateur" href='formulaireInscription.php'>S'inscrire</a></li>
+            <li class = "optionMenuUtilisateur"><a  class = "linkMenuUtilisateur" href='/anta/'>Se connecter</a></li>
+          </ul>
+        </div>
+        <div class = "menuPrincipal">
+          <nav>
+            <?php include('menu.php'); ?>
+          </nav>
+        </div>
       </div>
     </header>

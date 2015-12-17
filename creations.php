@@ -45,10 +45,7 @@
   <div class='collection'>
 
      <div class='row'>
-      <div class='col-xs-4'>
-      </div>
-      
-      <div class='col-xs-4'>
+      <div class='col-xs-8'>
       </div>
           
       <div class='col-xs-4 combobox-group'>
@@ -62,11 +59,11 @@
       </div>
     </div>
      
-    <div class="collection-produit" id="collection-produit">
+    <div class="collection-produit" id="creation-produit">
     </div>
     
   </div>
 </div>
 <?php include('/inc/footer.php')?>
 
-<script src="js/collection.js" defer="defer"></script>
+<script src="js/creation.js" defer="defer"></script>

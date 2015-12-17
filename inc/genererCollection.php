@@ -8,7 +8,18 @@ function getAllProduit($idClassement, $idTypeProduit, $idEnVente)
 {
   $link = connectionBD();
 
-  if($idTypeProduit == 0) {
+  if($idEnVente > 0) {
+    switch($idEnVente)
+    {
+      case 1:
+      $sql = "select * from produit where nouveaute = 1 order by nom";
+      break;
+      
+      case 2:
+      $sql = "select * from produit where en_vente = 0 order by nom";
+      break;
+    }
+  } else if($idTypeProduit == 0) {
     switch($idClassement)
     {
       case 0:
@@ -21,17 +32,6 @@ function getAllProduit($idClassement, $idTypeProduit, $idEnVente)
       
       case 2:
       $sql = "select * from produit order by prix desc";
-      break;
-    }
-  } else if($idEnVente > 0) {
-    switch($idEnVente)
-    {
-      case 1:
-      $sql = "select * from produit where nouveaute = 1 order by nom";
-      break;
-      
-      case 2:
-      $sql = "select * from produit where en_vente = 0 order by nom";
       break;
     }
   } else {
@@ -102,7 +102,7 @@ function envoyerProduits()
 	$idTypeProduit = $_GET["idTypeProduit"];
 	$idClassement  = $_GET["idClassement"];
   $idEnVente     = $_GET["idEnVente"];
-	$mesProduits = getAllProduit($idClassement, $idTypeProduit);
+	$mesProduits = getAllProduit($idClassement, $idTypeProduit, $idEnVente);
   
 	for($i=0; $i<count($mesProduits); $i++)
 	{

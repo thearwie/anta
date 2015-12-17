@@ -159,6 +159,7 @@ nav > a {
 /* footer */
 footer 
 {
+  position: relative;
   color: #732876;
   padding-top: 20px;
   padding-bottom: 20px;
