@@ -410,10 +410,14 @@ label
   border-collapse: collapse !important;
 }
 
+.img-produit, .img-creation
+{
+  width: 100% !important;
+}
+
 .img-produit
 {
   border-bottom: none !important;
-  width: 100% !important;
 }
 
 .combobox-group
