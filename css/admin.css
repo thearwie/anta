@@ -143,10 +143,8 @@ padding-right: 15px;
   display: inline-flex;
 }
 
-#photo_produit
+.photo_produit
 {
   height: 256px;
   width: 383px;
-  background-color: #FF0000;
-  
 }

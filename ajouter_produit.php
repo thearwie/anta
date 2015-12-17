@@ -1,18 +1,21 @@
-<?php 
+﻿<?php 
   include("requete_admin.php");
-  include("type_produit.php");
 ?>
 
 <label>Catégorie</label>
 <br/>
 <ul class="ul_horizontal groupe_toggle_btn">
 <?php 
-  $typeProduit[0] = new TypeProduit();
-  $typeProduit[0]->initialiser(1, "Bague", "BA");
-  $typeProduit[0]->printTypeProduit();
-  echo"<br/>test<br/>"
-  //$typeProduit = getAllTypeProduit();
-  //getAllTypeProduit();
+  // $typeProduit[0] = new TypeProduit();
+  // $typeProduit[0]->initialiser(1, "Bague", "BA");
+  // $typeProduit[0]->printTypeProduit();
+  // $typeProduit = "un testtest";
+  // $typeProduit = array("pas bien du tout");
+  // $typeProduit[0] = "pas bien du touttout";
+  
+   // $typeProduit = getAllTypeProduit();
+  // $typeProduit->printTypeProduit();
+//  print_r($typeProduit);
   // for($i = 0; $i<count($typeProduit); $i++)
   // {
   // echo "<li><input type=\"radio\" name=\"typeProduit\" value=\"" . $typeProduit[$i]->getAbreviation() . "\" class=\"toggle_btn\">Bague</li>";
@@ -121,10 +124,21 @@
     <div class="colonne">
       <label>Image</label> 
       <br/>
-      <input type="button" id="parcourir" name="parcourir" value="parcourir">
+      <input type="button" id="ajouter_photo" name="ajouter_photo" value="Ajouter photo" onclick="AjouterImage()">
+     
+      
+      
+     
     </div>
-    <div class="colonne">
-      <div id="photo_produit">&nbsp;</div>
+    <div id="liste_image" class="colonne conteneur">
+      <label>Liste de photo</label>
+      <div class="cellule">
+        <div>
+          <img id="image" class="photo_produit" />
+        </div>
+        <br/>
+        <input id="uploadImage" type="file" name="myPhoto" onchange='PreviewImage("image", "uploadImage");' accept="image/*"/>
+      </div>
     </div>
   </div>
   <div class="groupe" style="padding: 10px; padding-left: 0px;">
@@ -153,3 +167,33 @@
   <input type="button" name="enregistrer" value="Enregistrer">
   <input type="button" name="annuler" value="Annuler">
 </form>
+
+ <script type="text/javascript">
+  var nbImage = 0;
+  function PreviewImage(img_src, uploadImage)
+  {
+    var oFReader = new FileReader();
+    oFReader.readAsDataURL(document.getElementById(uploadImage).files[0]);
+
+    oFReader.onload = function (oFREvent) {
+      document.getElementById(img_src).src = oFREvent.target.result;
+    };
+  };
+
+  function AjouterImage()
+  {
+    if (window.XMLHttpRequest) {
+      // code for modern browsers
+      xhttp = new XMLHttpRequest();
+      } else {
+      // code for IE6, IE5
+      xhttp = new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    nbImage ++;
+    xhttp.onreadystatechange = function() {
+      document.getElementById("liste_image").innerHTML = document.getElementById("liste_image").innerHTML + xhttp.responseText;
+    };
+    xhttp.open("POST", "ajouter_image.php?q=" + nbImage, true);
+    xhttp.send();
+  }
+</script>

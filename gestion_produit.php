@@ -55,15 +55,10 @@
       </select>
       <br/>
       <br/>
-
-      
       <div id="contenu_page">
-      <?php include("ajouter_produit.php");?>
+        <?php include("ajouter_produit.php");?>
       </div>
-      
-     
-
-  </div>
+    </div>
   </body>
 </html>
 

@@ -1,4 +1,4 @@
-<?php
+﻿<?php
  include("php/accesBD/connexion_BD.php");
  include("type_produit.php");
 function getAllTypeProduit()
@@ -11,7 +11,7 @@ function getAllTypeProduit()
     $iterateur = 0;
     while ($row = mysqli_fetch_array($resultat, MYSQLI_BOTH))
     {
-      $typeProduit[$iterateur] = new TypeProduit();
+      // $typeProduit[$iterateur] = new TypeProduit();
       // $typeProduit->printTypeProduit();
       // $typeProduit[$iterateur]->initialiser($row[0], $row[1], $row[2]);
       // $typeProduit->printTypeProduit();
