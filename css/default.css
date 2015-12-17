@@ -392,7 +392,7 @@ label
 }
 
 
-/* Collection */
+/* Collection et création */
 .collection
 {
   width: 100%;
@@ -402,7 +402,7 @@ label
   padding-bottom: 30px;
 }
 
-.collection, .img-produit, .prix, .bouton-detail
+.collection, .img-produit, .prix, .bouton-detail, .img-creation
 {
   border-style: solid !important;
   border-width: 1px !important;
