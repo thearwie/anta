@@ -75,7 +75,7 @@
 <head>
 	<meta charset="utf-8"/>
 	<title>Panier</title>
-	<link rel="stylesheet" type="text/css" href="css/estilos.css">
+	<link rel="stylesheet" type="text/css" href="css/stylePanier.css">
 	<script type="text/javascript"  src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 	<script type="text/javascript"  src="js/scripts.js"></script>
 </head>
