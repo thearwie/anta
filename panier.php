@@ -83,6 +83,47 @@
 			<img src="./img/panier.png">
 		</a>
 	</header>
+    	<section>
+		<?php
+		  $totalPanier = 0;
+		  if(isset($_SESSION['panier'])){
+			  $contenuPanier = $_SESSION['panier'];
+			 
+			  for($i=0; $i<count($contenuPanier); $i++){
+		?>
+			<div class= "produit">
+			    <center>
+				  <img src="./img/<?php echo $contenuPanier[$i]['Id'];?>.jpg "></br>
+				  <span><?php echo $contenuPanier[$i]['Nom'];?></span></br>
+				  <span>Prix: <?php echo $contenuPanier[$i]['Prix'];?></span></br>
+				  <span>Quantité: 
+					<input type="text" value="<?php echo $contenuPanier[$i]['Quantite'];?>"
+					data-prix="<?php echo $contenuPanier[$i]['Prix'];?>"
+					data-id="<?php echo $contenuPanier[$i]['Id'];?>"
+					class="quantite">
+				  </span></br>
+				  <span class="sous-total">Sous-total: <?php echo $contenuPanier[$i]['Prix']*$contenuPanier[$i]['Quantite'];?></span></br>
+				</center>
+			</div>
 
+		<?php
+		    $totalPanier = ($contenuPanier[$i]['Prix']*$contenuPanier[$i]['Quantite'])+$totalPanier;
+			
+			}
+		  }
+		  else{
+			  echo '<center><h2>Le panier est vide</h2></center>';
+		  }
+		 
+		  echo '<center><h2 id="total">Total: '.$totalPanier.'</h2></center>';
+		  
+		  if($totalPanier!=0){
+				echo '<center><a href="./achat/acheter.php" class="acheter">Acheter</a></center>';
+		  }
+		?>
+	    
+		<center><a href="./">Voir produits</a></center>
+		
+	</section>
 </body>
 </html>
