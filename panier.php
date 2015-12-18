@@ -122,7 +122,7 @@
 		  }
 		?>
 	    
-		<center><a href="./">Voir produits</a></center>
+		<center><a href="./collections">Continuer à magasiner</a></center>
 		
 	</section>
 </body>
