@@ -31,7 +31,7 @@
         <div class = "menuUtilisateur">
           <ul>
             <li class = "optionMenuUtilisateur"><a  class = "linkMenuUtilisateur" href='formulaireInscription.php'>S'inscrire</a></li>
-            <li class = "optionMenuUtilisateur"><a  class = "linkMenuUtilisateur" href='/anta/'>Se connecter</a></li>
+            <li class = "optionMenuUtilisateur"><a  class = "linkMenuUtilisateur" href='login.php'>Se connecter</a></li>
           </ul>
         </div>
         <div class = "menuPrincipal">
