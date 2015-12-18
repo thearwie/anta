@@ -8,9 +8,7 @@
 </head>
 <body>
 	<header>
-		<a href="./panier.php" title="Voir panier">
-			<img src="./img/panier.png">
-		</a>
+		
 	</header>
 	<section>
 	<form id="formulaire" method="post" action="./login/verifier.php">
