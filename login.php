@@ -1,12 +1,12 @@
-<!DOCTYPE html>
+ï»¿<!DOCTYPE html>
 <!--
 /*******************************************************************************************************/
 /*                                                                                                     */
 /*  Fichier....................:  login.php                        			                           */
 /*  Type.......................:  Document PHP                                                         */
 /*  Titre......................:  Bijouterie Anta950                                                   */
-/*  Auteurs....................:  ©Paola Marilu Carranza Gonzalez, 2015                                */
-/*  Date de création...........:  2015-12-18                                                           */
+/*  Auteurs....................:  Â©Paola Marilu Carranza Gonzalez, 2015                                */
+/*  Date de crÃ©ation...........:  2015-12-18                                                           */
 /*  Date de mise en production.:                                                                       */
 /*                                                                                                     */
 /*******************************************************************************************************/
@@ -26,7 +26,7 @@
 	<form id="formulaire" method="post" action="./login/verifier.php">
 	    <?php 
 		  if(isset($_GET['erreur'])){
-			  echo '<center>Données invalides</center>';
+			  echo '<center>DonnÃ©es invalides</center>';
 		  }
 		?>
 		<label for="courriel">Adresse courriel</label><br>
