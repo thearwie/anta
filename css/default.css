@@ -740,6 +740,13 @@ label
 	color:#1e1e1e;
 }
 
+#formulaireLogin{
+	width: 50%;
+	height: auto;
+	margin:0 auto;
+	text-align:center;
+}
+
 .ouvrirSession{
 	background-color: #732876;
 	color:white;
