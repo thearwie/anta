@@ -1,11 +1,17 @@
 ﻿<?php
 	session_start();
-	include "conexion.php";
+	//include "conexion.php";
+	$connexionDB = mysql_connect("webc.cegepsherbrooke.qc.ca", "viauma", "rurove") or die ("Couldn't connect to server");  
+	mysql_select_db("viauma",  $connexionDB) or die ("Couldn't select database");
 	if(isset($_SESSION['User'])){
 		
 	}
 	else{
-		header("Location: ./index.php?Erreur=Accès refusé");
+		//header("Location: ./index.php?Erreur=Accès refusé");
+		
+		echo '<script type="text/javascript">
+	         window.location.assign("../index.php?Erreur=Accès refusé");
+			 </script>';
 		
 	}
 ?>
@@ -14,17 +20,62 @@
 <head>
 	<meta charset="utf-8"/>
 	<title>Mon compte</title>
-	<link rel="stylesheet" type="text/css" href="./css/stylePanier.css">
+	<link rel="stylesheet" type="text/css" href="css/stylePanier.css">
 	<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-	<script type="text/javascript"  href="./js/scripts.js"></script>
+	<script type="text/javascript"  href="js/scripts.js"></script>
 </head>
 <body>
 	<header>
 		<h1>Mon compte</h1>
-		<a href="./panier.php" title="ver carrito de compras">
+		<a href="./panier.php" title="panier">
 			<img src="./img/panier.png">
 		</a>
 	</header>
+		<section>
+	<nav class="menu2">
+	  <menu>
+	    <li><a href="./">Accueil</a></li>
+	    <li><a href="#" class="selected">Mon Compte</a></li>
+	    <li><a href="#" >Ajouter</a></li>
+	    <li><a href="./login/fermer.php">Quitter</a></li>
+	  </menu>
+	</nav>
+
+	<center><h1>Derniers achats</h1></center>
+	<table border="0px" width="100%">	
+		<tr>
+			<td>Image</td>
+			<td>Nom</td>
+			<td>Prix</td>
+			<td>Quantite</td>
+			<td>Sous-total</td>
+		</tr>	
+
+		<?php
+			$re=mysql_query("select t.id, p.id as idProduit, p.nom, p.prix, tp.quantite, tp.sous_total 
+							from transaction t, transaction_produit tp, produit p
+							where t.id = tp.id_transaction and 
+								  t.id_utilisateur = '10003' and 
+								  tp.id_produit = p.id
+							order by t.id");
+			$nbAchat=0;
+			while ($f=mysql_fetch_array($re)) {
+					if($nbAchat	!=$f['id']){
+						echo '<tr><td>Nombre de transaction: '.$f['id'].' </td></tr>';
+					}
+					$nbAchat=$f['id'];
+					echo '<tr>
+						<td><img src="./img/'.$f['idProduit'].".jpg".'" width="100px" heigth="100px" /></td>
+						<td>'.$f['nom'].'</td>
+						<td>'.$f['prix'].'</td>
+						<td>'.$f['quantite'].'</td>
+						<td>'.$f['sous_total'].'</td>
+
+					</tr>';
+			}
+		?>
+	</table>
+	</section>
 	
 </body>
 </html>
