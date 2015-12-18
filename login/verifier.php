@@ -1,6 +1,9 @@
 ﻿<?php
 session_start();
-include "../conexion.php";
+//include "../conexion.php";
+$connexionDB = mysql_connect("webc.cegepsherbrooke.qc.ca", "viauma", "rurove") or die ("Couldn't connect to server");  
+mysql_select_db("viauma",  $connexionDB) or die ("Couldn't select database");
+
 $re=mysql_query("select * from utilisateur where courriel='".$_POST['Courriel']."' AND 
  					motPasse='".$_POST['Password']."'")	or die(mysql_error());
 					
