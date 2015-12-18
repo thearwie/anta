@@ -23,7 +23,7 @@
 <div class='page'>
 
 	<section>
-	<form id="formulaire" method="post" action="./login/verifier.php">
+	<form id="formulaireLogin" method="post" action="./login/verifier.php">
 	    <?php 
 		  if(isset($_GET['erreur'])){
 			  echo '<center>Données invalides</center>';
