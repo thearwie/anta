@@ -16,7 +16,9 @@ if(isset($infoUtilisateur)){
 	header("Location: ../monCompte.php");
 	
 }else{
-	header("Location: http://webc.cegepsherbrooke.qc.ca/~viauma/login.php");
+	//header("Location: ./login.php");
+	echo "<script language=Javascript> location.href=\"login.php\"; </script>"; 
+	die();
 }
 
 
