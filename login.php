@@ -2,9 +2,9 @@
 <head>
 	<meta charset="utf-8"/>
 	<title>Login</title>
-	<link rel="stylesheet" type="text/css" href="./css/stylePanier.css">
+	<link rel="stylesheet" type="text/css" href="css/stylePanier.css">
 	<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-	<script type="text/javascript"  href="./js/scripts.js"></script>
+	<script type="text/javascript"  href="js/scripts.js"></script>
 </head>
 <body>
 	<header>
