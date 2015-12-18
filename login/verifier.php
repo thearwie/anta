@@ -14,18 +14,14 @@ while ($f=mysql_fetch_array($re)) {
 
 if(isset($infoUtilisateur)){
 	$_SESSION['User']=$infoUtilisateur;
-	//header("Location: http://webc.cegepsherbrooke.qc.ca/~viauma/index.php");
 	echo '<script type="text/javascript">
 	window.location.assign("../monCompte.php");
 	</script>';
 	
 }else{
-	//header("Location: ./login.php");
 	echo '<script type="text/javascript">
-	alert("Probando vamos a proceder a redireccionar");
 	window.location.assign("../login.php?erreur=Données invalides");
 	</script>';
 }
-
 
 ?>
