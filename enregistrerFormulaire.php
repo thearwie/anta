@@ -32,7 +32,7 @@
         $idUtilisateur = $row["idUtilisateur"] + 1;      
       }
       
-      $queryInsertUtilisateur = "INSERT INTO utilisateur (id, nom, prenom, courriel, motPasse, adresse, codePostal, infolettre, idVille ) VALUES ('$idUtilisateur', ' $nom', '$prenom', ' $courriel', '$password', '$adresse', '$codePostal', '$infolettre', '$ville')";
+      $queryInsertUtilisateur = "INSERT INTO utilisateur (id, nom, prenom, courriel, motPasse, adresse, codePostal, infolettre, idVille ) VALUES ('$idUtilisateur', '$nom', '$prenom', '$courriel', '$password', '$adresse', '$codePostal', '$infolettre', '$ville')";
         
       if(!mysql_query($queryInsertUtilisateur, $connexionDB))
       {
