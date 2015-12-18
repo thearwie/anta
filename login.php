@@ -34,9 +34,9 @@
 				<span class="spanInscription">Client déjà inscrit</span>	
 			</div>
 			<label class="labelCourrielLogin" for="courriel">Adresse courriel</label><br>
-			<input type="text" id="courrielLogin" name="Courriel" placeholder="courriel" size="80" ><br>
+			<input type="text" id="courrielLogin" name="Courriel" placeholder="courriel" size="140" ><br>
 			<label class="labelPasswordlLogin" for="password">Mot de passe</label><br>
-			<input type="password" id="passwordLogin" name="Password" placeholder="mot de passe" size="80"><br>
+			<input type="password" id="passwordLogin" name="Password" placeholder="mot de passe" size="140"><br>
 			<input type="submit" name="ouvrirSession" value="Ouvrir Session" class="ouvrirSession">
 		</form>
 	
