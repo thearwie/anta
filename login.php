@@ -21,7 +21,7 @@
 		<input type="text" id="courriel" name="Courriel" placeholder="courriel" size="60" ><br>
 		<label for="password">Mot de passe</label><br>
 		<input type="password" id="password" name="Password" placeholder="mot de passe" size="60"><br>
-		<input type="submit" name="ouvrirSession" value="OuvrirSession" class="ouvrirSession">
+		<input type="submit" name="ouvrirSession" value="Ouvrir Session" class="ouvrirSession">
 	</form>
 	</section>
 </body>
