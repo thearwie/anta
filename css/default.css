@@ -651,7 +651,7 @@ label
   margin-top: 16px; 
 }
 
-.spanNousJoindre,.infoDetail, .spanServices, .selectService, .optionSelectService, .spanInscription, .spanInfolettre
+.spanNousJoindre,.infoDetail, .spanServices, .selectService, .optionSelectService, .spanInscription, .spanInfolettre, .labelCourrielLogin, .labelPasswordlLogin
 {
   color: #732876;
 }
@@ -734,6 +734,8 @@ label
 }
 
 /* Login */
+
+
 
 #courrielLogin, #passwordLogin{
 	width: 20%;

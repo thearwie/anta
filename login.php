@@ -30,10 +30,13 @@
 				  echo '<center>Données invalides</center>';
 			  }
 			?>
-			<label for="courriel">Adresse courriel</label><br>
-			<input type="text" id="courrielLogin" name="Courriel" placeholder="courriel" size="60" ><br>
-			<label for="password">Mot de passe</label><br>
-			<input type="password" id="passwordLogin" name="Password" placeholder="mot de passe" size="60"><br>
+			<div class = "titreFormulaire">
+				<span class="spanInscription">Client déjà inscrit</span>	
+			</div>
+			<label class="labelCourrielLogin" for="courriel">Adresse courriel</label><br>
+			<input type="text" id="courrielLogin" name="Courriel" placeholder="courriel" size="80" ><br>
+			<label class="labelPasswordlLogin" for="password">Mot de passe</label><br>
+			<input type="password" id="passwordLogin" name="Password" placeholder="mot de passe" size="80"><br>
 			<input type="submit" name="ouvrirSession" value="Ouvrir Session" class="ouvrirSession">
 		</form>
 	
