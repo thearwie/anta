@@ -21,21 +21,23 @@
 
 
 <div class='page'>
-
+  
+  <div class='login'>
 	
-	<form id="formulaireLogin" method="post" action="./login/verifier.php">
-	    <?php 
-		  if(isset($_GET['erreur'])){
-			  echo '<center>Données invalides</center>';
-		  }
-		?>
-		<label for="courriel">Adresse courriel</label><br>
-		<input type="text" id="courrielLogin" name="Courriel" placeholder="courriel" size="60" ><br>
-		<label for="password">Mot de passe</label><br>
-		<input type="password" id="passwordLogin" name="Password" placeholder="mot de passe" size="60"><br>
-		<input type="submit" name="ouvrirSession" value="Ouvrir Session" class="ouvrirSession">
-	</form>
-
+		<form id="formulaireLogin" method="post" action="./login/verifier.php">
+			<?php 
+			  if(isset($_GET['erreur'])){
+				  echo '<center>Données invalides</center>';
+			  }
+			?>
+			<label for="courriel">Adresse courriel</label><br>
+			<input type="text" id="courrielLogin" name="Courriel" placeholder="courriel" size="60" ><br>
+			<label for="password">Mot de passe</label><br>
+			<input type="password" id="passwordLogin" name="Password" placeholder="mot de passe" size="60"><br>
+			<input type="submit" name="ouvrirSession" value="Ouvrir Session" class="ouvrirSession">
+		</form>
+	
+	</div>
 	
 </div>
 

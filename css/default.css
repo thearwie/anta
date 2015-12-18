@@ -743,7 +743,8 @@ label
 #formulaireLogin{
 	width: 50%;
 	height: auto;
-	margin:0 auto;
+	margin-top:40px;
+	margin-left:20px;
 	text-align:left;
 }
 
