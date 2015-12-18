@@ -13,9 +13,9 @@ while ($f=mysql_fetch_array($re)) {
 }
 if(isset($infoUtilisateur)){
 	$_SESSION['User']=$infoUtilisateur;
-	header("Location: monCompte.php");
+	header("Location: /monCompte.php");
 }else{
-	header("Location: login.php?erreur=Données invalides");
+	header("Location: /login.php?erreur=Données invalides");
 }
 
 
