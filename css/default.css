@@ -731,6 +731,32 @@ label
    margin-bottom: 60px;
 }
 
+/* Login */
+
+#courrielLogin, #passwordLogin{
+	width: 20%;
+	height: 30px;
+	border:1px solid #fafafa;
+	color:#1e1e1e;
+}
+
+.ouvrirSession{
+	background-color: #732876;
+	color:white;
+	padding-left: 20px;
+	padding-right: 20px;
+	margin-top:25px;
+	border-radius: 4px;
+	font-size: 1.3rem;
+
+
+}
+.ouvrirSession:hover{
+	background-color: #4a4a4a;
+	cursor: pointer;
+}
+
+
 
 
 /* Media queries */
