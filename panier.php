@@ -51,9 +51,7 @@
 		  $nom = "";
 		  $prix=0;
 		  $image="";
-		  
 		  $re = mysql_query("select * from produit where id='".$_GET['id']."'");
-		  //$re = mysql_query("select * from produit where id=".$_GET['id']);
 		  while ($f=mysql_fetch_array($re)){
 			$id= $f['id'];
 			$nom= $f['nom'];
@@ -98,7 +96,7 @@
 		?>
 			<div class= "produit">
 			    <center>
-				  <img src="./img/<?php echo $contenuPanier[$i]['Id'];?>.jpg "></br>
+				  <img src="./img/bracelet/<?php echo $contenuPanier[$i]['Id'];?>.jpg "></br>
 				  <span><?php echo $contenuPanier[$i]['Nom'];?></span></br>
 				  <span>Prix: <?php echo $contenuPanier[$i]['Prix'];?></span></br>
 				  <span>Quantité: 
