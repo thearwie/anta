@@ -6,7 +6,9 @@
     <link rel="stylesheet" type="text/css"  href="css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css"  href="css/smoothproducts.css">
     <link rel="icon"       type="image/png" href="img/logo.png" />
-
+    <link rel="stylesheet" type="text/css" href="css/stylePanier.css">
+	
+	
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
@@ -14,7 +16,8 @@
     
     <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
     <script type="text/javascript">stLight.options({publisher: "2ceda40e-5224-4f64-b6f8-31470958739f", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
-
+    <script type="text/javascript"  href="js/scripts.js"></script>
+	
     <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>

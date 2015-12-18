@@ -1,15 +1,27 @@
 <!DOCTYPE html>
-<head>
-	<meta charset="utf-8"/>
-	<title>Login</title>
-	<link rel="stylesheet" type="text/css" href="css/stylePanier.css">
-	<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-	<script type="text/javascript"  href="js/scripts.js"></script>
-</head>
-<body>
-	<header>
-		
-	</header>
+<!--
+/*******************************************************************************************************/
+/*                                                                                                     */
+/*  Fichier....................:  login.php                        			                           */
+/*  Type.......................:  Document PHP                                                         */
+/*  Titre......................:  Bijouterie Anta950                                                   */
+/*  Auteurs....................:  ©Paola Marilu Carranza Gonzalez, 2015                                */
+/*  Date de création...........:  2015-12-18                                                           */
+/*  Date de mise en production.:                                                                       */
+/*                                                                                                     */
+/*******************************************************************************************************/
+/*                                                                                                     */
+/*  - Page login                                                                                       */
+/*                                                                                                     */
+/*******************************************************************************************************/
+-->
+
+
+<?php include('/inc/header.php')?>
+
+
+<div class='page'>
+
 	<section>
 	<form id="formulaire" method="post" action="./login/verifier.php">
 	    <?php 
@@ -24,5 +36,7 @@
 		<input type="submit" name="ouvrirSession" value="Ouvrir Session" class="ouvrirSession">
 	</form>
 	</section>
-</body>
-</html>
+	
+</div>
+
+<?php include('/inc/footer.php')?>
