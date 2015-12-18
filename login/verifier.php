@@ -11,14 +11,14 @@ while ($f=mysql_fetch_array($re)) {
 	$infoUtilisateur[]=array('Prenom'=>$f['prenom'],
 							 'Nom'=>$f['nom']);
 }
+echo $infoUtilisateur;
 if(isset($infoUtilisateur)){
 	$_SESSION['User']=$infoUtilisateur;
 	header("Location: ../monCompte.php");
-	
+	echo "Hola1";
 }else{
-	//header("Location: ./login.php");
-	echo "<script language=Javascript> location.href=\"login.php\"; </script>"; 
-	die();
+	header("Location: ./login.php");
+	echo "Hola2";
 }
 
 
