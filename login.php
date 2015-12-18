@@ -22,7 +22,7 @@
 
 <div class='page'>
 
-	<section>
+	
 	<form id="formulaireLogin" method="post" action="./login/verifier.php">
 	    <?php 
 		  if(isset($_GET['erreur'])){
@@ -35,7 +35,7 @@
 		<input type="password" id="passwordLogin" name="Password" placeholder="mot de passe" size="60"><br>
 		<input type="submit" name="ouvrirSession" value="Ouvrir Session" class="ouvrirSession">
 	</form>
-	</section>
+
 	
 </div>
 
