@@ -101,7 +101,7 @@ section{
 	border-radius: 4px;
 }
 .ouvrirSession{
-	background-color: #f13453;
+	background-color: #732876;
 	color:white;
 	padding-left: 20px;
 	padding-right: 20px;
@@ -228,7 +228,7 @@ a.fun {
 	margin:0 auto;
 }
 input{
-	width: 80%;
+	width: 20%;
 	height: 30px;
 	border:1px solid #fafafa;
 	color:#1e1e1e;
