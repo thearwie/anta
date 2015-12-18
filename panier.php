@@ -3,6 +3,7 @@
   //include './conexion.php';
   $connexionDB = mysql_connect("webc.cegepsherbrooke.qc.ca", "viauma", "rurove") or die ("Couldn't connect to server");  
   mysql_select_db("viauma",  $connexionDB) or die ("Couldn't select database");
+  
   if(isset($_SESSION['panier'])){
 	  if(isset($_GET['id'])){
 	  
@@ -74,9 +75,9 @@
 <head>
 	<meta charset="utf-8"/>
 	<title>Panier</title>
-	<link rel="stylesheet" type="text/css" href="./css/estilos.css">
+	<link rel="stylesheet" type="text/css" href="css/estilos.css">
 	<script type="text/javascript"  src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-	<script type="text/javascript"  src="./js/scripts.js"></script>
+	<script type="text/javascript"  src="js/scripts.js"></script>
 </head>
 <body>
 	<header>
