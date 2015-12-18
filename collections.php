@@ -76,6 +76,8 @@
     
   </div>
 </div>
-<?php include('/inc/footer.php')?>
+<!-- <?php include('/inc/footer.php')?> -->
+</body>
+</html>
 
 <script src="js/collection.js" defer="defer"></script>
