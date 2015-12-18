@@ -20,7 +20,7 @@
 </head>
 <body>
 	<header>
-		
+		<h1>Mon compte</h1>
 		<a href="./panier.php" title="ver carrito de compras">
 			<img src="./img/panier.png">
 		</a>

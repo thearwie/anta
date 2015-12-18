@@ -71,12 +71,12 @@ section{
 	-webkit-transition: all 1s ease-in-out;
 	-moz-transition: all 1s ease-in-out;
 }
-.producto:hover{
+.produit:hover{
 
 	-webkit-transform: scale(1.2);
 	-moz-transform: scale(1.2);
 }
-.producto img{
+.produit img{
 	width: 200px;
 	height: 200px;
 	margin:0 auto;
@@ -87,11 +87,11 @@ section{
 	-webkit-transition: all 1s ease-in-out;
 	-moz-transition: all 1s ease-in-out;
 }
-.producto img:hover{
+.produit img:hover{
 	-webkit-transform: rotate(355deg);
 	-moz-transform: rotate(355deg);
 }
-.producto a{
+.produit a{
 	background-color: #4a4a4a;
 	padding: 3px;
 	color: white;
@@ -100,7 +100,7 @@ section{
 	padding-right: 20px;
 	border-radius: 4px;
 }
-.aceptar{
+.ouvrirSession{
 	background-color: #f13453;
 	color:white;
 	padding-left: 20px;
@@ -110,7 +110,7 @@ section{
 
 
 }
-.aceptar:hover{
+.ouvrirSession:hover{
 	background-color: #4a4a4a;
 	cursor: pointer;
 }
