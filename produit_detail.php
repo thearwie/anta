@@ -57,7 +57,7 @@
               <label class="col-droite1">Ajouter au panier</label>
             </div>
             <div class="col-sm-2">
-              <button class="row-col-droite2" type="button"><img class="icon" src="img/icones/ajout_cart.png" href="./panier.php?id='BR-0001-1'"/></button>
+              <button class="row-col-droite2" type="button" href="./panier.php?id='BR-0001-1'"><img class="icon" src="img/icones/ajout_cart.png" /></button>
             </div>
             <div class="col-sm-1">
             </div>
