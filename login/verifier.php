@@ -17,7 +17,7 @@ if(isset($infoUtilisateur)){
 	//header("Location: http://webc.cegepsherbrooke.qc.ca/~viauma/index.php");
 	echo '<script type="text/javascript">
 	alert("Probando vamos a proceder a redireccionar");
-	window.location.assign("index.php");
+	window.location.assign("../index.php");
 	</script>';
 	
 }else{
