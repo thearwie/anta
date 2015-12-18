@@ -2,6 +2,7 @@
 ini_set("display_errors", 1);
 include("dimension.php");
 include("type_produit.php");
+include("attribut.php");
 
   class Produit
   {
@@ -13,6 +14,9 @@ include("type_produit.php");
     var $nouveaute;
     var $typeProduit;
     var $dimension;
+    var $attribut;
+    var $nomImages;
+    var $nomAutresImages;
 
     function __construct()
     {
@@ -24,6 +28,9 @@ include("type_produit.php");
       $this->setNouveaute(0);
       $this->typeProduit = new TypeProduit();
       $this->dimension = array();
+      $this->attribut = array();
+      $this->nomImages = array();
+      $this->nomAutresImages = array();
     }
 
     function init($nvId, $nvNom, $nvPrix, $nvCommentaire, $nvEnVente, $nvNouveaute, $idTypeProduit, $nomTypeProduit, $dimension)
@@ -36,6 +43,21 @@ include("type_produit.php");
       $this->setNouveaute($nvNouveaute);
       $this->setTypeProduit($idTypeProduit, $nomTypeProduit);
       $this->setDimension($dimension);
+    }
+    
+    function initialiser($nvId, $nvNom, $nvPrix, $nvCommentaire, $nvEnVente, $nvNouveaute, $idTypeProduit, $nomTypeProduit, $dimension, $attribut, $nomImages, $nomAutresImages)
+    {
+      $this->setId($nvId);
+      $this->setNom($nvNom);
+      $this->setPrix($nvPrix);
+      $this->setCommentaire($nvCommentaire);
+      $this->setEnVente($nvEnVente);
+      $this->setNouveaute($nvNouveaute);
+      $this->setTypeProduit($idTypeProduit, $nomTypeProduit);
+      $this->setDimension($dimension);
+      $this->setAttribut($attribut);
+      $this->setNomImages($nomImages);
+      $this->nomAutresImages($nomAutresImages);
     }
     
     function setId($nvId)
@@ -78,6 +100,21 @@ include("type_produit.php");
       $this->dimension = $dimension;
     }
     
+    function setAttribut($attribut)
+    {
+      $this->attribut = $attribut;
+    }
+    
+    function setNomImages($nomImages)
+    {
+      $this->nomImages = $nomImages;
+    }
+    
+    function setNomAutresImages($nomAutresImages)
+    {
+      $this->nomAutresImages = $nomAutresImages;
+    }
+    
     function getId()
     {
       return $this->id;
@@ -116,6 +153,21 @@ include("type_produit.php");
     function getDimension()
     {
       return $this->dimension;
+    }
+    
+    function getAttribut()
+    {
+      return $this->attribut;
+    }
+    
+    function getNomImages()
+    {
+      return $this->nomImages;
+    }
+    
+    function getNomAutresImages()
+    {
+     return $this->nomAutresImages; 
     }
     
     /*function printProduit()

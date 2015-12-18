@@ -74,20 +74,20 @@
             </div>
           </div>
           
-          <div class="row row1-info-produit">
+          <div class="row row1-info-produit dimension">
             <div class="col-sm-5">
-              <label class='col-gauche h3'>Taille</label>
+              <label class='col-gauche h3'>Dimension</label>
             </div>
             <div class="col-sm-7">
             </div>
           </div>
           
-          <div class="row row-info-produit">
+          <div class="row row-info-produit dimension">
             <div class="col-sm-5">
               <div class='col-xs-4 combobox-group-detail col-gauche'>
                 <div class='combobox-taille'>
-                  <select class='form-control' name='taille' onchange='this.form.submit()'>
-                    <option value=''>Choisir la taille</option>
+                  <select class='form-control' name='dimension' onchange='this.form.submit()'>
+                    <option value=''>Choisir la dimension</option>
                     <option value='52'>52</option>
                     <option value='54'>54</option>
                     <option value='56'>56</option>
@@ -95,6 +95,7 @@
                 </div>
               </div>
             </div>
+            
             <div class="col-sm-4">
               <a class="col-droite col-charte" href="#">Charte de dimensions</a>
             </div>
@@ -143,19 +144,7 @@
             <tbody>
               <tr>
                 <td>Catégorie</td>
-                <td>Bracelet</td>
-              </tr>
-              <tr>
-                <td>Matériau</td>
-                <td>Argent 950</td>
-              </tr>
-              <tr>
-                <td>Dimensions</td>
-                <td>58 mm x 46 mm</td>
-              </tr>
-              <tr>
-                <td>Couleur</td>
-                <td>Blanc</td>
+                <td id= "type-produit">Bracelet</td>
               </tr>
             </tbody>            
           </table>

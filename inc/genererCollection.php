@@ -3,6 +3,7 @@ header('content-type:text/xml');
 
 include("php/accesBD/connexion_BD.php");
 include("outil.php");
+include("produit.php");
 
 function getAllProduit($idClassement, $idTypeProduit, $idEnVente)
 {
@@ -52,7 +53,6 @@ function getAllProduit($idClassement, $idTypeProduit, $idEnVente)
   }
 
  if($resultat = mysqli_query($link, $sql)) {
-   include("produit.php");
    $iterateur = 0;
    while($row = mysqli_fetch_array($resultat, MYSQLI_BOTH)) {
       $idTypeProduit = $row[6];
