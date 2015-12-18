@@ -70,11 +70,7 @@ section{
 	-webkit-transition: all 1s ease-in-out;
 	-moz-transition: all 1s ease-in-out;
 }
-.produit:hover{
 
-	-webkit-transform: scale(1.2);
-	-moz-transform: scale(1.2);
-}
 .produit img{
 	width: 200px;
 	height: 200px;
@@ -230,5 +226,5 @@ input{
 
 #linkMagasiner{
   margin-top:30px;
-	
+  padding-top:30px;	
 }
