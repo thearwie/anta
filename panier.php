@@ -52,8 +52,8 @@
 		  $prix=0;
 		  $image="";
 		  
-		 // $re = mysql_query("select * from produit where id='".$_GET['id']."'");
-		  $re = mysql_query("select * from produit where id=".$_GET['id']);
+		  $re = mysql_query("select * from produit where id='".$_GET['id']."'");
+		  //$re = mysql_query("select * from produit where id=".$_GET['id']);
 		  while ($f=mysql_fetch_array($re)){
 			$id= $f['id'];
 			$nom= $f['nom'];
