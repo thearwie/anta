@@ -14,7 +14,7 @@ while ($f=mysql_fetch_array($re)) {
 
 if(isset($infoUtilisateur)){
 	$_SESSION['User']=$infoUtilisateur;
-	header("Location:./monCompte.php");
+	header("Location: ./http://webc.cegepsherbrooke.qc.ca/~viauma/monCompte.php");
 	
 }else{
 	header("Location: ./login.php");
