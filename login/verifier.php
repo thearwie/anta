@@ -17,7 +17,7 @@ while ($f=mysql_fetch_array($re)) {
 							 'Id'=>$f['id']);
 
 echo '<script type="text/javascript">
-	   alert("Hola1");
+	   alert($infoUtilisateur[0]['Id']);
 	</script>';							 
 }
 
