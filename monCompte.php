@@ -30,7 +30,7 @@
 <body>
 	<header>
 	    <?php
-		  $courriel = $_GET['user'];
+		  $courriel = base64_decode($_GET['user']);
 		  $re=mysql_query("select * from utilisateur where courriel='".$courriel."'");
 		  while ($f=mysql_fetch_array($re)) {	
 				echo '<h2>Mon compte: '.$f['prenom'].' '.$f['nom'].' </h2>';
@@ -61,7 +61,7 @@
 		</tr>	
 
 		<?php
-		    $courriel = $_GET['user'];
+		    $courriel = base64_decode($_GET['user']);
 			$re=mysql_query("select t.id, p.id as idProduit, p.nom, p.prix, tp.quantite, tp.sous_total 
 							from transaction t, transaction_produit tp, produit p, utilisateur u
 							where t.id = tp.id_transaction and 
