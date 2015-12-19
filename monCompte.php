@@ -31,10 +31,9 @@
 	<header>
 	    <?php
 		  $courriel = $_GET['user'];
-		  echo $_GET['user'];
-		  $re=mysql_query("select * from utilisateur where u.courriel='".$courriel."'");
+		  $re=mysql_query("select * from utilisateur where courriel='".$courriel."'");
 		  while ($f=mysql_fetch_array($re)) {	
-				echo '<h1>Mon compte: '.$f['nom'].' </h1>';
+				echo '<h1>Mon compte: '.$f['prenom'].' '.$f['nom'].' </h1>';
 		  }
 		?>
 	
