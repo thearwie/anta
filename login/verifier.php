@@ -17,7 +17,7 @@ while ($f=mysql_fetch_array($re)) {
 							 'Id'=>$f['id']);
 
 echo '<script type="text/javascript">
-	   alert($infoUtilisateur[0]['Id']);
+	   alert('.$infoUtilisateur[0]['Id'].');
 	</script>';							 
 }
 
@@ -26,16 +26,18 @@ if(isset($infoUtilisateur)){
 	echo '<script type="text/javascript">
 	window.location.assign("../monCompte.php?user='.$infoUtilisateur[0]['Id'].'");
 	</script>';*/
-	echo "Hola2";
+	
 	$_SESSION['User']=$infoUtilisateur;
-	echo $infoUtilisateur[0]['Id'];
+	echo '<script type="text/javascript">
+	   alert("Hola2");
+	</script>';		
 	echo '<script type="text/javascript">
 	window.location.assign("../monCompte.php");
 	</script>';
 	
 	
 }else{
-	echo "Hola 3";
+	
 	echo '<script type="text/javascript">
 	window.location.assign("../login.php?erreur=Données invalides");
 	</script>';
