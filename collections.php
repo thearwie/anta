@@ -81,3 +81,4 @@
 </html>
 
 <script src="js/collection.js" defer="defer"></script>
+<script src="js/produit.js" defer="defer"></script>

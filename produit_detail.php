@@ -33,12 +33,12 @@
     
       <div class="row">
         <div class="col-sm-12 row-titre">
-          <h1 class="titre-produit">Bracelet BR-0003</h1>
+          <h1 id="titre-produit" class="titre-produit">Bracelet BR-0003</h1>
         </div>
       </div>
       <div class="row">
         <div class="col-md-4">
-          <div class="sp-wrap img-produit-detail">
+          <div id="groupe-images" class="sp-wrap img-produit-detail">
             <!-- <img class="img-responsive img-produit-detail" src="img/bracelet/BR-0003-1.jpg" alt="BR-0003-1"> -->
             <!-- <div class=" img-produit-detail"> -->
               <a href="img/bracelet/BR-0001-1.jpg"><img class="img-responsive" src="img/bracelet/BR-0001-1.jpg" alt="BR-0001-1"></a>
@@ -51,7 +51,7 @@
         
           <div class="row row1-info-produit">
             <div class="col-sm-5">
-              <label class="col-gauche">22.75 CAD$</label>
+              <label id="label-prix" class="col-gauche">22.75 CAD$</label>
             </div>
             <div class="col-sm-4">
               <label class="col-droite1">Ajouter au panier</label>
@@ -65,7 +65,7 @@
           
           <div class="row row2-info-produit">
             <div class="col-sm-5">
-              <input class="quantite" type="number" name="quantity" value="0" min="0" max="5" />
+              <input id="input-quantite" class="quantite" type="number" name="quantity" value="0" min="0" max="5" />
             </div>
             <div class="col-sm-4">
               <label class="row2-col-droite">Ajouter à la liste de souhait</label>
@@ -89,7 +89,7 @@
             <div class="col-sm-5">
               <div class='col-xs-4 combobox-group-detail col-gauche'>
                 <div class='combobox-taille'>
-                  <select class='form-control' name='dimension' onchange='this.form.submit()'>
+                  <select id="select-dimension" class='form-control' name='dimension' onchange='this.form.submit()'>
                     <option value=''>Choisir la dimension</option>
                     <option value='52'>52</option>
                     <option value='54'>54</option>
@@ -100,7 +100,7 @@
             </div>
             
             <div class="col-sm-4">
-              <a class="col-droite col-charte" href="#">Charte de dimensions</a>
+              <a id="lien-charte" class="col-droite col-charte" href="#">Charte de dimensions</a>
             </div>
             <div class="col-sm-3">
             </div>
@@ -111,7 +111,7 @@
               <label class="col-gauche">Disponibilié :</label>
             </div>
             <div class="col-sm-4">
-              <label class="col-droite">2 bracelets restants</label>
+              <label id="label-qty-restante" class="col-droite">2 bracelets restants</label>
             </div>
             <div class="col-sm-3">
             </div>
@@ -144,7 +144,7 @@
                 <th colspan="2"><h3 class="titre-detail">Détails du produit</h3></th>
               </tr>
             </head>
-            <tbody>
+            <tbody id="tab_detail">
               <tr>
                 <td>Catégorie</td>
                 <td id= "type-produit">Bracelet</td>
@@ -160,13 +160,13 @@
           </div>
           <div class="row">
             <div class="col-sm-3">
-              <img class="img-autres-produits" src="img/bracelet/BR-0001-1.jpg" alt="BR-0001-1">
+              <img id="autre-img1" class="img-autres-produits" src="img/bracelet/BR-0001-1.jpg" alt="BR-0001-1">
             </div>
             <div class="col-sm-3">
-              <img class="img-autres-produits" src="img/bracelet/BR-0003-1.jpg" alt="BR-0003-1">
+              <img id="autre-img2" class="img-autres-produits" src="img/bracelet/BR-0003-1.jpg" alt="BR-0003-1">
             </div>
             <div class="col-sm-3 img-3">
-              <img class="img-autres-produits" src="img/bracelet/BR-0007-1.jpg" alt="BR-0007-1">
+              <img id="autre-img3" class="img-autres-produits" src="img/bracelet/BR-0007-1.jpg" alt="BR-0007-1">
             </div>
             <div class="col-sm-3">
             </div>
@@ -187,3 +187,4 @@
     $('.sp-wrap').smoothproducts();
   });
 </script>
+<script src="js/produit.js" defer="defer"></script>

@@ -1,4 +1,5 @@
 <?php
+header('content-type:text/xml');
 
 include("php/accesBD/connexion_BD.php");
 include("outil.php");
@@ -84,7 +85,7 @@ function getDetailsProduit($idProduit)
 
 function retournerNomsAutresProduits($idTypeProduit, $idProduit)
 {  
-  $sql = "select p.id, p.id_type_produit, tp.nom from produit as p, type_produit as tp "
+  $sql = "select p.id, p.id_type_produit,  tp.nom from produit as p, type_produit as tp "
        . "where tp.id = p.id_type_produit "
        . "order by case when id_type_produit = " . $idTypeProduit . " then 1 else 2 end, p.nom";
      
@@ -126,8 +127,76 @@ function afficherDetailsProduit()
   $idProduit = $_GET["idProduit"];
   $produit = getDetailsProduit($idProduit);
   
+  $xml = new DOMDocument('1.0', 'iso-8859-1');
+	$xml->formatOutput = true;
   
+  $baliseProduit = $xml->createElement("produit");
+	$xml->appendChild($baliseProduit);
   
+  $nom = $xml->createElement("nom", $produit->getNom());
+  $baliseProduit->appendChild($nom);
+  
+  $typeProduit = $xml->createElement("typeproduit", $produit->getTypeProduit()->getNom());
+  $baliseProduit->appendChild($typeProduit);
+  
+  $images = $xml->createElement("images");
+  for($i = 0; $i < count($produit->getNomImages()); $i++)
+  {
+    $image = $xml->createElement("image", $produit->getNomImages()[$i]);
+    $images->appendChild($image);
+  }
+  $baliseProduit->appendChild($images);
+  
+  $prix = $xml->createElement("prix", number_format((float)$produit->getPrix(), 2, '.', '') . " CDN$");
+  $baliseProduit->appendChild($prix);
+  
+  $dimensions = $xml->createElement("dimensions");
+  for($x = 0; $x < count($produit->getDimension()); $x++)
+  {
+    $dimension = $xml->createElement("dimension");
+    
+    $nomDimension = $xml->createElement("nomdimension", $produit->getDimension[$x]->getNom());
+    $dimension->appendChild($nomDimension);
+    
+    $quantite = $xml->createElement("quantite", $produit->getDimension()[$x]->getQuantite());
+    $dimension->appendChild($quantite);
+    
+    $dimensions->appendChild($dimension);
+  }
+  $baliseProduit->appendChild($dimensions);
+  
+  $details = $xml->createElement("details");
+  for($y = 0; $y < count($produit->getAttribut()); $y++)
+  {
+    $attribut = $xml->createElement("attribut");
+    
+    $nomAttribut = $xml->createElement("nomattribut", $produit->getAttribut()[$y]->getNom());
+    $attribut->appendChild($nomAttribut);
+    
+    $valeur = $xml->createElement("valeur", $produit->getAttribut()[$y]->getValeur());
+    $attribut->appendChild($valeur);
+    
+    $unite = $xml->createElement("unite", $produit->getAttribut()[$y]->getUnite());
+    $attribut = $xml->appendChild($unite);
+    
+    $description = $xml->createElement("description", $produit->getAttribut()[$y]->getDescription());
+    $attribut->appendChild($description);
+    
+    
+    $details = $xml->appendChild($attribut);
+  }
+  $baliseProduit->appendChild($details);
+  
+  $autresImages = $xml->createElement("autresimages");
+  for($it = 0; $it < count($produit->getNomAutresImages()); $it++)
+  {
+    $autreImage = $xml->createElement("autreimage", $produit->getNomAutresImages()[$it]);
+    $autresImages->appendChild($autreImage);
+  }
+  $baliseProduit->appendChild($autresImages);
+  
+  echo $xml->saveXML();
 }
 
+afficherDetailsProduit();
 ?>

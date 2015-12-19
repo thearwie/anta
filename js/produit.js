@@ -1,26 +1,26 @@
 var idProduit = 0;
 
-function afficherProduits() {
+function afficherProduit(idProduit) {
   var idTypeProduit = document.getElementById("select-categogie").selectedIndex;
   var idClassement = document.getElementById("select-classement").selectedIndex;
   
   $.ajax({
     type: "GET",
-    url: "genererCollection.php?idClassement=" + idClassement + "&idTypeProduit=" + idTypeProduit + "&idEnVente=0",
+    url: "genererProduit.php?idProduit=" + idProduit,
     dataType: "xml",
-    success: function (xml) {
-      $(".collection-produit").empty();
+    success: function (xml) {      
+      var produit = xml.getElementsByTagName("produit");
+      var nom = produit[0].getElementsByTagName("nom")[0];
+      var typeProduit = produit[0].getElementsByTagName("typeproduit")[0];
+      var images = produit[0].getElementsByTagName("images");
+      var prix = produit[0].getElementsByTagName("prix")[0];
+      var dimensions = produit[0].getElementsByTagName("dimensions");
+      var details = produit[0].getElementsByTagName("details");
+      var autresImages = produit[0].getElementsByTagName("autresimages");
       
-      var collection = xml.getElementsByTagName("collection");
-      var ids = collection[0].getElementsByTagName("id");
-      var idproduits = collection[0].getElementsByTagName("idproduit");
-      var noms = collection[0].getElementsByTagName("nom");
-      var sourceimages = collection[0].getElementsByTagName("sourceimage");
-      var listePrix = collection[0].getElementsByTagName("prix");
-      var collectionProduit = document.getElementById("collection-produit");
+      //var titre = document.getElementbyclas
+      
       var boutons = [];
-      var nbProduitSurLigne = 1;
-      var row = null;
       var idBouton = 0;
       
       for(var i = 0; i < ids.length; i++) {
@@ -76,7 +76,7 @@ function afficherProduits() {
       for(var y = 0; y < idproduits.length; y++) {
         idBouton = "bouton" + y;
         var idProduit = idproduits.item(y).firstChild.nodeValue;
-        var nomMethode = "afficherProduit('" + idProduit + "');";
+        var nomMethode = "afficherDetail('" + idProduit + "');";
         document.getElementById(idBouton).setAttribute("onclick", nomMethode);
       }
       
@@ -119,8 +119,4 @@ function afficherProduits() {
   });
 }
 
-/*function afficherDetail(idProduit) {
-	location = "produit_detail.php?idProduit=" + idProduit;
-}*/
-
-afficherProduits();
+afficherProduit(idProduit);
