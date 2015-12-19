@@ -11,7 +11,7 @@ var debut=function(){
 				   Id:id,
 				   Prix:prix,
 				   Quantite:quantite
-				   
+				   alert(prix);
 			   }, function(e){
 				   
 				   $("#total").text('Total: '+ e);

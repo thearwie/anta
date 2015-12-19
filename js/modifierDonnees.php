@@ -7,7 +7,7 @@ session_start();
   for($i=0; $i<count($tableuPanier); $i++){
 	  if($tableuPanier[$i]['Id'] == $_POST['Id']){
 		$nb = $i;
-		$tableuPanier[$nb]['Prix'] = $_POST['Prix'];
+		
 	  }
   }
   $tableuPanier[$nb]['Quantite']=$_POST['Quantite'];
