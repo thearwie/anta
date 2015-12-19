@@ -28,6 +28,11 @@ if(isset($infoUtilisateur)){
 	</script>';*/
 	
 	$_SESSION['User']=$infoUtilisateur;	
+	$user = $_SESSION['User'];
+	echo '<script type="text/javascript">
+	   alert('.$user[0]['Id'].');
+	</script>';
+	
 	echo '<script type="text/javascript">
 	window.location.assign("../monCompte.php");
 	</script>';
