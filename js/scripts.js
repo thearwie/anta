@@ -7,7 +7,7 @@ var debut=function(){
 			   var quantite=$(this).val();
 			  
 			   $(this).parentsUntil('.produit').find('.sous-total').text('Sous-total: '+(prix*quantite));
-			   $.post('../js/modifierDonnees.php',{
+			   $.post('./js/modifierDonnees.php',{
 				   Id:id,
 				   Prix:prix,
 				   Quantite:quantite
