@@ -1,6 +1,7 @@
 ﻿<?php
 	session_start();
 	//include "conexion.php";
+	
 	$connexionDB = mysql_connect("webc.cegepsherbrooke.qc.ca", "viauma", "rurove") or die ("Couldn't connect to server");  
 	mysql_select_db("viauma",  $connexionDB) or die ("Couldn't select database");
 	if(isset($_SESSION['User'])){
@@ -52,11 +53,13 @@
 		</tr>	
 
 		<?php
+		    $courriel = $_GET['user'];
 			$re=mysql_query("select t.id, p.id as idProduit, p.nom, p.prix, tp.quantite, tp.sous_total 
-							from transaction t, transaction_produit tp, produit p
+							from transaction t, transaction_produit tp, produit p, utilisateur u
 							where t.id = tp.id_transaction and 
-								  t.id_utilisateur = '10003' and 
-								  tp.id_produit = p.id
+								  tp.id_produit = p.id and 
+								  u.id = t.id_utilisateur and
+								  u.courriel ='".$courriel."'  
 							order by t.id");
 			$nbAchat=0;
 			while ($f=mysql_fetch_array($re)) {

@@ -1,11 +1,15 @@
 ﻿<?php
 session_start();
 //include "../conexion.php";
+
+$courriel = $_POST['Courriel'];
+$motPasse = $_POST['Password'];
+
 $connexionDB = mysql_connect("webc.cegepsherbrooke.qc.ca", "viauma", "rurove") or die ("Couldn't connect to server");  
 mysql_select_db("viauma",  $connexionDB) or die ("Couldn't select database");
 
-$re=mysql_query("select * from utilisateur where courriel='".$_POST['Courriel']."' AND 
- 					motPasse='".$_POST['Password']."'")	or die(mysql_error());
+$re=mysql_query("select * from utilisateur where courriel='".$courriel."' AND 
+ 					motPasse='".$motPasse."'")	or die(mysql_error());
 					
 while ($f=mysql_fetch_array($re)) {
 	$infoUtilisateur[]=array('Prenom'=>$f['prenom'],
@@ -15,7 +19,7 @@ while ($f=mysql_fetch_array($re)) {
 if(isset($infoUtilisateur)){
 	$_SESSION['User']=$infoUtilisateur;
 	echo '<script type="text/javascript">
-	window.location.assign("../monCompte.php");
+	window.location.assign("../monCompte.php?user=$courriel");
 	</script>';
 	
 }else{

@@ -173,10 +173,6 @@ li a:after {
   transition   : all .4s;
 }
 
-li:hover a:after {
-  border-color : white transparent transparent transparent;
-  transition   : all .4s;
-}
 
 /*************************************/
 
@@ -189,22 +185,18 @@ li:hover a:after {
   text-transform : capitalize;
 }
 
-.menu2 li {
-  border-right  : 1px solid rgba(200,200,255,0.5);
-  border-left   : 1px solid rgba(40,40,40,0.2); 
-}
+
 
 .selected {
   top   : -20px;
-  color : #4eacff;
-  background-color: #fff;
+  color : #732876;
   box-shadow : 0 0 5px 0 rgba(255, 255, 255, 0.7);
-  transition : all .4s;
+
 }
 
 .selected:after {
   border-color : white transparent transparent transparent;
-  transition   : all .4s;
+
 }
 
 a.fun {
