@@ -17,11 +17,9 @@ else{
 	$nbTransaction++;
 }
 
-mysql_query("insert into transaction (id, id_utilisateur, id_etat_transaction ) values ( 
-	".$nbTransaction.",
-    10003,
-	1)"
-	) or die(mysql_error());
+mysql_query("insert into transaction (id, id_utilisateur, id_etat_transaction ) values ( ".$nbTransaction.", 10003, 1)") or die(mysql_error());
+
+echo $panier[$i]['Id'];
 
 for($i=0; $i<count($panier);$i++){
 	mysql_query("insert into transaction_produit (id_transaction, id_produit, quantite, sous_total, panier) values ( 
