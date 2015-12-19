@@ -18,6 +18,9 @@ var debut=function(){
 			   });
 			   
 			}	
+			
+			alert(quantite);
+			alert(prix);
 		}
 	});
 	
