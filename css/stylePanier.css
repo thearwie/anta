@@ -187,3 +187,23 @@ input{
   margin-top:30px;
   padding-top:30px;	
 }
+
+.headerCompte{
+	width: 100%;
+}
+
+.titreCompte{
+	width:50%;
+	float : left
+	
+}
+
+.menuCompte{
+	width:50%;
+	float:right;
+}
+
+.panierCompte{
+	width: 100%;
+	float:right;
+}

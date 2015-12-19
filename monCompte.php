@@ -29,25 +29,29 @@
 </head>
 <body>
 	<header>
-	    <?php
-		  $courriel = $_GET['user'];
-		  $re=mysql_query("select * from utilisateur where courriel='".$courriel."'");
-		  while ($f=mysql_fetch_array($re)) {	
-				echo '<h2>Mon compte: '.$f['prenom'].' '.$f['nom'].' </h2>';
-		  }
-		?>
-	     
-		<nav class="menu2">
-		  <menu>
-			<li><a href="./">Accueil</a></li>
-			<li><a href="#" class="selected">Mon Compte</a></li>
-			<li><a href="./login/fermer.php">Quitter</a></li>
-		  </menu>
-		</nav>
- 
-		<a href="./panier.php" title="panier">
-			<img src="./img/panier.png">
-		</a>
+		<div class="titreCompte">
+			<?php
+			  $courriel = $_GET['user'];
+			  $re=mysql_query("select * from utilisateur where courriel='".$courriel."'");
+			  while ($f=mysql_fetch_array($re)) {	
+					echo '<h2>Mon compte: '.$f['prenom'].' '.$f['nom'].' </h2>';
+			  }
+			?>
+		</div>
+		<div class="menuCompte">	
+			<nav class="menu2">
+			  <menu>
+				<li><a href="./">Accueil</a></li>
+				<li><a href="#" class="selected">Mon Compte</a></li>
+				<li><a href="./login/fermer.php">Quitter</a></li>
+			  </menu>
+			</nav>
+		</div>
+		<div class="panierCompte">
+			<a href="./panier.php" title="panier">
+				<img src="./img/panier.png">
+			</a>
+		</div>
 	</header>
 	<section>
 
