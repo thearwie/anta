@@ -13,13 +13,14 @@ $re=mysql_query("select * from utilisateur where courriel='".$courriel."' AND
 					
 while ($f=mysql_fetch_array($re)) {
 	$infoUtilisateur[]=array('Prenom'=>$f['prenom'],
-							 'Nom'=>$f['nom']);
+							 'Nom'=>$f['nom'],
+							 'Id'=>$f['id']);
 }
 
 if(isset($infoUtilisateur)){
 	$_SESSION['User']=$infoUtilisateur;
 	echo '<script type="text/javascript">
-	window.location.assign("../monCompte.php?user=  base64_encode('.$courriel.')");
+	window.location.assign("../monCompte.php?user='.$infoUtilisateur[0]['Id'].'");
 	</script>';
 	
 }else{
