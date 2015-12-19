@@ -12,8 +12,9 @@ session_start();
   $tableuPanier[$nb]['Quantite']=$_POST['Quantite'];
 
   for($i=0; $i<count($tableuPanier); $i++){
+	   echo $tableuPanier[$i]['Prix'];
 	  $total=$total+($tableuPanier[$i]['Prix']*$tableuPanier[$i]['Quantite']);
-	  echo $total;
+	 
   }
   
   $_SESSION['panier']= $tableuPanier;
