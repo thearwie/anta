@@ -15,6 +15,7 @@
 		  if($tableuPanier[$i]['Id'] == $_GET['id']){
 			$trouve = true;
 			$nb = $i;
+			
 		  }
 	  }
 	  if($trouve==true){
@@ -120,7 +121,7 @@
 		  echo '<center><h2 id="total">Total: '.$totalPanier.'</h2></center>';
 		  
 		  if($totalPanier!=0){
-				echo '<center><a href="./achat/acheter.php" class="acheter">Acheter</a></center>';
+				echo '<center><a href="achat/acheter.php" class="acheter">Acheter</a></center>';
 		  }
 		?>
 	    
