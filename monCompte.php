@@ -37,7 +37,6 @@
 	  <menu>
 	    <li><a href="./">Accueil</a></li>
 	    <li><a href="#" class="selected">Mon Compte</a></li>
-	    <li><a href="#" >Ajouter</a></li>
 	    <li><a href="./login/fermer.php">Quitter</a></li>
 	  </menu>
 	</nav>
