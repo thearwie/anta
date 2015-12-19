@@ -11,7 +11,7 @@
 	$user = $_GET['user'];
 	
 	echo '<script type="text/javascript">
-	   alert('.$user[0]['Id'].');
+	   alert('.$user.');
 	</script>';
 	
 	if(isset($user)){
