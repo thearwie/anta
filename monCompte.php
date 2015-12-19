@@ -29,68 +29,63 @@
 </head>
 <body>
 	<header>
-		<div class="titreCompte">
-			<?php
-			  $courriel = $_GET['user'];
-			  $re=mysql_query("select * from utilisateur where courriel='".$courriel."'");
-			  while ($f=mysql_fetch_array($re)) {	
-					echo '<h2>Mon compte: '.$f['prenom'].' '.$f['nom'].' </h2>';
-			  }
-			?>
-		</div>
-		<div class="menuCompte">	
-			<nav class="menu2">
-			  <menu>
-				<li><a href="./">Accueil</a></li>
-				<li><a href="#" class="selected">Mon Compte</a></li>
-				<li><a href="./login/fermer.php">Quitter</a></li>
-			  </menu>
-			</nav>
-		</div>
-		<div class="panierCompte">
-			<a href="./panier.php" title="panier">
-				<img src="./img/panier.png">
-			</a>
-		</div>
+	    <?php
+		  $courriel = $_GET['user'];
+		  $re=mysql_query("select * from utilisateur where courriel='".$courriel."'");
+		  while ($f=mysql_fetch_array($re)) {	
+				echo '<h2>Mon compte: '.$f['prenom'].' '.$f['nom'].' </h2>';
+		  }
+		?>
+	
+		<a href="./panier.php" title="panier">
+			<img src="./img/panier.png">
+		</a>
 	</header>
-	<section>
+		<section>
+	<nav class="menu2">
+	  <menu>
+	    <li><a href="./">Accueil</a></li>
+	    <li><a href="#" class="selected">Mon Compte</a></li>
+	    <li><a href="./login/fermer.php">Quitter</a></li>
+	  </menu>
+	</nav>
 
-		<center><h1>Derniers achats</h1></center>
-		<table border="0px" width="100%">	
-			<tr>
-				<td>Image</td>
-				<td>Nom</td>
-				<td>Prix</td>
-				<td>Quantite</td>
-				<td>Sous-total</td>
-			</tr>	
+	<center><h1>Derniers achats</h1></center>
+	<table border="0px" width="100%">	
+		<tr>
+			<td>Image</td>
+			<td>Nom</td>
+			<td>Prix</td>
+			<td>Quantite</td>
+			<td>Sous-total</td>
+		</tr>	
 
-			<?php
-				$courriel = $_GET['user'];
-				$re=mysql_query("select t.id, p.id as idProduit, p.nom, p.prix, tp.quantite, tp.sous_total 
-								from transaction t, transaction_produit tp, produit p, utilisateur u
-								where t.id = tp.id_transaction and 
-									  tp.id_produit = p.id and 
-									  u.id = t.id_utilisateur and
-									  u.courriel ='".$courriel."'  
-								order by t.id");
-				$nbAchat=0;
-				while ($f=mysql_fetch_array($re)) {
-						if($nbAchat	!=$f['id']){
-							echo '<tr><td>Nombre de transaction: '.$f['id'].' </td></tr>';
-						}
-						$nbAchat=$f['id'];
-						echo '<tr>
-							<td><img src="./img/'.$f['idProduit'].".jpg".'" width="100px" heigth="100px" /></td>
-							<td>'.$f['nom'].'</td>
-							<td>'.$f['prix'].'</td>
-							<td>'.$f['quantite'].'</td>
-							<td>'.$f['sous_total'].'</td>
+		<?php
+		    $courriel = $_GET['user'];
+			$re=mysql_query("select t.id, p.id as idProduit, p.nom, p.prix, tp.quantite, tp.sous_total 
+							from transaction t, transaction_produit tp, produit p, utilisateur u
+							where t.id = tp.id_transaction and 
+								  tp.id_produit = p.id and 
+								  u.id = t.id_utilisateur and
+								  u.courriel ='".$courriel."'  
+							order by t.id");
+			$nbAchat=0;
+			while ($f=mysql_fetch_array($re)) {
+					if($nbAchat	!=$f['id']){
+						echo '<tr><td>Nombre de transaction: '.$f['id'].' </td></tr>';
+					}
+					$nbAchat=$f['id'];
+					echo '<tr>
+						<td><img src="./img/'.$f['idProduit'].".jpg".'" width="100px" heigth="100px" /></td>
+						<td>'.$f['nom'].'</td>
+						<td>'.$f['prix'].'</td>
+						<td>'.$f['quantite'].'</td>
+						<td>'.$f['sous_total'].'</td>
 
-						</tr>';
-				}
-			?>
-		</table>
+					</tr>';
+			}
+		?>
+	</table>
 	</section>
 	
 </body>
