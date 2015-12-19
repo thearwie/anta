@@ -6,16 +6,16 @@
 	mysql_select_db("viauma",  $connexionDB) or die ("Couldn't select database");
 	
 	
-	$_SESSION['User'] = $_GET['user'];
+	//$_SESSION['User'] = $_GET['user'];
 	
-	$user = $_SESSION['User'];
+	$user = $_GET['user'];
 	
 	echo '<script type="text/javascript">
 	   alert('.$user[0]['Id'].');
 	</script>';
 	
-	if(isset($_SESSION['User'])){
-		$user = $_SESSION['User'];
+	if(isset($user)){
+		//$user = $_SESSION['User'];
 	}
 	else{
 		//header("Location: ./index.php?Erreur=Accès refusé");
@@ -36,8 +36,8 @@
 <body>
 	<header>
 	    <?php
-		 // $id = $_GET['user'];
-		  $id = $user[0]['Id'];
+		   $id = $user;
+		  //$id = $user[0]['Id'];
 		  $re=mysql_query("select * from utilisateur where id='".$id."'");
 		  while ($f=mysql_fetch_array($re)) {	
 				echo '<h2>Mon compte: '.$f['prenom'].' '.$f['nom'].' </h2>';
