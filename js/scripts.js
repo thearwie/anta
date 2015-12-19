@@ -5,6 +5,8 @@ var debut=function(){
 			   var id=$(this).attr('data-id');
 			   var prix=$(this).attr('data-prix');
 			   var quantite=$(this).val();
+			   alert(quantite);
+			   alert(prix);
 			   $(this).parentsUntil('.produit').find('.sous-total').text('Sous-total: '+(prix*quantite));
 			   $.post('modifierDonnees.php',{
 				   Id:id,
@@ -19,8 +21,7 @@ var debut=function(){
 			   
 			}	
 			
-			alert(quantite);
-			alert(prix);
+			
 		}
 	});
 	
