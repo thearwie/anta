@@ -19,7 +19,7 @@ while ($f=mysql_fetch_array($re)) {
 if(isset($infoUtilisateur)){
 	$_SESSION['User']=$infoUtilisateur;
 	echo '<script type="text/javascript">
-	window.location.assign("../monCompte.php?user=$courriel");
+	window.location.assign("../monCompte.php?user=<?php echo $courriel?>");
 	</script>';
 	
 }else{
