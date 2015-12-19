@@ -16,7 +16,9 @@ while ($f=mysql_fetch_array($re)) {
 							 'Nom'=>$f['nom'],
 							 'Id'=>$f['id']);
 
-echo "hola1";							 
+echo '<script type="text/javascript">
+	   alert("Hola1");
+	</script>';							 
 }
 
 if(isset($infoUtilisateur)){
