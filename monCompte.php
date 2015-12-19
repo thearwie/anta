@@ -68,7 +68,8 @@
 		</tr>	
 
 		<?php
-		    $id = $_GET['user'];
+		    //$id = $_GET['user'];
+			$id = $user;
 			$re=mysql_query("select t.id, p.id as idProduit, p.nom, p.prix, tp.quantite, tp.sous_total 
 							from transaction t, transaction_produit tp, produit p, utilisateur u
 							where t.id = tp.id_transaction and 
