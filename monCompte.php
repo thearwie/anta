@@ -7,7 +7,7 @@
 	
 	
 	if(isset($_SESSION['User'])){
-		
+		$user = $_SESSION['User'];
 	}
 	else{
 		//header("Location: ./index.php?Erreur=Accès refusé");
@@ -29,7 +29,8 @@
 <body>
 	<header>
 	    <?php
-		  $id = $_GET['user'];
+		 // $id = $_GET['user'];
+		  $id = $user[0]['Id'];
 		  $re=mysql_query("select * from utilisateur where id='".$id."'");
 		  while ($f=mysql_fetch_array($re)) {	
 				echo '<h2>Mon compte: '.$f['prenom'].' '.$f['nom'].' </h2>';
