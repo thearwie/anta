@@ -33,6 +33,7 @@ if(isset($infoUtilisateur)){
 	
 	
 }else{
+	echo "Hola 3";
 	echo '<script type="text/javascript">
 	window.location.assign("../login.php?erreur=Données invalides");
 	</script>';

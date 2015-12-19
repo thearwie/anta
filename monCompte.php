@@ -11,7 +11,7 @@
 	}
 	else{
 		//header("Location: ./index.php?Erreur=Accès refusé");
-		
+		echo "Hola4";
 		echo '<script type="text/javascript">
 	         window.location.assign("../index.php?Erreur=Accès refusé");
 			 </script>';
