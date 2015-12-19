@@ -1,6 +1,6 @@
 <?php
 session_start();
-  echo "Hola";
+  
   $tableuPanier = $_SESSION['panier'];
   $total=0;
   $nb = 0;	
