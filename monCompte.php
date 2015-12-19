@@ -4,6 +4,8 @@
 	
 	$connexionDB = mysql_connect("webc.cegepsherbrooke.qc.ca", "viauma", "rurove") or die ("Couldn't connect to server");  
 	mysql_select_db("viauma",  $connexionDB) or die ("Couldn't select database");
+	
+	
 	if(isset($_SESSION['User'])){
 		
 	}
@@ -27,7 +29,14 @@
 </head>
 <body>
 	<header>
-		<h1>Mon compte</h1>
+	    <?php
+		  $courriel = $_GET['user'];
+		  $re=mysql_query("select * from utilisateur where u.courriel='".$courriel."'");
+		  while ($f=mysql_fetch_array($re)) {	
+				echo '<h1>Mon compte: '.$f['nom'].' </h1>';
+		  }
+		?>
+	
 		<a href="./panier.php" title="panier">
 			<img src="./img/panier.png">
 		</a>
