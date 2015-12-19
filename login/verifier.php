@@ -11,7 +11,7 @@ mysql_select_db("viauma",  $connexionDB) or die ("Couldn't select database");
 $re=mysql_query("select * from utilisateur where courriel='".$courriel."' AND 
  					motPasse='".$motPasse."'")	or die(mysql_error());
 					
-while ($f=mysql_fetch_array($re)) {
+while ($f=mysql_fetch_array($re)){
 	$infoUtilisateur[]=array('Prenom'=>$f['prenom'],
 							 'Nom'=>$f['nom'],
 							 'Id'=>$f['id']);

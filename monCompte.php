@@ -8,11 +8,14 @@
 	
 	if(isset($_SESSION['User'])){
 		$user = $_SESSION['User'];
+		echo '<script type="text/javascript">
+	   alert("Hola2");
+	   </script>';
 	}
 	else{
 		//header("Location: ./index.php?Erreur=Accès refusé");
-	    echo '<script type="text/javascript">
-	   alert('.$user[0]['Id'].');
+	   echo '<script type="text/javascript">
+	   alert("Hola3");
 	   </script>';
 		
 		echo '<script type="text/javascript">
