@@ -5,6 +5,10 @@
 	$connexionDB = mysql_connect("webc.cegepsherbrooke.qc.ca", "viauma", "rurove") or die ("Couldn't connect to server");  
 	mysql_select_db("viauma",  $connexionDB) or die ("Couldn't select database");
 	
+	$user = $_SESSION['User'];
+	echo '<script type="text/javascript">
+	   alert('.$user[0]['Id'].');
+	</script>';
 	
 	if(isset($_SESSION['User'])){
 		$user = $_SESSION['User'];
