@@ -21,7 +21,9 @@ else{
 
 mysql_query("insert into transaction (id, id_utilisateur, id_etat_transaction ) values ( ".$nbTransaction.", 10003, 1)") or die(mysql_error());
 
-echo count($panier);
+echo '<script type="text/javascript">
+	   alert('.$panier[$i]['Id'].');
+	</script>';
 
 for($i=0; $i<count($panier);$i++){
 	
