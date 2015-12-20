@@ -15,7 +15,8 @@ while ($f=mysql_fetch_array($re)){
 	$infoUtilisateur[]=array('Prenom'=>$f['prenom'],
 							 'Nom'=>$f['nom'],
 							 'Id'=>$f['id']);
-
+    
+	$_SESSION['User']=$infoUtilisateur;	
 /*echo '<script type="text/javascript">
 	   alert('.$infoUtilisateur[0]['Id'].');
 	</script>';	*/						 
@@ -27,7 +28,7 @@ if(isset($infoUtilisateur)){
 	window.location.assign("../monCompte.php?user='.$infoUtilisateur[0]['Id'].'");
 	</script>';*/
 	
-	$_SESSION['User']=$infoUtilisateur;	
+	
 	echo '<script type="text/javascript">
 	window.location.assign("../monCompte.php?user='.$infoUtilisateur[0]['Id'].'");
 	</script>';
