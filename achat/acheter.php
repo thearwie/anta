@@ -5,6 +5,7 @@ $connexionDB = mysql_connect("webc.cegepsherbrooke.qc.ca", "viauma", "rurove") o
 mysql_select_db("viauma",  $connexionDB) or die ("Couldn't select database");
 
 $panier = $_SESSION['panier'];
+
 $nbTransaction=0;
 $re=mysql_query("select * from transaction order by id DESC limit 1") or die(mysql_error());
 while($f=mysql_fetch_array($re)){
