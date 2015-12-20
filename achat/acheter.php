@@ -24,7 +24,7 @@ else{
 	$nbTransaction++;
 }
 
-mysql_query("insert into transaction (id, id_utilisateur, id_etat_transaction ) values ( ".$nbTransaction.", 10003, 1)") or die(mysql_error());
+mysql_query("insert into transaction (id, id_utilisateur, id_etat_transaction ) values ( ".$nbTransaction.", 10007, 1)") or die(mysql_error());
 
 
 for($i=0; $i<count($panier);$i++){
@@ -45,12 +45,10 @@ if(isset($_SESSION['User'])){
 	$compteUser = $_SESSION['User'];
 	$id = $compteUser[0]['Id'];	
 }
-echo '<script type="text/javascript">
-	   alert('.$id.');
-	</script>';
+
 
 echo '<script type="text/javascript">
-	window.location.assign("../monCompte.php?user='.$id.'");
+	window.location.assign("../monCompte.php?user='10007'");
 	</script>';
 
 ?>
