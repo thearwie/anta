@@ -70,7 +70,7 @@
 							where t.id = tp.id_transaction and 
 								  tp.id_produit = p.id and 
 								  u.id = t.id_utilisateur and
-								  u.courriel ='".$id."'  
+								  u.id ='".$id."'  
 							order by t.id");
 			$nbAchat=0;
 			while ($f=mysql_fetch_array($re)) {
