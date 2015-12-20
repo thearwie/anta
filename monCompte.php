@@ -97,7 +97,7 @@
 					}
 					$nbAchat=$f['id'];
 					echo '<tr>
-						<td><img src="./img/bracelet/"'.$f['idProduit'].".jpg".'"  width="100px" heigth="100px" /></td>
+						<td><img src="./img/bracelet/"'.$f['idProduit'].'".jpg".'"  width="100px" heigth="100px" /></td>
 						<td>'.$f['nom'].'</td>
 						<td>'.$f['prix'].'</td>
 						<td>'.$f['quantite'].'</td>
