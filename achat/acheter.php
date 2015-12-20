@@ -1,10 +1,11 @@
 ﻿<?php
 session_start();
+$panier = $_SESSION['panier'];
 //include '../conexion.php';
 $connexionDB = mysql_connect("webc.cegepsherbrooke.qc.ca", "viauma", "rurove") or die ("Couldn't connect to server");  
 mysql_select_db("viauma",  $connexionDB) or die ("Couldn't select database");
 
-$panier = $_SESSION['panier'];
+
 
 $nbTransaction=0;
 $re=mysql_query("select * from transaction order by id DESC limit 1") or die(mysql_error());
@@ -22,7 +23,7 @@ else{
 mysql_query("insert into transaction (id, id_utilisateur, id_etat_transaction ) values ( ".$nbTransaction.", 10003, 1)") or die(mysql_error());
 
 echo '<script type="text/javascript">
-	   alert('.$panier[$i]['Id'].');
+	   alert('.$panier[$i]['Prix'].');
 	</script>';
 
 for($i=0; $i<count($panier);$i++){
