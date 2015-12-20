@@ -125,7 +125,7 @@
 		  }
 		?>
 	    
-		<center class="linkMagasiner"><a href="./collections">Continuer à magasiner</a></center>
+		<center><a href="./collections" class="linkMagasiner">Continuer à magasiner</a></center>
 		
 	</section>
 </body>
