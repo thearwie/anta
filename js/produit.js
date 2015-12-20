@@ -1,4 +1,4 @@
-var idProduit = 0;
+var typeProduit = "";
 
 function afficherProduit(idProduit) {
   var idTypeProduit = document.getElementById("select-categogie").selectedIndex;
@@ -8,115 +8,155 @@ function afficherProduit(idProduit) {
     type: "GET",
     url: "genererProduit.php?idProduit=" + idProduit,
     dataType: "xml",
-    success: function (xml) {      
+    success: function (xml) {
       var produit = xml.getElementsByTagName("produit");
-      var nom = produit[0].getElementsByTagName("nom")[0];
-      var typeProduit = produit[0].getElementsByTagName("typeproduit")[0];
+      var nom = produit[0].getElementsByTagName("nom").item(0).firstChild.nodeValue;
+      typeProduit = produit[0].getElementsByTagName("typeproduit").item(0).firstChild.nodeValue;
       var images = produit[0].getElementsByTagName("images");
-      var prix = produit[0].getElementsByTagName("prix")[0];
+      var prix = produit[0].getElementsByTagName("prix").item(0).firstChild.nodeValue;
       var dimensions = produit[0].getElementsByTagName("dimensions");
       var details = produit[0].getElementsByTagName("details");
-      var autresImages = produit[0].getElementsByTagName("autresimages");
+      var autresImageXML = produits[0].getElementsByTagName("autresimages");
       
-      //var titre = document.getElementbyclas
+      var labelTitre = document.getElementById("titre-produit");
+      var groupeImages = document.getElementById("groupe-images");
+      var labelPrix = document.getElementById("label-prix");
+      var inputQuantite = document.getElementById("input-quantite");
+      var cbDimension = document.getElementById("select-dimension");
+      var lienCharteDim = document.getElementById("lien-charte");
+      var labelCategorie = document.getElementById("type-produit");
+      var tabDetails = document.getElementById("tab-detail");
+      var lienAutreImage1 = document.getElementById("lien-autre-img-1");
+      var lienAutreImage2 = document.getElementById("lien-autre-img-2");
+      var lienAutreImage3 = document.getElementById("lien-autre-img-3");
+      var autreImage1 = document.getElementById("autre-img1");
+      var autreImage2 = document.getElementById("autre-img2");
+      var autreImage3 = document.getElementById("autre-img3");
+      var lienAutresImages = [lienAutreImage1, lienAutreImage2, lienAutreImage3];
+      var autresImages = [autreImage1, autreImage2, autreImage3];
+      var contenuAutresProduits = document.getElementById("contenu-autres-produits");
       
-      var boutons = [];
-      var idBouton = 0;
+      var lienImage = null;
+      var image = null;
+      var cbItem = null;
+      var cbItemValue = null;
+      var trAttribut = null;
+      var tdNomAttribut = null;
+      var tdValeurAttribut = null;
       
-      for(var i = 0; i < ids.length; i++) {
-        var produit = null;
-        var titre = null;
-        var image = null;
-        var prix = null;
-        var bouton = null;
-        var text = null;
-        
-        if(nbProduitSurLigne == 1) {
-          row = document.createElement("div");
-          row.setAttribute("class", "row");
-          collectionProduit.appendChild(row);
-        }
-        
-        produit = document.createElement("div");
-        produit.setAttribute("class", "col-md-4");
-        row.appendChild(produit);
-        
-        titre = document.createElement("h2");
-        text = document.createTextNode(noms.item(i).firstChild.nodeValue);
-        titre.appendChild(text);
-        produit.appendChild(titre);
+      location = "produit_detail.php?idProduit=" + idProduit;
+      
+      labelTitre.innerHTML = nom;
+      
+      for(var i = 0; i < images.length; i++)
+      {
+        lienImage = document.createElement("a");
+        lienImage.setAttribute("href", images.item(i).firstChild.nodeValue);
+        groupeImages.appendChild(lienImage);
         
         image = document.createElement("img");
-        image.setAttribute("class", "img-responsive img-produit");
-        image.setAttribute("src", sourceimages.item(i).firstChild.nodeValue);
-        image.setAttribute("alt", ids.item(i).firstChild.nodeValue);
-        produit.appendChild(image);
-        
-        prix = document.createElement("h3");
-        prix.setAttribute("class", "prix");
-        text = document.createTextNode(listePrix.item(i).firstChild.nodeValue);
-        prix.appendChild(text);
-        produit.appendChild(prix);
-        
-        idBouton = "bouton" + i;
-        bouton = document.createElement("input");
-        bouton.setAttribute("id", idBouton);
-        bouton.setAttribute("class", "btn btn-primary bouton-detail");
-        bouton.setAttribute("type", "button");
-        bouton.setAttribute("value", "Détails");
-        produit.appendChild(bouton);
-        
-        if(nbProduitSurLigne < 3) {
-          nbProduitSurLigne++;
-        } else {
-          nbProduitSurLigne = 1;
-        }
+        image.setAttribute("class", "img-responsive");
+        image.setAttribute("src", images.item(i).firstChild.nodeValue);
       }
       
-      for(var y = 0; y < idproduits.length; y++) {
-        idBouton = "bouton" + y;
-        var idProduit = idproduits.item(y).firstChild.nodeValue;
-        var nomMethode = "afficherDetail('" + idProduit + "');";
-        document.getElementById(idBouton).setAttribute("onclick", nomMethode);
-      }
+      labelPrix.innerHTML = prix;
       
-      if(ids.length > 0)
+      if(dimensions.length > 0)
       {
-        for(var z = nbProduitSurLigne; z <= 3; z++)
+        $("#select-dimension").empty(); //on vide le contenu du combobox
+        for(var x = 0; x < dimensions.length; x++)
         {
-          var produitVide = document.createElement("div");
-              produitVide.setAttribute("class", "col-md-4");
-              row.appendChild(produitVide);
+          var nomDimension = dimensions[x].getElementsByTagName("nomdimension").item(0).firstChild.nodeValue;
+          var qtyDimension = dimension[x].getElementsByTagName("quantite").item(0).firstChild.nodeValue;
+          
+          cbItem = document.creatElement("option");
+          cbItemValue = document.createTextNode(nomDimension);
+          cbItemValue.setAttribute("value", qtyDimension);
+          cbItem.appendChild(cbItemValue);
+          
+          cbDimension.appendChild(cbItem);
+        }
+        
+        //Générer le lien de lien-charte
+        
+      }
+      else
+      {
+        $(".dimension").remove(); //si pas de dimension on affiche aucune dimension
+      }
+      
+      
+      if(details.length > 0)
+      {
+        $("#tab-detail").empty(); //on vide le contenu du tableau de détails
+        for(var y = 0; y < details.length; y++)
+        {
+          var nomAttribut = details[0].getElementsByTagName("attribut")[y].getElementsByTagName("nomattribut").item(0).firstChild.nodeValue;
+          var valeur = details[0].getElementsByTagName("attribut")[y].getElementsByTagName("valeur").item(0).firstChild.nodeValue;
+          var unite = details[0].getElementsByTagName("attribut")[y].getElementsByTagName("unite").item(0).firstChild.nodeValue;
+          
+          var contenuTdNomAttribut = bull;
+          var contenuTdValeurAttribut = null;
+          
+          trAttribut = document.createElement("tr");
+          tabDetails.appendChild(trAttribut);
+          
+          tdNomAttribut = document.createElement("td");
+          contenuTdNomAttribut = document.createTextNode(nomAttribut);
+          tdNomAttribut.appendChild(contenuTdValeurAttribut);
+          
+          
+          tdValeurAttribut = document.createElement("td");
+          contenuTdValeurAttribut = document.createElement(valeur + " " + unite);
+          tdValeurAttribut.appendChild(contenuTdValeurAttribut);
+          
+          trAttribut.appendChild(tdNomAttribut);
+          trAttribut.appendChild(tdValeurAttribut);
+          
+          tabDetails.appendChild(trAttribut);
         }
       }
       
-      if( !$.trim( $('#collection-produit').html() ).length ) {
-        var contenuH2 = "";
-        switch(idTypeProduit)
-        {
-          case 0:
-          contenuH2 = "Aucun 'produit' n'a été trouvé.";
-          break;
-          
-          case 1:
-          contenuH2 = "Aucune 'boucle d'oreille' n'a été trouvée.";
-          break;
-          
-          case 2:
-          contenuH2 = "Aucun 'bracelet' n'a été trouvé.";
-          break;
-          
-          case 3:
-          contenuH2 = "Aucun 'collier' n'a été trouvé.";
-          break;
-        }
-        var texteAucunProduit = document.createTextNode(contenuH2);
-        var h2 = document.createElement("h2");
-        h2.appendChild(texteAucunProduit);
-        collectionProduit.appendChild(h2);
+      var premiereSourceImage = autresImageXML[0].getElementsByTagName("autreimage")[0].getElementsByTagName("sourceimage").item(0).firstChild.nodeValue;
+      if(premiereSourceImage == "Aucun autre produit dans le système.")
+      {
+        $("#contenu-autres-produits").empty(); //on vide le contenu de la secteur "Autres produits"
+        
+        pasAutresProduits = document.createElement("h3");
+        contenuPasAutresProduits = document.createTextNode(premiereSourceImage);
+        pasAutresProduits.appendChild(contenuPasAutresProduits);
+        
+        contenuAutresProduits.appendChild(pasAutresProduits);
       }
-    }
+      else(autresImages.length > 0)
+      {
+        for(var z = 0; z < autresImageXML.length; z++)
+        {
+          var idAutreImage = autresImageXML[0].getElementsByTagName("autreimage")[z].getElementsByTagName("id").item(0).firstChild.nodeValue;
+          var sourceAutreImage = autresImageXML[0].getElementsByTagName("sourceimage")[z].getElementsByTagName("id").item(0).firstChild.nodeValue;
+          
+          
+          var lastIndexOfHyphen = idAutreImage.lastIndexOf("-");
+          var idSansImage = idAutreImage.substring(0, lastIndexOfHyphen);
+          var nomMethode = "afficherProduit('" + idSansImage + "');";
+          
+          lienAutresImages[z].setAttribute("onclick", nomMethode);
+          autresImages[z].setAttribute("src", sourceAutreImage);
+          autresImages[z].setAttribute("alt", idAutreImage);
+        }
+      }
+    
   });
 }
 
-afficherProduit(idProduit);
+function changerQtyRestante()
+{
+  var cbDimension = document.getElementById("select-dimension");
+  var labelQtyRestante = document.getElementById("label-qty-restante");
+  
+  var contenuLvlQtyRestante = cbDimension.options[cbDimension.selectedIndex].value + " " + typeProduit.toLowerCase() + " restantes.";
+  
+  labelQtyRestante.innerHTML = contenuLvlQtyRestante;
+}
+
+//afficherProduit(idProduit);

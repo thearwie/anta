@@ -19,9 +19,6 @@
 <?php
 
   $page = 'produit';
-  
-  
-  
 ?>
 
 <!-- VIEW -->
@@ -41,9 +38,9 @@
           <div id="groupe-images" class="sp-wrap img-produit-detail">
             <!-- <img class="img-responsive img-produit-detail" src="img/bracelet/BR-0003-1.jpg" alt="BR-0003-1"> -->
             <!-- <div class=" img-produit-detail"> -->
-              <a href="img/bracelet/BR-0001-1.jpg"><img class="img-responsive" src="img/bracelet/BR-0001-1.jpg" alt="BR-0001-1"></a>
+              <!-- <a href="img/bracelet/BR-0001-1.jpg"><img class="img-responsive" src="img/bracelet/BR-0001-1.jpg" alt="BR-0001-1"></a>
               <a href="img/bracelet/BR-0003-1.jpg"><img class="img-responsive" src="img/bracelet/BR-0003-1.jpg" alt="BR-0003-1"></a>
-              <a href="img/bracelet/BR-0007-1.jpg"><img class="img-responsive" src="img/bracelet/BR-0007-1.jpg" alt="BR-0007-1"></a>
+              <a href="img/bracelet/BR-0007-1.jpg"><img class="img-responsive" src="img/bracelet/BR-0007-1.jpg" alt="BR-0007-1"></a> -->
             <!-- </div> -->
           </div>
         </div>
@@ -57,7 +54,7 @@
               <label class="col-droite1">Ajouter au panier</label>
             </div>
             <div class="col-sm-2">
-              <button class="row-col-droite2" type="button" onclick= "location = 'panier.php?id=BR-0003-1'"><img class="icon" src="img/icones/ajout_cart.png" /></button>
+              <button class="row-col-droite2" type="button"><img class="icon" src="img/icones/ajout_cart.png"/></button>
             </div>
             <div class="col-sm-1">
             </div>
@@ -89,7 +86,7 @@
             <div class="col-sm-5">
               <div class='col-xs-4 combobox-group-detail col-gauche'>
                 <div class='combobox-taille'>
-                  <select id="select-dimension" class='form-control' name='dimension' onchange='this.form.submit()'>
+                  <select id="select-dimension" class='form-control' name='dimension' onchange='changerQtyRestante()'>
                     <option value=''>Choisir la dimension</option>
                     <option value='52'>52</option>
                     <option value='54'>54</option>
@@ -144,7 +141,7 @@
                 <th colspan="2"><h3 class="titre-detail">Détails du produit</h3></th>
               </tr>
             </head>
-            <tbody id="tab_detail">
+            <tbody id="tab-detail">
               <tr>
                 <td>Catégorie</td>
                 <td id= "type-produit">Bracelet</td>
@@ -158,15 +155,15 @@
               <h2 class="col-bas-droite">Autres produits</h2>
             </div>
           </div>
-          <div class="row">
+          <div id="contenu-autres-produits" class="row">
             <div class="col-sm-3">
-              <img id="autre-img1" class="img-autres-produits" src="img/bracelet/BR-0001-1.jpg" alt="BR-0001-1">
+              <a id="lien-autre-img-1"><img id="autre-img1" class="img-autres-produits" src="img/bracelet/BR-0001-1.jpg" alt="BR-0001-1"></a>
             </div>
             <div class="col-sm-3">
-              <img id="autre-img2" class="img-autres-produits" src="img/bracelet/BR-0003-1.jpg" alt="BR-0003-1">
+              <a id="lien-autre-img-2"><img id="autre-img2" class="img-autres-produits" src="img/bracelet/BR-0003-1.jpg" alt="BR-0003-1"></a>
             </div>
             <div class="col-sm-3 img-3">
-              <img id="autre-img3" class="img-autres-produits" src="img/bracelet/BR-0007-1.jpg" alt="BR-0007-1">
+              <a id="lien-autre-img-3"><img id="autre-img3" class="img-autres-produits" src="img/bracelet/BR-0007-1.jpg" alt="BR-0007-1"></a>
             </div>
             <div class="col-sm-3">
             </div>

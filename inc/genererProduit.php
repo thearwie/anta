@@ -97,12 +97,13 @@ function retournerNomsAutresProduits($idTypeProduit, $idProduit)
     while($row = mysqli_fetch_array($resultat, MYSQLI_BOTH) && nbProduits < 3) {
       if($row[0] != $idProduit)
       {
-        $nomImageAutreProduit = $row[2];
+        /*$nomImageAutreProduit = $row[2];
         $nomImageAutreProduit = retirerApostrophe($nomImageAutreProduit);
         $nomImageAutreProduit = formaterTexte($nomImageAutreProduit);
         $nomImageAutreProduit = convertirMinuscule($nomImageAutreProduit);
         $nomImageAutreProduit = "img/" . $nomImageAutreProduit . "/" . $row[0] . ".jpg"
-        $nomsProduit[$iterateur] = $nomImageAutreProduit;
+        $nomsProduit[$iterateur] = $nomImageAutreProduit;*/
+        $nomImageAutreProduit = $row[1];
         
         $nbProduits++;
         $iterateur++;
@@ -155,7 +156,8 @@ function afficherDetailsProduit()
   {
     $dimension = $xml->createElement("dimension");
     
-    $nomDimension = $xml->createElement("nomdimension", $produit->getDimension[$x]->getNom());
+    $contenuNomDimension = substr($produit->getDimension[$x]->getNom(), 2);
+    $nomDimension = $xml->createElement("nomdimension", $contenuNomDimension);
     $dimension->appendChild($nomDimension);
     
     $quantite = $xml->createElement("quantite", $produit->getDimension()[$x]->getQuantite());
@@ -188,10 +190,35 @@ function afficherDetailsProduit()
   $baliseProduit->appendChild($details);
   
   $autresImages = $xml->createElement("autresimages");
-  for($it = 0; $it < count($produit->getNomAutresImages()); $it++)
+  
+  if(count($produit->getNomAutresImages()) == 1 
+  && $produit->getNomAutresImages()[0] == "Aucun autre produit dans le système.")
   {
-    $autreImage = $xml->createElement("autreimage", $produit->getNomAutresImages()[$it]);
+    $autreImage = $xml->createElement("autreimage");
     $autresImages->appendChild($autreImage);
+    
+    $sourceImage = $xml->createElement("sourceimage", $produit->getNomAutresImages()[0]);
+    $autreImage->appendChild($sourceImage);
+  }
+  else
+  {
+    for($it = 0; $it < count($produit->getNomAutresImages()); $it++)
+    {
+      $nomImageAutreProduit = $produit->getNom();
+      $nomImageAutreProduit = retirerApostrophe($nomImageAutreProduit);
+      $nomImageAutreProduit = formaterTexte($nomImageAutreProduit);
+      $nomImageAutreProduit = convertirMinuscule($nomImageAutreProduit);
+      $nomImageAutreProduit = "img/" . $nomImageAutreProduit . "/" . $produit->getId() . ".jpg"      
+      
+      $autreImage = $xml->createElement("autreimage");
+      $autresImages->appendChild($autreImage);
+      
+      $idAutreImage = $xml->createElement("id", $produit->getNomAutresImages()[$it]);
+      $autreImage->appendChild($idAutreImage);
+      
+      $sourceImage = $xml->createElement("sourceimage", $nomImageAutreProduit);
+      $autreImage->appendChild($sourceImage);
+    }
   }
   $baliseProduit->appendChild($autresImages);
   
