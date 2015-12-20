@@ -25,6 +25,10 @@ echo '<script type="text/javascript">
 	   alert('.count($panier).');
 	</script>';
 
+echo '<script type="text/javascript">
+	   alert('.$panier[$i]['Id'].');
+	</script>';
+
 for($i=0; $i<count($panier);$i++){
 	
 	mysql_query("insert into transaction_produit (id_transaction, id_produit, quantite, sous_total, panier) values ( 
