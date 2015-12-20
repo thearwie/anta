@@ -118,14 +118,14 @@
 			  echo '<center><h2>Le panier est vide</h2></center>';
 		  }
 		 
-		  echo '<div class="total"><h2 id="total">Total: '.$totalPanier.'</h2></div>';
+		  echo '<center class="total"><h2 id="total">Total: '.$totalPanier.'</h2></center>';
 		  
 		  if($totalPanier!=0){
-				echo '<div class="linkAcheter"><a href="achat/acheter.php">Acheter</a></div>';
+				echo '<center class="linkAcheter"><a href="achat/acheter.php">Acheter</a></center>';
 		  }
 		?>
 	    
-		<div class="linkMagasiner"><a href="./collections" >Continuer à magasiner</a></div>
+		<center class="linkMagasiner"><a href="./collections" >Continuer à magasiner</a></center>
 		
 	</section>
 </body>
