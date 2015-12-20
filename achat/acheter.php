@@ -1,6 +1,7 @@
 ﻿<?php
 session_start();
 $panier = $_SESSION['panier'];
+$user = $_SESSION['User'];
 
 //include '../conexion.php';
 $connexionDB = mysql_connect("webc.cegepsherbrooke.qc.ca", "viauma", "rurove") or die ("Couldn't connect to server");  
@@ -36,8 +37,13 @@ for($i=0; $i<count($panier);$i++){
 unset($_SESSION['panier']);
 //header("Location: ../monCompte.php");
 
+if(isset($_SESSION['User'])){
+	$compteUser = $_SESSION['User'];
+	$id = $compteUser[0]['Id'];	
+}
+
 echo '<script type="text/javascript">
-	window.location.assign("../monCompte.php?user='.$panier[$i]['Id'].'");
+	window.location.assign("../monCompte.php?user='.$id .'");
 	</script>';
 
 ?>
