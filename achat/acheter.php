@@ -21,19 +21,12 @@ else{
 
 mysql_query("insert into transaction (id, id_utilisateur, id_etat_transaction ) values ( ".$nbTransaction.", 10003, 1)") or die(mysql_error());
 
-echo '<script type="text/javascript">
-	   alert('.count($panier).');
-	</script>';
-
-echo '<script type="text/javascript">
-	   alert('.$panier[$i]['Id'].');
-	</script>';
 
 for($i=0; $i<count($panier);$i++){
 	
 	mysql_query("insert into transaction_produit (id_transaction, id_produit, quantite, sous_total, panier) values ( 
 	".$nbTransaction.",
-	'".$panier[$i]['Id']."',
+    'BR-0003-1',
 	'".$panier[$i]['Quantite']."',
 	'".$panier[$i]['Prix']*$panier[$i]['Quantite']."',
 	'1'
