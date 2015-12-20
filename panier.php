@@ -121,6 +121,10 @@
 		  echo '<center class="total"><h2 id="total">Total: '.$totalPanier.'</h2></center>';
 		  
 		  if($totalPanier!=0){
+			    $panier = $_SESSION['panier'];
+				echo '<script type="text/javascript">
+				alert('. $panier[0]['Id'].');
+				</script>';
 				echo '<center class="linkAcheter"><a href="./achat/acheter.php">Acheter</a></center>';
 		  }
 		?>
