@@ -1,6 +1,14 @@
 var typeProduit = "";
 
-function afficherProduit(idProduit) {
+function getParameterByName(name) {
+    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+        results = regex.exec(location.search);
+    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+}
+
+function afficherProduit() {
+  var idProduit = getParameterByName('idProduit');
   
   $.ajax({
     type: "GET",
@@ -136,13 +144,19 @@ function afficherProduit(idProduit) {
           
           var lastIndexOfHyphen = idAutreImage.lastIndexOf("-");
           var idSansImage = idAutreImage.substring(0, lastIndexOfHyphen);
-          var nomMethode = "afficherProduit('" + idSansImage + "');";
+          //var action = "afficherProduit('" + idSansImage + "');";
+          var action = "location = 'produit_detail.php?idProduit='" + idSansImage + "';";
           
-          lienAutresImages[z].setAttribute("onclick", nomMethode);
+          lienAutresImages[z].setAttribute("onclick", action);
           autresImages[z].setAttribute("src", sourceAutreImage);
           autresImages[z].setAttribute("alt", idAutreImage);
         }
       }
+    },    
+    error: function (xhr, ajaxOptions, thrownError) {
+      alert("L'état de la requête est: '" + xhr.status + "'.");
+      alert("La réponse de la requëte est: '" + xhr.responseText + "'.");
+      alert("L'erreur retournée est: '" + thrownError+ "'.");
     }
   });
 }
@@ -157,4 +171,4 @@ function changerQtyRestante()
   labelQtyRestante.innerHTML = contenuLvlQtyRestante;
 }
 
-//afficherProduit(idProduit);
+afficherProduit();

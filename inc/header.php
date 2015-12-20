@@ -14,7 +14,6 @@
     <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
     <script type="text/javascript">stLight.options({publisher: "2ceda40e-5224-4f64-b6f8-31470958739f", doNotHash: false, doNotCopy: false, hashAdressBar: false});</script>
     <script type="text/javascript" href="js/scripts.js"></script>
-    <script type="text/javascript" href="js/collection.js"></script>
     
     <!-- [if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>

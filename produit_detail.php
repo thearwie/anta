@@ -30,7 +30,7 @@
     
       <div class="row">
         <div class="col-sm-12 row-titre">
-          <h1 id="titre-produit" class="titre-produit">Bracelet BR-0003</h1>
+          <h1 id="titre-produit" class="titre-produit">Titre du produit</h1>
         </div>
       </div>
       <div class="row">
@@ -48,7 +48,7 @@
         
           <div class="row row1-info-produit">
             <div class="col-sm-5">
-              <label id="label-prix" class="col-gauche">22.75 CAD$</label>
+              <label id="label-prix" class="col-gauche">Prix</label>
             </div>
             <div class="col-sm-4">
               <label class="col-droite1">Ajouter au panier</label>
@@ -88,9 +88,6 @@
                 <div class='combobox-taille'>
                   <select id="select-dimension" class='form-control' name='dimension' onchange='changerQtyRestante()'>
                     <option value=''>Choisir la dimension</option>
-                    <option value='52'>52</option>
-                    <option value='54'>54</option>
-                    <option value='56'>56</option>
                   </select>
                 </div>
               </div>
@@ -108,7 +105,7 @@
               <label class="col-gauche">Disponibilié :</label>
             </div>
             <div class="col-sm-4">
-              <label id="label-qty-restante" class="col-droite">2 bracelets restants</label>
+              <label id="label-qty-restante" class="col-droite"></label>
             </div>
             <div class="col-sm-3">
             </div>
@@ -144,7 +141,7 @@
             <tbody id="tab-detail">
               <tr>
                 <td>Catégorie</td>
-                <td id= "type-produit">Bracelet</td>
+                <td id= "type-produit"></td>
               </tr>
             </tbody>            
           </table>
@@ -157,13 +154,13 @@
           </div>
           <div id="contenu-autres-produits" class="row">
             <div class="col-sm-3">
-              <a id="lien-autre-img-1"><img id="autre-img1" class="img-autres-produits" src="img/bracelet/BR-0001-1.jpg" alt="BR-0001-1"></a>
+              <a id="lien-autre-img-1"><img id="autre-img1" class="img-autres-produits"></a>
             </div>
             <div class="col-sm-3">
-              <a id="lien-autre-img-2"><img id="autre-img2" class="img-autres-produits" src="img/bracelet/BR-0003-1.jpg" alt="BR-0003-1"></a>
+              <a id="lien-autre-img-2"><img id="autre-img2" class="img-autres-produits"></a>
             </div>
             <div class="col-sm-3 img-3">
-              <a id="lien-autre-img-3"><img id="autre-img3" class="img-autres-produits" src="img/bracelet/BR-0007-1.jpg" alt="BR-0007-1"></a>
+              <a id="lien-autre-img-3"><img id="autre-img3" class="img-autres-produits"></a>
             </div>
             <div class="col-sm-3">
             </div>

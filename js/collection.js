@@ -1,6 +1,4 @@
-﻿$.getScript("js/produit.js");
-
-var idProduit = 0;
+﻿var idProduit = 0;
 
 function afficherProduits() {
   var idTypeProduit = document.getElementById("select-categogie").selectedIndex;
@@ -78,7 +76,7 @@ function afficherProduits() {
       for(var y = 0; y < idproduits.length; y++) {
         idBouton = "bouton" + y;
         var idProduit = idproduits.item(y).firstChild.nodeValue;
-        var nomMethode = "afficherProduit('" + idProduit + "');";
+        var nomMethode = "afficherDetail('" + idProduit + "');";
         document.getElementById(idBouton).setAttribute("onclick", nomMethode);
       }
       
@@ -121,8 +119,8 @@ function afficherProduits() {
   });
 }
 
-/*function afficherDetail(idProduit) {
+function afficherDetail(idProduit) {
 	location = "produit_detail.php?idProduit=" + idProduit;
-}*/
+}
 
-//afficherProduits();
+afficherProduits();

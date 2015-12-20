@@ -1,5 +1,10 @@
 <?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 header('content-type:text/xml');
+
+echo "<script>alert(\"test1\")</script>"; 
 
 include("php/accesBD/connexion_BD.php");
 include("outil.php");
@@ -64,7 +69,7 @@ function getDetailsProduit($idProduit)
       $nomImage = retirerApostrophe($nomImage);
       $nomImage = formaterTexte($nomImage);
       $nomImage = convertirMinuscule($nomImage);
-      $nomImage = "img/" . $nomImage . "/" . $idProduitComplet . ".jpg"
+      $nomImage = "img/" . $nomImage . "/" . $idProduitComplet . ".jpg";
       
       $nomsImages[$iterateur] = $nomImage;
       
@@ -73,6 +78,8 @@ function getDetailsProduit($idProduit)
   $produit = new Produit();
   $produit->initialiser($idProduit, $row[1], $row[2], $row[3], $row[4], $row[5], $row[6], $row[7], $quantitesProduit, $attributsProduit, $nomsImages, $nomsAutresProduits);
 
+  print_r($produit);
+  
   mysqli_free_result($resultat3);
   mysqli_free_result($resultat2);
   mysqli_free_result($resultat);
@@ -85,41 +92,32 @@ function getDetailsProduit($idProduit)
 
 function retournerNomsAutresProduits($idTypeProduit, $idProduit)
 {  
-  $sql = "select p.id, p.id_type_produit,  tp.nom from produit as p, type_produit as tp "
+  $sql = "select p.id, p.id_type_produit, tp.nom from produit as p, type_produit as tp "
        . "where tp.id = p.id_type_produit "
        . "order by case when id_type_produit = " . $idTypeProduit . " then 1 else 2 end, p.nom";
      
   $nbProduits = 0;
   
   if($resultat = mysqli_query($link, $sql)) {
-   $iterateur = 0;
    
     while($row = mysqli_fetch_array($resultat, MYSQLI_BOTH) && nbProduits < 3) {
       if($row[0] != $idProduit)
       {
-        /*$nomImageAutreProduit = $row[2];
-        $nomImageAutreProduit = retirerApostrophe($nomImageAutreProduit);
-        $nomImageAutreProduit = formaterTexte($nomImageAutreProduit);
-        $nomImageAutreProduit = convertirMinuscule($nomImageAutreProduit);
-        $nomImageAutreProduit = "img/" . $nomImageAutreProduit . "/" . $row[0] . ".jpg"
-        $nomsProduit[$iterateur] = $nomImageAutreProduit;*/
-        $nomImageAutreProduit = $row[1];
+        $nomImageAutreProduit[$nbProduits] = array($row[0], $row[2]);
         
         $nbProduits++;
-        $iterateur++;
       }
     }
+    mysqli_free_result($resultat);
   }
-  
-  mysqli_free_result($resultat);
   
   if($nbProduits == 0)
   {
-    return "Aucun autre produit dans le système."
+    return "Aucun autre produit dans le système.";
   }
   else
   {
-    return $nomsProduit;
+    return $nomImageAutreProduit;
   }
 }
 
@@ -204,16 +202,16 @@ function afficherDetailsProduit()
   {
     for($it = 0; $it < count($produit->getNomAutresImages()); $it++)
     {
-      $nomImageAutreProduit = $produit->getNom();
+      $nomImageAutreProduit = $produit->getNomAutresImages()[$it][1];
       $nomImageAutreProduit = retirerApostrophe($nomImageAutreProduit);
       $nomImageAutreProduit = formaterTexte($nomImageAutreProduit);
       $nomImageAutreProduit = convertirMinuscule($nomImageAutreProduit);
-      $nomImageAutreProduit = "img/" . $nomImageAutreProduit . "/" . $produit->getId() . ".jpg"      
+      $nomImageAutreProduit = "img/" . $nomImageAutreProduit . "/" . $produit->getNomAutresImages()[$it][0] . ".jpg";   
       
       $autreImage = $xml->createElement("autreimage");
       $autresImages->appendChild($autreImage);
       
-      $idAutreImage = $xml->createElement("id", $produit->getNomAutresImages()[$it]);
+      $idAutreImage = $xml->createElement("id", $produit->getNomAutresImages()[$it][0]);
       $autreImage->appendChild($idAutreImage);
       
       $sourceImage = $xml->createElement("sourceimage", $nomImageAutreProduit);
