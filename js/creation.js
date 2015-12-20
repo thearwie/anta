@@ -1,4 +1,6 @@
-function afficherCreations() {
+﻿function afficherCreations() {
+  alert("test2");
+  
   var idEnVente = document.getElementById("select-categogie").selectedIndex + 1;
     
   $.ajax({

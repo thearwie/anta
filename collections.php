@@ -5,7 +5,7 @@
 /*  Fichier....................:  collections.php                                                      */
 /*  Type.......................:  Document PHP                                                         */
 /*  Titre......................:  Bijouterie Anta950                                                   */
-/*  Auteurs....................:  ©Michaël Bilodeau, 2015                                			   */
+/*  Auteurs....................:  ©Michaël Bilodeau, 2015                                			         */
 /*  Date de création...........:  2015-11-19                                                           */
 /*  Date de mise en production.:                                                                       */
 /*                                                                                                     */
@@ -76,9 +76,9 @@
     
   </div>
 </div>
-<?php /*include('/inc/footer.php')*/ ?>
-</body>
-</html>
+</div>
 
-<script src="js/collection.js" defer="defer"></script>
 <script src="js/produit.js" defer="defer"></script>
+<script src="js/collection.js" defer="defer"></script>
+
+<?php include('/inc/footer.php') ?>
