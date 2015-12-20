@@ -121,7 +121,7 @@
 		  echo '<div class="total"><h2 id="total">Total: '.$totalPanier.'</h2></div>';
 		  
 		  if($totalPanier!=0){
-				echo '<div class="acheter"><a href="achat/acheter.php">Acheter</a></div>';
+				echo '<div class="linkAcheter"><a href="achat/acheter.php">Acheter</a></div>';
 		  }
 		?>
 	    

@@ -186,6 +186,19 @@ input{
 .linkMagasiner{
   margin-top:30px;
   padding-top:30px;	
+  float:right;
+}
+
+.linkAcheter{
+  margin-top:30px;
+  padding-top:30px;	
+  float:right;
+}
+
+.total{
+  margin-top:30px;
+  padding-top:30px;	
+  float:right;
 }
 
 .headerCompte{
