@@ -22,7 +22,7 @@ else{
 mysql_query("insert into transaction (id, id_utilisateur, id_etat_transaction ) values ( ".$nbTransaction.", 10003, 1)") or die(mysql_error());
 
 echo '<script type="text/javascript">
-	   alert('.$panier[0]['Prix'].');
+	   alert('.count($panier).');
 	</script>';
 
 for($i=0; $i<count($panier);$i++){
