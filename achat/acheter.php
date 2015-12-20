@@ -41,9 +41,12 @@ if(isset($_SESSION['User'])){
 	$compteUser = $_SESSION['User'];
 	$id = $compteUser[0]['Id'];	
 }
+echo '<script type="text/javascript">
+	   alert('.$id.');
+	</script>';
 
 echo '<script type="text/javascript">
-	window.location.assign("../monCompte.php?user='.$id .'");
+	window.location.assign("../monCompte.php?user='.$id.'");
 	</script>';
 
 ?>
