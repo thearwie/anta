@@ -7,10 +7,6 @@
 	
 	$compteUser = $_SESSION['User'];
 	
-	echo '<script type="text/javascript">
-				alert('. $compteUser[0]['Id'].');
-				</script>';
-	
 	//$_SESSION['User'] = $_GET['user'];
 	
 	$user = $_GET['user'];
@@ -39,7 +35,8 @@
 	    <?php
 		   //$id = $user;
 		  //$id = $compteUser[0]['Id'];
-		  if(isset($compteUser[0]['Id'])){
+		  if(isset($_SESSION['User'])){
+			    $compteUser = $_SESSION['User'];
 				$id = $compteUser[0]['Id'];	
 		  }
 		  else{
@@ -78,7 +75,8 @@
 		<?php
 		    //$id = $_GET['user'];
 			//$id = $user;
-			if(isset($compteUser[0]['Id'])){
+			if(isset($_SESSION['User'])){
+				$compteUser = $_SESSION['User'];
 				$id = $compteUser[0]['Id'];	
 			}
 			else{
