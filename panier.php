@@ -121,11 +121,11 @@
 		  echo '<center><h2 id="total">Total: '.$totalPanier.'</h2></center>';
 		  
 		  if($totalPanier!=0){
-				echo '<center><a href="achat/acheter.php" class="acheter">Acheter</a></center>';
+				echo '<div class="acheter"><a href="achat/acheter.php">Acheter</a></div>';
 		  }
 		?>
 	    
-		<center><a href="./collections" class="linkMagasiner">Continuer à magasiner</a></center>
+		<div class="linkMagasiner"><a href="./collections" >Continuer à magasiner</a></div>
 		
 	</section>
 </body>
