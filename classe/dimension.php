@@ -34,10 +34,5 @@
     {
       return $this->quantite;
     }
-    
-    function printDimension()
-    {
-      echo "Dimension : " . $this->getNom() . ", quantité :" . $this->getQuantite() . "<br/>";
-    }
   }
 ?>

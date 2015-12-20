@@ -1,8 +1,6 @@
 var typeProduit = "";
 
 function afficherProduit(idProduit) {
-  var idTypeProduit = document.getElementById("select-categogie").selectedIndex;
-  var idClassement = document.getElementById("select-classement").selectedIndex;
   
   $.ajax({
     type: "GET",
@@ -145,7 +143,7 @@ function afficherProduit(idProduit) {
           autresImages[z].setAttribute("alt", idAutreImage);
         }
       }
-    
+    }
   });
 }
 

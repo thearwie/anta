@@ -1,5 +1,4 @@
 <?php
-ini_set("display_errors", 1);
   class TypeProduit
   {
     var $id;
@@ -65,7 +64,7 @@ ini_set("display_errors", 1);
     }
   }
   
-  $x = new TypeProduit();
+  /*$x = new TypeProduit();
   $x->initialiser(1, "Bague", "BA");
-  $x->printTypeProduit();
+  $x->printTypeProduit();*/
 ?>

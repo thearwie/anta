@@ -1,3 +1,5 @@
+﻿$.getScript("js/produit.js");
+
 var idProduit = 0;
 
 function afficherProduits() {
@@ -123,4 +125,4 @@ function afficherProduits() {
 	location = "produit_detail.php?idProduit=" + idProduit;
 }*/
 
-afficherProduits();
+//afficherProduits();

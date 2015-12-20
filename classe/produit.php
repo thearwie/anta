@@ -1,5 +1,4 @@
 <?php
-ini_set("display_errors", 1);
 include("dimension.php");
 include("type_produit.php");
 include("attribut.php");
@@ -169,21 +168,5 @@ include("attribut.php");
     {
      return $this->nomAutresImages; 
     }
-    
-    /*function printProduit()
-    {
-      echo "Id: " . $this->getId() . "<br/>";
-      echo "Nom: " . $this->getNom() . "<br/>";
-      echo "Prix: " . $this->getPrix() . "<br/>";
-      echo "Commentaire: " . $this->getCommentaire() . "<br/>";
-      echo "Si en vente: " . $this->getEnVente() . "<br/>";
-      echo "Si nouveauté: " . $this->getNouveaute() . "<br/>";
-      echo "Id du type de produit: " . $this->getTypeProduit()->getId() . "<br/>";
-      for($i = 0; $i < count($this->getDimension()); $i++)
-      {
-        echo "Dimension " . $i + 1 . " : " . $this->getDimension()[$i]->getNom() . ", quantité :" . $this->getDimension()[$i]->getQuantite() . "<br/>";
-      }
-      echo "<br/>";
-    }*/
   }
 ?>

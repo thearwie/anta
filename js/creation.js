@@ -1,13 +1,11 @@
 ﻿function afficherCreations() {
-  alert("test2");
-  
   var idEnVente = document.getElementById("select-categogie").selectedIndex + 1;
     
   $.ajax({
     type: "GET",
     url: "genererCollection.php?idClassement=0&idTypeProduit=0&idEnVente=" + idEnVente,
     dataType: "xml",
-    success: function (xml) {
+    success: function (xml) {      
       $(".collection-produit").empty();
       
       var collection = xml.getElementsByTagName("collection");

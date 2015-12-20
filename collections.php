@@ -71,14 +71,11 @@
       </div>
     </div>
      
-    <div class="collection-produit" id="collection-produit">
+    <div class="collection-produit" id="collection-produit" onload="afficherProduits();">
     </div>
     
   </div>
 </div>
 </div>
-
-<script src="js/produit.js" defer="defer"></script>
-<script src="js/collection.js" defer="defer"></script>
 
 <?php include('/inc/footer.php') ?>
