@@ -38,7 +38,14 @@
 	<header>
 	    <?php
 		   //$id = $user;
-		  $id = $compteUser[0]['Id'];
+		  //$id = $compteUser[0]['Id'];
+		  if(isset($compteUser[0]['Id'])){
+				$id = $compteUser[0]['Id'];	
+		  }
+		  else{
+				$id = $user;
+		  }
+		  
 		  $re=mysql_query("select * from utilisateur where id='".$id."'");
 		  while ($f=mysql_fetch_array($re)) {	
 				echo '<h2>Mon compte: '.$f['prenom'].' '.$f['nom'].' </h2>';
@@ -71,7 +78,13 @@
 		<?php
 		    //$id = $_GET['user'];
 			//$id = $user;
-			 $id = $compteUser[0]['Id'];
+			if(isset($compteUser[0]['Id'])){
+				$id = $compteUser[0]['Id'];	
+			}
+			else{
+				$id = $user;
+			}
+			
 			$re=mysql_query("select t.id, p.id as idProduit, p.nom, p.prix, tp.quantite, tp.sous_total 
 							from transaction t, transaction_produit tp, produit p, utilisateur u
 							where t.id = tp.id_transaction and 
