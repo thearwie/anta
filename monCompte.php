@@ -43,7 +43,7 @@
 				$id = $user;
 		  }
 		  
-		  $re=mysql_query("select * from utilisateur where id='".$id."'");
+		  $re=mysql_query("select * from utilisateur where id='10007'");
 		  while ($f=mysql_fetch_array($re)) {	
 				echo '<h2>Mon compte: '.$f['prenom'].' '.$f['nom'].' </h2>';
 		  }
@@ -88,7 +88,7 @@
 							where t.id = tp.id_transaction and 
 								  tp.id_produit = p.id and 
 								  u.id = t.id_utilisateur and
-								  u.id ='".$id."'  
+								  u.id ='10007'  
 							order by t.id");
 			$nbAchat=0;
 			while ($f=mysql_fetch_array($re)) {
@@ -97,7 +97,7 @@
 					}
 					$nbAchat=$f['id'];
 					echo '<tr>
-						<td><img src="./img/'.$f['idProduit'].".jpg".'" width="100px" heigth="100px" /></td>
+						<td><img src="./img/bracelet/'.$f['idProduit'].".jpg".'" width="100px" heigth="100px" /></td>
 						<td>'.$f['nom'].'</td>
 						<td>'.$f['prix'].'</td>
 						<td>'.$f['quantite'].'</td>
