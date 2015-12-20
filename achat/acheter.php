@@ -48,7 +48,7 @@ if(isset($_SESSION['User'])){
 
 
 echo '<script type="text/javascript">
-	window.location.assign("../monCompte.php?user='10007'");
+	window.location.assign("../monCompte.php?user=10007");
 	</script>';
 
 ?>
