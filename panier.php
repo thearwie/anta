@@ -96,7 +96,7 @@
 		?>
 			<div class= "produit">
 			    <center>
-				  <img src="./img/bracelet/<?php echo $contenuPanier[$i]['Id'];?>.jpg "></br>
+				  <img src="./img/bracelet/<?php echo $contenuPanier[$i]['Image'];?>.jpg "></br>
 				  <span><?php echo $contenuPanier[$i]['Nom'];?></span></br>
 				  <span>Prix: <?php echo $contenuPanier[$i]['Prix'];?></span></br>
 				  <span>Quantité: 
